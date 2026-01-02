@@ -2,69 +2,8 @@
    THE CATHOLIC EXPERIMENT · WAYLIGHT UTILITY POST-WAR MODERN CATHOLIC THEME
    ========================================= */
 
-:root {
-  /* Waylight-inspired Catholic palette */
-  --tce-bg: #f7f6f2;            /* light cream, parchment */
-  --tce-bg-alt: #f0f4f8;        /* soft blue-gray, modern utility */
-  --tce-marian-blue: #25408f;   /* Marian blue */
-  --tce-gold: #d4af37;          /* gold accent */
-  --tce-text: #232323;
-  --tce-muted: #6c6f7a;
-  --tce-border: #e0e0e0;
-  --tce-radius: 10px;
-  --tce-shadow: 0 4px 24px rgba(37, 64, 143, 0.07);
-  --tce-font-sans: 'Inter', 'Segoe UI', Arial, sans-serif;
-  --tce-font-serif: 'EB Garamond', 'Georgia', serif;
-}
-
-/* GLOBAL */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body.tce-body {
-  margin: 0;
-  font-family: var(--tce-font-sans);
-  background:
-    linear-gradient(120deg, var(--tce-bg) 80%, var(--tce-bg-alt) 100%);
-  color: var(--tce-text);
   min-height: 100vh;
-}
-
-/* TYPOGRAPHY */
-
-
-h1, h2, h3 {
-  margin: 0 0 0.5em 0;
-  font-family: var(--tce-font-serif);
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  color: var(--tce-marian-blue);
-}
-
-h1 {
-  font-size: 2.2rem;
-  border-bottom: 2px solid var(--tce-gold);
-  padding-bottom: 0.2em;
-  margin-bottom: 0.7em;
-}
-h2 {
-  font-size: 1.5rem;
-  color: var(--tce-marian-blue);
-}
-h3 {
-  font-size: 1.15rem;
-  color: var(--tce-gold);
-}
-
-
-p {
-  margin: 0 0 1.1em 0;
-  line-height: 1.7;
-  color: var(--tce-text);
 }
 
 /* HEADER */

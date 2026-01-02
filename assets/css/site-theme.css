@@ -1,0 +1,13 @@
+:root {
+  --wl-accent: #6a4b7a;
+  --wl-accent-soft: rgba(106, 75, 122, 0.12);
+  --tce-bg: var(--wl-paper);
+  --tce-bg-alt: var(--wl-paper);
+  --tce-marian-blue: var(--wl-primary);
+  --tce-gold: var(--wl-accent);
+  --tce-text: var(--wl-ink);
+  --tce-muted: var(--wl-muted);
+  --tce-border: var(--wl-rule);
+  --tce-radius: var(--wl-radius);
+  --tce-shadow: var(--wl-shadow);
+}
