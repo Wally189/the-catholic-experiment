@@ -1,2 +1,2 @@
-# thecatholicexperiment
-A journey of faith in the modern world
+# the-catholic-experiment
+faith-focused site with reflections/resources
