@@ -1,6 +1,22 @@
 :root {
   --wl-accent: #6a4b7a;
   --wl-accent-soft: rgba(106, 75, 122, 0.12);
+
+  --accent: var(--wl-primary);
+  --accent-soft: var(--wl-primary-soft);
+  --wine: var(--wl-accent);
+  --wine-soft: var(--wl-accent-soft);
+  --sidebar-rail: rgba(31, 31, 31, 0.06);
+  --sidebar-rail-gap: 14px;
+  --max: 980px;
+  --pad: 20px;
+  --portrait: 220px;
+  --frontis-gap: 18px;
+  --sidebar-width: 250px;
+  --sidebar-gap: 24px;
+  --transition-fast: 0.15s ease;
+  --transition-medium: 0.25s ease;
+
   --tce-bg: var(--wl-paper);
   --tce-bg-alt: var(--wl-paper);
   --tce-marian-blue: var(--wl-primary);

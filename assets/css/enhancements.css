@@ -1,0 +1,299 @@
+﻿/* Enhancements: motion, typography, accents, interactions */
+
+ :root{
+  --fade-ms: 420ms;
+}
+
+/* Thematic accents */
+body.theme-vocation { --accent: #2b4a8a; --accent-soft: rgba(43,74,138,0.14); }
+body.theme-formation{ --accent: #2b4a8a; --accent-soft: rgba(43,74,138,0.14); }
+body.theme-rest     { --accent: #2b4a8a; --accent-soft: rgba(43,74,138,0.14); }
+
+/* Slow underline on links */
+a:not(.info-link):not(.button){
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 2px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 320ms ease;
+}
+a:not(.info-link):not(.button):hover,
+a:not(.info-link):not(.button):focus-visible{
+  background-size: 100% 2px;
+}
+
+/* Link shimmer (menus + inline links) */
+a:not(.info-link):not(.button){
+  position: relative;
+}
+a:not(.info-link):not(.button)::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.5) 50%, transparent 100%);
+  transform: translateX(-120%);
+  transition: transform 500ms ease;
+  pointer-events: none;
+}
+a:not(.info-link):not(.button):hover::after,
+a:not(.info-link):not(.button):focus-visible::after{
+  transform: translateX(120%);
+}
+
+/* Page-load fade/slide */
+main{
+  animation: mainFade var(--fade-ms) ease both;
+}
+
+@keyframes mainFade{
+  from{ opacity: 0; transform: translateY(4px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  main{
+    animation: none !important;
+  }
+  .divider::before,
+  .reveal-on-scroll,
+  a::after,
+  .table--practical::after{
+    transition: none !important;
+    animation: none !important;
+  }
+  .reveal-on-scroll{
+    opacity: 1;
+    transform: none;
+  }
+  a::after,
+  .table--practical::after{
+    opacity: 0;
+    transform: none;
+  }
+}
+
+
+/* Divider draw from centre */
+.divider{
+  position: relative;
+  height: 1px;
+  background: transparent;
+  margin: 2rem 0;
+}
+.divider::before{
+  content:"";
+  position:absolute;
+  left: 50%;
+  top: 0;
+  height: 1px;
+  width: 0;
+  background: rgba(0,0,0,0.25);
+  transform: translateX(-50%);
+  animation: dividerDraw 520ms ease forwards;
+}
+
+@keyframes dividerDraw{
+  from{ width: 0; }
+  to{ width: 100%; }
+}
+
+/* Scroll reveal for quotes (class only) */
+.reveal-on-scroll{
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 420ms ease, transform 420ms ease;
+}
+.reveal-on-scroll.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Collapsibles styling */
+details.collapse{
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+  background: rgba(0,0,0,0.02);
+}
+details.collapse > summary{
+  cursor: pointer;
+  list-style: none;
+  font-weight: 600;
+}
+details.collapse > summary::-webkit-details-marker{ display:none; }
+details.collapse[open]{ background: var(--accent-soft); }
+
+/* Practical tables */
+.table--practical{
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+}
+.table--practical::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.5) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 600ms ease;
+  pointer-events: none;
+}
+.table--practical:hover::after{
+  transform: translateX(100%);
+}
+
+/* Feature page structure */
+.page-header{
+  padding: 6px 0 10px;
+}
+.section-kicker{
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted, #5b5b5b);
+  margin: 0 0 6px;
+}
+.deck{
+  font-size: 1.05rem;
+  color: var(--muted, #5b5b5b);
+  margin: 8px 0 0;
+}
+.callout{
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  background: var(--accent-soft);
+}
+.callout__title{
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+.callout__text{
+  margin: 0;
+}
+.article{
+  margin-top: 18px;
+}
+.article__section{
+  margin: 22px 0;
+}
+.lead{
+  font-size: 1.05rem;
+}
+.quote{
+  margin: 18px 0;
+  padding: 12px 16px;
+  border-left: 3px solid var(--accent);
+  background: rgba(0,0,0,0.03);
+}
+.quote cite{
+  display: block;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--muted, #5b5b5b);
+}
+.note{
+  background: rgba(0,0,0,0.03);
+  border: 1px dashed rgba(0,0,0,0.18);
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+.closing{
+  margin-top: 14px;
+}
+.fineprint{
+  font-size: 0.9rem;
+  color: var(--muted, #5b5b5b);
+}
+.support-note{
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  background: rgba(0,0,0,0.02);
+  margin-bottom: 16px;
+}
+.table--practical th,
+.table--practical td{
+  padding: 8px 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(45,79,140,0.3);
+}
+.table--practical tr:last-child th,
+.table--practical tr:last-child td{
+  border-bottom: 0;
+}
+/* Floating DIES badge */
+.dies-badge{
+  position: fixed;
+  left: 16px;
+  bottom: 64px;
+  transform: none;
+  z-index: 9999;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  backdrop-filter: blur(6px);
+  max-width: min(92vw, 300px);
+  opacity: 0.75;
+}
+.dies-badge__tag{
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: rgba(0,0,0,0.55);
+  text-transform: uppercase;
+}
+.dies-badge__text{
+  font-size: 0.8rem;
+  color: rgba(0,0,0,0.7);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dies-badge__close{
+  border: 0;
+  background: transparent;
+  color: rgba(0,0,0,0.45);
+  padding: 3px 6px;
+  border-radius: 8px;
+}
+.dies-badge__close:hover,
+.dies-badge__close:focus-visible{
+  background: rgba(0,0,0,0.06);
+  color: rgba(0,0,0,0.75);
+}
+.dies-badge__info{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.12);
+  color: rgba(0,0,0,0.55);
+  font-size: 0.7rem;
+  text-decoration: none;
+}
+.dies-badge__info:hover,
+.dies-badge__info:focus-visible{
+  border-color: rgba(0,0,0,0.2);
+  color: rgba(0,0,0,0.75);
+  background: rgba(0,0,0,0.03);
+}
+
+@media (max-width: 700px){
+  .dies-badge{
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+  }
+}
