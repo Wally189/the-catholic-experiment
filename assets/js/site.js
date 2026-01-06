@@ -28,20 +28,10 @@
     yearEl.textContent = new Date().getFullYear();
   }
 
-  const landingKey = "landingUrl";
-  if (!sessionStorage.getItem(landingKey)) {
-    sessionStorage.setItem(landingKey, location.href);
-  }
-
   const backBtn = document.querySelector("[data-back]");
   if (backBtn) {
     backBtn.addEventListener("click", () => {
-      const landing = sessionStorage.getItem(landingKey);
-      if (landing) {
-        location.href = landing;
-      } else {
-        location.href = backBtn.getAttribute("data-back");
-      }
+      location.href = backBtn.getAttribute("data-back");
     });
   }
 

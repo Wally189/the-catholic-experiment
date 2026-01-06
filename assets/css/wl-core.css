@@ -1,13 +1,13 @@
 :root {
-  --wl-paper: #f7f6f2;
-  --wl-ink: #1f1f1f;
-  --wl-muted: #5a5a5a;
-  --wl-rule: rgba(0, 0, 0, 0.12);
-  --wl-primary: #2d4f8c;
-  --wl-primary-hover: #1d395f;
-  --wl-primary-soft: rgba(45, 79, 140, 0.12);
-  --wl-accent: #56606a;
-  --wl-accent-soft: rgba(86, 96, 106, 0.12);
+  --wl-paper: #f4f1ea;
+  --wl-ink: #1e2a44;
+  --wl-muted: #5b4632;
+  --wl-rule: rgba(90, 31, 46, 0.16);
+  --wl-primary: #2f4a7d;
+  --wl-primary-hover: #1e2a44;
+  --wl-primary-soft: rgba(47, 74, 125, 0.12);
+  --wl-accent: #b08d3a;
+  --wl-accent-soft: rgba(176, 141, 58, 0.14);
   --wl-radius: 12px;
   --wl-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 
@@ -180,13 +180,13 @@ a.button:focus-visible {
 }
 
 .wl-stack > * + * { margin-top: var(--wl-space-4); }
-.wl-surface { background: #ffffff; border: 1px solid var(--wl-rule); border-radius: var(--wl-radius); }
+.wl-surface { background: #fff2cc; border: 1px solid var(--wl-rule); border-radius: var(--wl-radius); }
 
 .wl-footer {
   margin-top: var(--wl-space-7);
   padding: var(--wl-space-5) 0;
   border-top: 1px solid var(--wl-rule);
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(237, 231, 217, 0.88);
 }
 
 .wl-footer__grid {
@@ -266,4 +266,21 @@ a.button:focus-visible {
 .wl-footer__hint {
   font-size: var(--wl-step--1);
   color: var(--wl-muted);
+}
+
+.wl-footer__family {
+  width: min(1120px, calc(100% - 2rem));
+  margin: var(--wl-space-2) auto 0;
+  text-align: center;
+  font-size: var(--wl-step--1);
+  color: var(--wl-muted);
+}
+
+.wl-footer__family a {
+  color: var(--wl-primary);
+  text-decoration: none;
+}
+
+.wl-footer__family a:hover {
+  text-decoration: underline;
 }

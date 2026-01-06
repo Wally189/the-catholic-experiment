@@ -5,9 +5,9 @@
 }
 
 /* Thematic accents */
-body.theme-vocation { --accent: #2b4a8a; --accent-soft: rgba(43,74,138,0.14); }
-body.theme-formation{ --accent: #2b4a8a; --accent-soft: rgba(43,74,138,0.14); }
-body.theme-rest     { --accent: #2b4a8a; --accent-soft: rgba(43,74,138,0.14); }
+body.theme-vocation { --accent: #2f4a7d; --accent-soft: rgba(47,74,125,0.14); }
+body.theme-formation{ --accent: #2f4a7d; --accent-soft: rgba(47,74,125,0.14); }
+body.theme-rest     { --accent: #2f4a7d; --accent-soft: rgba(47,74,125,0.14); }
 
 /* Slow underline on links */
 a:not(.info-link):not(.button){
@@ -88,7 +88,7 @@ main{
   top: 0;
   height: 1px;
   width: 0;
-  background: rgba(0,0,0,0.25);
+  background: rgba(90,31,46,0.3);
   transform: translateX(-50%);
   animation: dividerDraw 520ms ease forwards;
 }
@@ -220,7 +220,7 @@ details.collapse[open]{ background: var(--accent-soft); }
 .table--practical td{
   padding: 8px 10px;
   text-align: center;
-  border-bottom: 1px solid rgba(45,79,140,0.3);
+  border-bottom: 1px solid rgba(47,74,125,0.3);
 }
 .table--practical tr:last-child th,
 .table--practical tr:last-child td{

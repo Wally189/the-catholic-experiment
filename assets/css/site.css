@@ -10,7 +10,7 @@ html::before{
   left: 50%;
   width: calc(var(--max) + (var(--pad) * 2));
   transform: translateX(-50%);
-  background: rgba(249,247,242,0.85);
+  background: rgba(237,231,217,0.88);
   pointer-events: none;
   z-index: 0;
 }
@@ -81,7 +81,7 @@ html::before{
 }
 .modal__card--accent{
   border: 2px solid var(--accent);
-  box-shadow: 0 24px 60px rgba(45,79,140,0.22);
+  box-shadow: 0 24px 60px rgba(47,74,125,0.22);
 }
 .modal__card h2{
   margin-top: 0;
@@ -120,7 +120,7 @@ html::before{
 .skip:focus{
   left: var(--pad);
   top: var(--pad);
-  background: #fff;
+  background: var(--paper);
   padding: 10px 12px;
   border: 1px solid var(--rule);
   border-radius: 10px;
@@ -129,23 +129,23 @@ html::before{
 .masthead{
   padding: 34px 0 18px;
   border-bottom: 1px solid var(--rule);
-  background: linear-gradient(180deg, rgba(45,79,140,0.08), transparent 55%);
+  background: linear-gradient(180deg, rgba(47,74,125,0.08), transparent 55%);
   transition: background var(--transition-medium);
 }
 @media (prefers-color-scheme: dark) {
   .masthead {
-    background: linear-gradient(180deg, rgba(107,155,209,0.1), transparent 55%);
+    background: linear-gradient(180deg, rgba(58,95,158,0.1), transparent 55%);
   }
 }
 
 /* Inner page hero enhancement */
 .masthead--inner{
   padding: 48px 0 28px;
-  background: linear-gradient(180deg, rgba(107,31,43,0.06), transparent 65%);
+  background: linear-gradient(180deg, rgba(107,31,42,0.08), transparent 65%);
 }
 @media (prefers-color-scheme: dark) {
   .masthead--inner {
-    background: linear-gradient(180deg, rgba(196,112,125,0.08), transparent 65%);
+    background: linear-gradient(180deg, rgba(140,29,24,0.12), transparent 65%);
   }
 }
 .masthead--inner .kicker{
@@ -263,7 +263,7 @@ html::before{
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   overflow: hidden;
-  background: #fff;
+  background: #fff2cc;
 }
 .portrait img{
   width: 100%;
@@ -275,12 +275,12 @@ html::before{
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   padding: 16px 16px 14px;
-  background: linear-gradient(180deg, rgba(45,79,140,0.08), rgba(255,255,255,0.7));
+  background: linear-gradient(180deg, rgba(47,74,125,0.1), rgba(255,242,204,0.7));
   max-width: 72ch;
 }
 @media (prefers-color-scheme: dark) {
   .opening {
-    background: linear-gradient(180deg, rgba(107,155,209,0.1), rgba(26,26,31,0.7));
+    background: linear-gradient(180deg, rgba(58,95,158,0.12), rgba(30,42,68,0.7));
   }
 }
 .opening.doorway{
@@ -318,7 +318,7 @@ html::before{
   border: 1px solid var(--rule);
   border-radius: 999px;
   text-decoration: none;
-  background: rgba(255,255,255,0.75);
+  background: rgba(255,242,204,0.75);
   text-align: center;
   transition: background var(--transition-fast), transform var(--transition-fast);
 }
@@ -441,13 +441,13 @@ html::before{
   border-radius: 4px;
 }
 .panel__summary::after{
-  content: "?";
+  content: "v";
   color: var(--wine);
   font-size: 14px;
-  transition: transform var(--transition-medium);
+  transition: color var(--transition-medium);
 }
 details[open] > .panel__summary::after{
-  transform: rotate(180deg);
+  content: "^";
 }
 .panel__body{
   padding: 6px 0 10px;
@@ -565,8 +565,8 @@ h2{
   z-index: 50;
   font-size: 14px;
   color: var(--muted);
-  background: rgba(255,255,255,0.92);
-  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(255,242,204,0.92);
+  border: 1px solid var(--rule);
   border-radius: 12px;
   padding: 6px 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
@@ -574,8 +574,8 @@ h2{
 }
 @media (prefers-color-scheme: dark) {
   .hora-fixed {
-    background: rgba(30,30,35,0.92);
-    border-color: rgba(255,255,255,0.1);
+    background: rgba(30,42,68,0.92);
+    border-color: rgba(255,242,204,0.12);
   }
 }
 .hora-fixed strong{
@@ -589,8 +589,8 @@ h2{
   z-index: 50;
   font-size: 14px;
   color: var(--muted);
-  background: rgba(255,255,255,0.92);
-  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(255,242,204,0.92);
+  border: 1px solid var(--rule);
   border-radius: 12px;
   padding: 6px 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
@@ -598,8 +598,8 @@ h2{
 }
 @media (prefers-color-scheme: dark) {
   .date-fixed {
-    background: rgba(30,30,35,0.92);
-    border-color: rgba(255,255,255,0.1);
+    background: rgba(30,42,68,0.92);
+    border-color: rgba(255,242,204,0.12);
   }
 }
 .date-fixed strong{
@@ -613,8 +613,8 @@ h2{
   z-index: 50;
   font-size: 15px;
   color: var(--muted);
-  background: rgba(255,255,255,0.92);
-  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(255,242,204,0.92);
+  border: 1px solid var(--rule);
   border-radius: 16px;
   padding: 18px 20px;
   width: var(--sidebar-width);
@@ -627,8 +627,8 @@ h2{
 
 @media (prefers-color-scheme: dark) {
   .pillar-fixed {
-    background: rgba(30,30,35,0.92);
-    border-color: rgba(255,255,255,0.1);
+    background: rgba(30,42,68,0.92);
+    border-color: rgba(255,242,204,0.12);
   }
 }
 .pillar-fixed__title{
@@ -661,8 +661,8 @@ h2{
   z-index: 50;
   font-size: 15px;
   color: var(--muted);
-  background: rgba(255,255,255,0.92);
-  border: 1px solid rgba(0,0,0,0.1);
+  background: rgba(255,242,204,0.92);
+  border: 1px solid var(--rule);
   border-radius: 16px;
   padding: 18px 20px;
   width: var(--sidebar-width);
@@ -675,8 +675,8 @@ h2{
 
 @media (prefers-color-scheme: dark) {
   .top-menu-fixed {
-    background: rgba(30,30,35,0.92);
-    border-color: rgba(255,255,255,0.1);
+    background: rgba(30,42,68,0.92);
+    border-color: rgba(255,242,204,0.12);
   }
 }
 .top-menu-fixed__title{
@@ -769,11 +769,11 @@ h2{
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   padding: 10px 12px;
-  background: linear-gradient(180deg, rgba(45,79,140,0.08), rgba(255,255,255,0.7));
+  background: linear-gradient(180deg, rgba(47,74,125,0.1), rgba(255,242,204,0.7));
 }
 @media (prefers-color-scheme: dark) {
   .details {
-    background: linear-gradient(180deg, rgba(107,155,209,0.1), rgba(26,26,31,0.7));
+    background: linear-gradient(180deg, rgba(58,95,158,0.12), rgba(30,42,68,0.7));
   }
 }
 .table{
@@ -799,7 +799,7 @@ h2{
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   padding: 12px;
-  background: linear-gradient(180deg, rgba(45,79,140,0.08), rgba(255,255,255,0.7));
+  background: linear-gradient(180deg, rgba(47,74,125,0.1), rgba(255,242,204,0.7));
   display: grid;
   gap: 10px;
   max-width: 560px;
@@ -1001,6 +1001,12 @@ button:active{
   .mobile-nav__time strong{
     color: var(--wine);
     font-weight: 600;
+  }
+}
+
+@media (min-width: 900px) {
+  .wl-footer__grid {
+    width: min(var(--max), calc(100% - 6rem));
   }
 }
 
