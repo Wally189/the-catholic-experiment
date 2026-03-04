@@ -35,54 +35,6 @@
     });
   }
 
-  const langBtn = document.querySelector("[data-lang-target]");
-  if (langBtn) {
-    langBtn.addEventListener("click", () => {
-      const target = langBtn.getAttribute("data-lang-target") || "";
-      if (target.includes("-ga.html")) {
-        localStorage.setItem("preferredLang", "ga");
-      } else {
-        localStorage.setItem("preferredLang", "en");
-      }
-      location.href = target;
-    });
-  }
-
-  const setPreferredLangFromLink = (href) => {
-    if (!href || href.startsWith("http")) {
-      return;
-    }
-    if (href.includes("-ga.html")) {
-      localStorage.setItem("preferredLang", "ga");
-    } else if (href.endsWith(".html")) {
-      localStorage.setItem("preferredLang", "en");
-    }
-  };
-
-  document.addEventListener("click", (event) => {
-    const link = event.target.closest("a");
-    if (!link) {
-      return;
-    }
-    setPreferredLangFromLink(link.getAttribute("href") || "");
-  });
-
-  const preferredLang = localStorage.getItem("preferredLang");
-  const currentLang = (document.documentElement.lang || "").toLowerCase().startsWith("ga") ? "ga" : "en";
-  if (!preferredLang) {
-    localStorage.setItem("preferredLang", currentLang);
-  } else if (preferredLang !== currentLang) {
-    const path = location.pathname || "";
-    if (preferredLang === "ga" && path.endsWith(".html") && !path.endsWith("-ga.html")) {
-      const gaPath = path.replace(/\.html$/i, "-ga.html");
-      location.replace(gaPath + location.search + location.hash);
-    }
-    if (preferredLang === "en" && path.endsWith("-ga.html")) {
-      const enPath = path.replace(/-ga\.html$/i, ".html");
-      location.replace(enPath + location.search + location.hash);
-    }
-  }
-
   const shareBtn = document.querySelector("[data-share]");
   if (shareBtn) {
     const hint = document.querySelector("[data-share-hint]");
