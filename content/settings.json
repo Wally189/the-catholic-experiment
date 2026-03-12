@@ -1,0 +1,13 @@
+{
+  "siteUrl": "http://localhost:3000",
+  "ownerName": "The Catholic Experiment",
+  "adminLabel": "The Catholic Experiment Editor",
+  "dashboardIntro": "Use this console to update placeholder editorial content, artwork, colours, and fonts, then rebuild the static site.",
+  "publishChecklist": [
+    "Replace the placeholder contact details, legal copy, and launch notes",
+    "Decide the real section names, publishing rhythm, and editorial ownership",
+    "Upload final photography, commissioned illustration, or archive artwork",
+    "Review theological, editorial, safeguarding, and data responsibilities before launch"
+  ],
+  "systemNotes": "The public website stays static. Saving content rewrites JSON files and regenerates dist automatically."
+}

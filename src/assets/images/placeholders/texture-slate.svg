@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Slate travel texture</title>
+  <desc id="desc">A muted grey and green textured placeholder with soft geometric poster-style forms.</desc>
+  <rect width="1200" height="900" fill="#f7f7f3"/>
+  <rect x="0" y="0" width="1200" height="900" fill="url(#grain)"/>
+  <path d="M0 710C156 592 297 535 473 546C636 556 760 661 912 666C1008 670 1104 642 1200 580V900H0Z" fill="#d7ddd7"/>
+  <path d="M702 0C842 96 934 214 973 348C1001 446 987 544 935 644C885 742 786 812 646 856L1200 900V0Z" fill="#dbe5dd"/>
+  <circle cx="251" cy="256" r="132" fill="#d2c6b6"/>
+  <circle cx="251" cy="256" r="102" fill="#f5f1e8"/>
+  <path d="M163 256H337" stroke="#2e5f51" stroke-width="14" stroke-linecap="round"/>
+  <path d="M251 168V344" stroke="#2e5f51" stroke-width="14" stroke-linecap="round"/>
+  <path d="M344 139C459 162 541 217 603 304" stroke="#a56b57" stroke-width="11" fill="none" stroke-linecap="round"/>
+  <path d="M784 164C877 184 973 248 1040 344" stroke="#6c7f79" stroke-width="8" fill="none" stroke-linecap="round" opacity=".9"/>
+  <path d="M86 787H538" stroke="#be9551" stroke-width="16" stroke-linecap="round"/>
+  <path d="M86 820H415" stroke="#2e5f51" stroke-width="8" stroke-linecap="round" opacity=".8"/>
+  <defs>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.065"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="grain" width="1200" height="900" patternUnits="userSpaceOnUse">
+      <rect width="1200" height="900" fill="#f7f7f3"/>
+      <rect width="1200" height="900" filter="url(#noise)"/>
+    </pattern>
+  </defs>
+</svg>

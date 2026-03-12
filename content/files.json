@@ -1,0 +1,65 @@
+[
+  {
+    "id": "hero-triptych",
+    "label": "Hero triptych",
+    "category": "Image",
+    "kind": "image",
+    "publicPath": "/assets/images/placeholders/hero-triptych.svg",
+    "note": "Lead placeholder artwork for the homepage hero.",
+    "uploadedAt": "2026-03-12T10:00:00Z"
+  },
+  {
+    "id": "editorial-desk",
+    "label": "Editorial desk",
+    "category": "Image",
+    "kind": "image",
+    "publicPath": "/assets/images/placeholders/editorial-desk.svg",
+    "note": "Warm placeholder artwork for the manifesto section.",
+    "uploadedAt": "2026-03-12T10:02:00Z"
+  },
+  {
+    "id": "chapel-light",
+    "label": "Chapel light",
+    "category": "Image",
+    "kind": "image",
+    "publicPath": "/assets/images/placeholders/chapel-light.svg",
+    "note": "Placeholder stained-glass inspired panel for the second feature section.",
+    "uploadedAt": "2026-03-12T10:04:00Z"
+  },
+  {
+    "id": "library-notes",
+    "label": "Library notes",
+    "category": "Image",
+    "kind": "image",
+    "publicPath": "/assets/images/placeholders/library-notes.svg",
+    "note": "Reading and review placeholder artwork for the image library.",
+    "uploadedAt": "2026-03-12T10:06:00Z"
+  },
+  {
+    "id": "parish-bulletin",
+    "label": "Parish bulletin board",
+    "category": "Image",
+    "kind": "image",
+    "publicPath": "/assets/images/placeholders/parish-bulletin.svg",
+    "note": "Community and parish-life placeholder artwork.",
+    "uploadedAt": "2026-03-12T10:08:00Z"
+  },
+  {
+    "id": "studio-mix",
+    "label": "Studio and broadcast",
+    "category": "Image",
+    "kind": "image",
+    "publicPath": "/assets/images/placeholders/studio-mix.svg",
+    "note": "Placeholder artwork for interviews and recorded conversations.",
+    "uploadedAt": "2026-03-12T10:10:00Z"
+  },
+  {
+    "id": "processional-light",
+    "label": "Processional light",
+    "category": "Image",
+    "kind": "image",
+    "publicPath": "/assets/images/placeholders/processional-light.svg",
+    "note": "Abstract liturgical-season placeholder artwork.",
+    "uploadedAt": "2026-03-12T10:12:00Z"
+  }
+]

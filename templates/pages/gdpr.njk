@@ -1,0 +1,14 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+  <section class="legal-section">
+    <div class="container legal-shell">
+      <p class="eyebrow">GDPR</p>
+      <h1>Data Protection</h1>
+      <p>{{ site.businessName }} currently uses this website as a static placeholder project. Public pages are generated from structured files, which keeps the frontend simple and avoids a live database-driven publishing layer by default.</p>
+      <p>If someone contacts the project, any personal information should be used only to answer that enquiry, arrange the requested follow-up, and handle necessary administration. Access should be limited to the small number of people responsible for the project.</p>
+      <p>Before any live launch, review the actual data flows for email, analytics, donations, volunteer forms, event bookings, or subscriber management and publish project-specific GDPR wording.</p>
+      <p>For any data or privacy request, use the published contact email: <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a>.</p>
+    </div>
+  </section>
+{% endblock %}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Ash roadbook texture</title>
+  <desc id="desc">A pale textured placeholder with linear roadbook marks and soft poster-era arcs.</desc>
+  <rect width="1200" height="900" fill="#fbfaf7"/>
+  <rect width="1200" height="900" fill="url(#grain)"/>
+  <path d="M0 662C127 627 248 611 366 623C527 641 613 733 764 755C898 775 1030 730 1200 617V900H0Z" fill="#e3e5df"/>
+  <path d="M149 0H320V900H149Z" fill="#f0ede5"/>
+  <path d="M202 0H237V900H202Z" fill="#d8ded8"/>
+  <path d="M842 94C941 146 1026 236 1089 363" stroke="#29584a" stroke-width="18" fill="none" stroke-linecap="round" opacity=".82"/>
+  <path d="M811 167C903 214 972 282 1035 391" stroke="#c3985d" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <circle cx="813" cy="167" r="18" fill="#c3985d"/>
+  <path d="M316 152H628" stroke="#2f6f7a" stroke-width="12" stroke-linecap="round" opacity=".75"/>
+  <path d="M316 196H692" stroke="#d47a4d" stroke-width="7" stroke-linecap="round" opacity=".82"/>
+  <path d="M316 238H566" stroke="#29584a" stroke-width="7" stroke-linecap="round" opacity=".65"/>
+  <path d="M316 688H716" stroke="#29584a" stroke-width="14" stroke-linecap="round"/>
+  <path d="M316 727H644" stroke="#c3985d" stroke-width="9" stroke-linecap="round"/>
+  <defs>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.055"/>
+      </feComponentTransfer>
+    </filter>
+    <pattern id="grain" width="1200" height="900" patternUnits="userSpaceOnUse">
+      <rect width="1200" height="900" fill="#fbfaf7"/>
+      <rect width="1200" height="900" filter="url(#noise)"/>
+    </pattern>
+  </defs>
+</svg>
