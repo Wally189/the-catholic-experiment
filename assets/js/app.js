@@ -49,6 +49,148 @@ const TCE = (() => {
     return host.endsWith('.ie') ? 'ie' : 'gb';
   }
 
+
+  function dateOnly(date) {
+    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  }
+
+  function addDays(date, days) {
+    const copy = new Date(date);
+    copy.setDate(copy.getDate() + days);
+    return copy;
+  }
+
+  function daysBetween(start, end) {
+    const ms = 24 * 60 * 60 * 1000;
+    return Math.round((dateOnly(end) - dateOnly(start)) / ms);
+  }
+
+  function yyyymmdd(date) {
+    return `${date.getFullYear()}${String(date.getMonth() + 1).padStart(2, '0')}${String(date.getDate()).padStart(2, '0')}`;
+  }
+
+  function weekdayName(date) {
+    return new Intl.DateTimeFormat('en-GB', { weekday: 'long' }).format(date);
+  }
+
+  function universalisBase(locale) {
+    return locale === 'ie' ? 'https://universalis.com/Europe.Ireland' : 'https://universalis.com/europe.england';
+  }
+
+  function universalisPath(locale, page, now = new Date()) {
+    return `${universalisBase(locale)}/${yyyymmdd(now)}/${page}.htm`;
+  }
+
+  function universalisAppLink() {
+    const ua = navigator.userAgent || '';
+    if (/iPhone|iPad|iPod/i.test(ua)) return 'https://apps.apple.com/hu/app/universalis/id284942719';
+    if (/Android/i.test(ua)) return 'https://play.google.com/store/apps/details?hl=en_IE&id=com.universalis.android.calendar';
+    return 'https://universalis.com/n-apps.htm';
+  }
+
+  function fixedObservance(date, locale) {
+    const mmdd = `${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    const common = {
+      '01-01': { label: 'Mary, the Holy Mother of God', rank: 'Solemnity' },
+      '03-19': { label: 'Saint Joseph, husband of the Blessed Virgin Mary', rank: 'Solemnity' },
+      '03-25': { label: 'The Annunciation of the Lord', rank: 'Solemnity' },
+      '06-24': { label: 'The Nativity of Saint John the Baptist', rank: 'Solemnity' },
+      '06-29': { label: 'Saints Peter and Paul, Apostles', rank: 'Solemnity' },
+      '08-15': { label: 'The Assumption of the Blessed Virgin Mary', rank: 'Solemnity' },
+      '11-01': { label: 'All Saints', rank: 'Solemnity' },
+      '11-02': { label: 'All Souls', rank: 'Commemoration' },
+      '12-08': { label: 'The Immaculate Conception of the Blessed Virgin Mary', rank: 'Solemnity' },
+      '12-25': { label: 'The Nativity of the Lord (Christmas)', rank: 'Solemnity' },
+      '12-26': { label: 'Saint Stephen, Protomartyr', rank: 'Feast' },
+      '12-27': { label: 'Saint John, Apostle, Evangelist', rank: 'Feast' },
+      '12-28': { label: 'The Holy Innocents, Martyrs', rank: 'Feast' },
+    };
+    const local = {
+      gb: {
+        '03-17': { label: 'Saint Patrick, Bishop, Missionary', rank: 'Feast' },
+        '04-23': { label: 'Saint George, Martyr', rank: 'Solemnity' },
+        '12-29': { label: 'Saint Thomas Becket, Bishop, Martyr', rank: 'Feast' },
+      },
+      ie: {
+        '02-01': { label: 'Saint Brigid, Abbess', rank: 'Feast' },
+        '03-17': { label: 'Saint Patrick, Bishop, Missionary', rank: 'Solemnity' },
+      },
+    };
+    return local[locale]?.[mmdd] || common[mmdd] || null;
+  }
+
+  function liturgicalDayLabel(now = new Date()) {
+    const locale = currentLocale();
+    const year = now.getFullYear();
+    const easter = dateOnly(easterSunday(year));
+    const ashWednesday = addDays(easter, -46);
+    const palmSunday = addDays(easter, -7);
+    const holyThursday = addDays(easter, -3);
+    const goodFriday = addDays(easter, -2);
+    const holySaturday = addDays(easter, -1);
+    const pentecost = addDays(easter, 49);
+    const trinitySunday = addDays(pentecost, 7);
+    const baptismOfLord = (() => {
+      const jan6 = new Date(year, 0, 6);
+      const nextSunday = new Date(jan6);
+      nextSunday.setDate(jan6.getDate() + ((7 - jan6.getDay()) % 7 || 7));
+      return dateOnly(nextSunday);
+    })();
+    const advent = dateOnly(firstSundayOfAdvent(year));
+    const christmas = new Date(year, 11, 25);
+    const today = dateOnly(now);
+    const fixed = fixedObservance(today, locale);
+
+    if (fixed) return fixed;
+    if (sameDate(today, ashWednesday)) return { label: 'Ash Wednesday', rank: 'Principal day' };
+    if (sameDate(today, palmSunday)) return { label: 'Palm Sunday', rank: 'Sunday' };
+    if (sameDate(today, holyThursday)) return { label: 'Holy Thursday', rank: 'Principal day' };
+    if (sameDate(today, goodFriday)) return { label: 'Good Friday', rank: 'Principal day' };
+    if (sameDate(today, holySaturday)) return { label: 'Holy Saturday', rank: 'Principal day' };
+    if (sameDate(today, easter)) return { label: 'Easter Sunday', rank: 'Solemnity' };
+    if (sameDate(today, pentecost)) return { label: 'Pentecost Sunday', rank: 'Solemnity' };
+    if (sameDate(today, trinitySunday)) return { label: 'Trinity Sunday', rank: 'Solemnity' };
+
+    if (between(today, ashWednesday, easter)) {
+      const firstSunday = addDays(ashWednesday, 4);
+      if (today.getDay() === 0) {
+        const week = Math.floor(daysBetween(firstSunday, today) / 7) + 1;
+        if (week === 4) return { label: '4th Sunday of Lent (Laetare Sunday)', rank: 'Sunday' };
+        return { label: `${week}${week === 1 ? 'st' : week === 2 ? 'nd' : week === 3 ? 'rd' : 'th'} Sunday of Lent`, rank: 'Sunday' };
+      }
+      if (today < firstSunday) return { label: `${weekdayName(today)} after Ash Wednesday`, rank: 'Weekday' };
+      const week = Math.floor(daysBetween(firstSunday, today) / 7) + 1;
+      return { label: `${weekdayName(today)} of the ${week}${week === 1 ? 'st' : week === 2 ? 'nd' : week === 3 ? 'rd' : 'th'} week of Lent`, rank: 'Weekday' };
+    }
+
+    if (between(today, easter, addDays(pentecost, 1))) {
+      if (today.getDay() === 0) {
+        if (sameDate(today, easter)) return { label: 'Easter Sunday', rank: 'Solemnity' };
+        const week = Math.floor(daysBetween(easter, today) / 7) + 1;
+        return { label: `${week}${week === 1 ? 'st' : week === 2 ? 'nd' : week === 3 ? 'rd' : 'th'} Sunday of Easter`, rank: 'Sunday' };
+      }
+      if (daysBetween(easter, today) < 7) return { label: `${weekdayName(today)} within the Octave of Easter`, rank: 'Weekday' };
+      const secondSunday = addDays(easter, 7);
+      const week = Math.floor(daysBetween(secondSunday, today) / 7) + 2;
+      return { label: `${weekdayName(today)} of the ${week}${week === 1 ? 'st' : week === 2 ? 'nd' : week === 3 ? 'rd' : 'th'} week of Easter`, rank: 'Weekday' };
+    }
+
+    if (between(today, advent, christmas)) {
+      if (today.getDay() === 0) {
+        const week = Math.floor(daysBetween(advent, today) / 7) + 1;
+        return { label: `${week}${week === 1 ? 'st' : week === 2 ? 'nd' : week === 3 ? 'rd' : 'th'} Sunday of Advent`, rank: 'Sunday' };
+      }
+      const week = Math.floor(daysBetween(advent, today) / 7) + 1;
+      return { label: `${weekdayName(today)} of the ${week}${week === 1 ? 'st' : week === 2 ? 'nd' : week === 3 ? 'rd' : 'th'} week of Advent`, rank: 'Weekday' };
+    }
+
+    if (between(today, new Date(year, 0, 1), addDays(baptismOfLord, 1)) || between(today, christmas, new Date(year + 1, 0, 13))) {
+      return { label: 'Christmastide', rank: 'Seasonal day' };
+    }
+
+    return { label: `${weekdayName(today)} in Ordinary Time`, rank: 'Weekday' };
+  }
+
   function feastOverride(date, locale) {
     const mmdd = `${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
     const overrides = {
@@ -134,16 +276,50 @@ const TCE = (() => {
   }
 
   function updateCurrentHourLink() {
+    const now = new Date();
+    const locale = currentLocale();
+    const hourInfo = canonicalHourInfo(now);
+    const massUrl = universalisPath(locale, 'mass', now);
+    const hourUrl = universalisPath(locale, hourInfo.slug, now);
+    const todayUrl = universalisPath(locale, 'today', now);
+    const appUrl = universalisAppLink();
+    const isMobile = window.matchMedia('(max-width: 980px)').matches;
+
     document.querySelectorAll('[data-current-hour]').forEach((link) => {
-      const info = canonicalHourInfo(new Date());
-      link.href = `https://universalis.com/${info.slug}.htm`;
+      link.href = isMobile ? appUrl : hourUrl;
+      link.dataset.desktopHref = hourUrl;
       const span = link.querySelector('span');
-      if (span) span.textContent = info.label;
-      else link.textContent = `${info.label} — Universalis`;
+      if (isMobile) {
+        if (span) span.textContent = 'Universalis app';
+        else link.textContent = 'Universalis app';
+      } else if (span) {
+        span.textContent = hourInfo.label;
+      } else {
+        link.textContent = `${hourInfo.label} — Universalis`;
+      }
     });
+
     document.querySelectorAll('[data-today-readings]').forEach((link) => {
-      link.href = 'https://universalis.com/mass.htm';
+      link.href = isMobile ? appUrl : massUrl;
+      link.dataset.desktopHref = massUrl;
+      link.textContent = isMobile ? 'Open Universalis app' : "Today's readings";
     });
+
+    const dayLabel = document.getElementById('today-date-label');
+    if (dayLabel) dayLabel.textContent = weekdayName(now);
+
+    const observance = liturgicalDayLabel(now);
+    const observanceLabel = document.getElementById('today-observance-label');
+    if (observanceLabel) observanceLabel.textContent = observance.label;
+
+    const rankLabel = document.getElementById('today-rank-label');
+    if (rankLabel) rankLabel.textContent = observance.rank;
+
+    const todayLink = document.getElementById('today-universalis-link');
+    if (todayLink) {
+      todayLink.href = todayUrl;
+      todayLink.textContent = 'View today on Universalis';
+    }
   }
 
   function initStickyHeader() {
@@ -212,6 +388,60 @@ const languages = [
         if (!menu.contains(event.target)) menu.classList.remove('open');
       });
     });
+  }
+
+
+  function initMobileNav() {
+    const nav = document.querySelector('.nav');
+    const headerTools = document.querySelector('.header-tools');
+    if (!nav || !headerTools) return;
+
+    let button = document.querySelector('[data-nav-toggle]');
+    if (!button) {
+      button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'nav-toggle';
+      button.setAttribute('data-nav-toggle', '');
+      button.setAttribute('aria-expanded', 'false');
+      button.setAttribute('aria-label', 'Toggle menu');
+      button.textContent = 'Menu';
+      headerTools.prepend(button);
+    }
+
+    const closeNav = () => {
+      nav.classList.remove('open');
+      button.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('mobile-nav-open');
+    };
+
+    const syncMode = () => {
+      if (window.matchMedia('(max-width: 980px)').matches) {
+        closeNav();
+      } else {
+        nav.classList.remove('open');
+        button.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('mobile-nav-open');
+      }
+    };
+
+    button.addEventListener('click', () => {
+      if (!window.matchMedia('(max-width: 980px)').matches) return;
+      const open = !nav.classList.contains('open');
+      nav.classList.toggle('open', open);
+      button.setAttribute('aria-expanded', open ? 'true' : 'false');
+      document.body.classList.toggle('mobile-nav-open', open);
+    });
+
+    window.addEventListener('scroll', () => {
+      if (window.matchMedia('(max-width: 980px)').matches && window.scrollY > 24) closeNav();
+    }, { passive: true });
+    window.addEventListener('resize', () => { syncMode(); updateCurrentHourLink(); });
+    nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNav));
+    document.addEventListener('click', (event) => {
+      if (!window.matchMedia('(max-width: 980px)').matches) return;
+      if (!nav.contains(event.target) && !button.contains(event.target)) closeNav();
+    });
+    syncMode();
   }
 
   async function fetchJSON(path) {
@@ -350,6 +580,7 @@ const languages = [
     initLanguageSwitch();
     initDarkMode();
     initNav();
+    initMobileNav();
     initSearch();
     initCookieBanner();
     initParishFilter();
