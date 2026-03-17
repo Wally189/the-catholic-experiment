@@ -1,0 +1,17 @@
+[
+  {
+    "id": "evt_sample_walsingham",
+    "slug": "sample-walsingham-pilgrimage",
+    "event_name": "Sample Walsingham Pilgrimage",
+    "event_type": "pilgrimage",
+    "summary": "Prototype event entry for site testing.",
+    "venue_name": "Walsingham",
+    "town_city": "Walsingham",
+    "country": "United Kingdom",
+    "island_region": "England",
+    "start_datetime": "2026-08-15T10:00:00+01:00",
+    "end_datetime": "2026-08-15T17:00:00+01:00",
+    "timezone": "Europe/London",
+    "status": "published"
+  }
+]

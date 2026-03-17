@@ -1,0 +1,12 @@
+[
+  {
+    "id": "med_independent_catholic_news",
+    "slug": "independent-catholic-news",
+    "outlet_name": "Independent Catholic News",
+    "media_type": "news_site",
+    "summary": "Catholic news and notices across Britain and Ireland.",
+    "website_url": "https://www.indcatholicnews.com/",
+    "trust_level": "independent_catholic_project",
+    "status": "published"
+  }
+]

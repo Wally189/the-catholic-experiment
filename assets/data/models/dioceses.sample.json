@@ -1,0 +1,13 @@
+[
+  {
+    "id": "dio_clifton",
+    "slug": "clifton",
+    "diocese_name": "Diocese of Clifton",
+    "type": "diocese",
+    "country": "United Kingdom",
+    "island_region": "England",
+    "rite": "latin",
+    "website_url": "https://cliftondiocese.com/",
+    "status": "published"
+  }
+]

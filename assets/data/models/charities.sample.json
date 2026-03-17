@@ -1,0 +1,12 @@
+[
+  {
+    "id": "char_cafod",
+    "slug": "cafod",
+    "charity_name": "CAFOD",
+    "scope": "national",
+    "summary": "Official aid agency of the Catholic Church in England and Wales.",
+    "website_url": "https://cafod.org.uk/",
+    "trust_level": "bishops_conference",
+    "status": "published"
+  }
+]

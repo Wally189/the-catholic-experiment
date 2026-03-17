@@ -1,0 +1,37 @@
+{
+  "posts": [
+    {
+      "id": "rule-of-life",
+      "title": "Why I Started a Rule of Life",
+      "excerpt": "A rule of life is less a prison than a trellis: it gives shape so that grace may grow in ordinary time.",
+      "date": "2026-03-01",
+      "category": "Faith & Formation",
+      "approvedComments": [
+        {
+          "author": "M.",
+          "date": "2026-03-03",
+          "text": "This feels grounded and honest. The gardening image of a trellis is especially strong."
+        }
+      ],
+      "content": "<p class=\"dropcap\">There comes a point when a person realises that drift has a cost. Not merely lost time, but a thinning out of purpose. A rule of life, approached humbly, can become a pattern that steadies the soul and makes room for prayer, work, and charity without theatricality.</p><p>This project is not a grand manifesto. It is an attempt to put habits, duties, and hopes into a shape that can be lived in the ordinary weather of the year.</p><blockquote>Order does not guarantee holiness. It does, however, remove some of the needless obstacles to it.</blockquote><p>Much of modern life encourages permanent improvisation. The older Christian instinct is gentler and wiser: establish rhythm, return to it, repent when you fail, and begin again.</p>"
+    },
+    {
+      "id": "household-stewardship",
+      "title": "Budgeting as an Act of Stewardship",
+      "excerpt": "Budgets are not only spreadsheets. Properly understood, they are moral documents that reveal what we fear, what we value, and what we are preparing for.",
+      "date": "2026-02-16",
+      "category": "Household & Budgeting",
+      "approvedComments": [],
+      "content": "<p class=\"dropcap\">To budget well is not to worship money. It is to tell the truth about limits. Stewardship begins where fantasy ends and responsibility takes its place.</p><p>A Catholic approach to household budgeting need not sound pious in every line. It is enough that it be prudent, honest, and generous where it can be.</p><p>The practical work matters: naming expenses, reducing waste, planning for feast and famine, and making decisions before panic makes them for you.</p>"
+    },
+    {
+      "id": "parish-belonging",
+      "title": "Parish Belonging in an Age of Drift",
+      "excerpt": "It is easier to consume religious content than to belong to a parish. But Christianity was never intended to be lived as a private feed.",
+      "date": "2026-01-10",
+      "category": "Community & Relationships",
+      "approvedComments": [],
+      "content": "<p class=\"dropcap\">Belonging is demanding. It asks for attendance, patience, and the willingness to encounter ordinary people in ordinary places. The parish remains one of the few institutions where the successful and the struggling may yet kneel side by side.</p><p>That is one reason why parish life matters: it trains the soul away from choice-as-identity and towards fidelity-as-love.</p>"
+    }
+  ]
+}

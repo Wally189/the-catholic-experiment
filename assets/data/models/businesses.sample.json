@@ -1,0 +1,15 @@
+[
+  {
+    "id": "biz_st_brigid_books_dublin",
+    "slug": "st-brigid-books-dublin",
+    "business_name": "St Brigid Books",
+    "short_description": "A Catholic bookshop serving Dublin and beyond.",
+    "category": "books",
+    "town_city": "Dublin",
+    "country": "Ireland",
+    "island_region": "Republic of Ireland",
+    "website_url": "https://example.org",
+    "catholic_connection_statement": "Catholic bookshop with a focus on prayer, theology, and family formation.",
+    "status": "published"
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": "tool_universalis",
+    "slug": "universalis",
+    "tool_name": "Universalis",
+    "tool_type": "liturgy_tool",
+    "summary": "Mass readings and the Hours.",
+    "official_url": "https://universalis.com/",
+    "trust_level": "reputable_catholic_apostolate",
+    "status": "published"
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "id": "mem_0001",
+    "full_name": "Jane Example",
+    "confirmation_name": "Brigid",
+    "email": "jane@example.org",
+    "town_city": "Galway",
+    "country": "Ireland",
+    "island_region": "Republic of Ireland",
+    "public_roll_opt_in": true,
+    "public_display_name": "Brigid",
+    "status": "approved"
+  }
+]

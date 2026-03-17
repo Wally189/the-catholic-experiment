@@ -1,0 +1,15 @@
+[
+  {
+    "id": "pil_knock_shrine",
+    "slug": "knock-shrine",
+    "site_name": "Knock Shrine",
+    "site_type": "shrine",
+    "summary": "A major Marian pilgrimage site in Ireland.",
+    "town_city": "Knock",
+    "country": "Ireland",
+    "island_region": "Republic of Ireland",
+    "latitude": 53.792,
+    "longitude": -8.921,
+    "status": "published"
+  }
+]

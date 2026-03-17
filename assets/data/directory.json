@@ -1,0 +1,138 @@
+{
+  "parishes": [
+    {
+      "name": "St Mary on the Quay",
+      "location": "Bristol",
+      "region": "England & Wales",
+      "postcodeArea": "BS",
+      "summary": "Sample parish listing for Bristol and Clifton diocese searches.",
+      "website": "https://cliftondiocese.com/",
+      "lat": 51.4545,
+      "lon": -2.5879
+    },
+    {
+      "name": "St Andrew's Cathedral",
+      "location": "Glasgow",
+      "region": "Scotland",
+      "postcodeArea": "G",
+      "summary": "Cathedral sample for Scottish searches and pilgrimage browsing.",
+      "website": "https://archedinburgh.org/",
+      "lat": 55.8642,
+      "lon": -4.2518
+    },
+    {
+      "name": "St Peter's Cathedral",
+      "location": "Belfast",
+      "region": "Northern Ireland",
+      "postcodeArea": "BT",
+      "summary": "Northern Ireland sample parish/cathedral listing.",
+      "website": "https://www.downandconnor.org/",
+      "lat": 54.5973,
+      "lon": -5.9301
+    },
+    {
+      "name": "St Eunan's Cathedral",
+      "location": "Letterkenny",
+      "region": "Ireland",
+      "postcodeArea": "F92",
+      "summary": "Sample Irish cathedral listing for Raphoe and Donegal related searches.",
+      "website": "https://www.raphoediocese.ie/",
+      "lat": 54.9538,
+      "lon": -7.734
+    },
+    {
+      "name": "St Mary & St Michael",
+      "location": "Douglas, Isle of Man",
+      "region": "Isle of Man",
+      "postcodeArea": "IM",
+      "summary": "Sample Isle of Man parish listing.",
+      "website": "https://www.dioceseofliverpool.co.uk/",
+      "lat": 54.1523,
+      "lon": -4.4861
+    },
+    {
+      "name": "St Thomas, St Helier",
+      "location": "Jersey",
+      "region": "Channel Islands",
+      "postcodeArea": "JE",
+      "summary": "Sample Channel Islands listing.",
+      "website": "https://www.portsmouthdiocese.org.uk/",
+      "lat": 49.1868,
+      "lon": -2.1066
+    }
+  ],
+  "businesses": [
+    {
+      "name": "St Anne's Bookshop",
+      "location": "Bristol",
+      "region": "England & Wales",
+      "postcodeArea": "BS",
+      "summary": "Books, devotional goods, parish gifts, catechetical basics.",
+      "website": "https://www.cbcew.org.uk/",
+      "lat": 51.4545,
+      "lon": -2.5879
+    },
+    {
+      "name": "Pilgrim Print Studio",
+      "location": "Edinburgh",
+      "region": "Scotland",
+      "postcodeArea": "EH",
+      "summary": "Design and print support for Catholic organisations and schools.",
+      "website": "https://www.bcos.org.uk/",
+      "lat": 55.9533,
+      "lon": -3.1883
+    },
+    {
+      "name": "Atlantic Craft & Candle",
+      "location": "Letterkenny",
+      "region": "Ireland",
+      "postcodeArea": "F92",
+      "summary": "Candles, domestic devotional items, and small gifts.",
+      "website": "https://www.catholicbishops.ie/",
+      "lat": 54.9538,
+      "lon": -7.734
+    }
+  ],
+  "pilgrimages": [
+    {
+      "name": "Walsingham",
+      "location": "Norfolk",
+      "region": "England & Wales",
+      "postcodeArea": "NR",
+      "summary": "National Marian shrine and pilgrimage destination.",
+      "website": "https://www.walsingham.org.uk/",
+      "lat": 52.9004,
+      "lon": 0.874
+    },
+    {
+      "name": "Knock Shrine",
+      "location": "County Mayo",
+      "region": "Ireland",
+      "postcodeArea": "F12",
+      "summary": "National shrine of Our Lady of Knock.",
+      "website": "https://www.knockshrine.ie/",
+      "lat": 53.788,
+      "lon": -8.9219
+    },
+    {
+      "name": "Iona Abbey",
+      "location": "Argyll & Bute",
+      "region": "Scotland",
+      "postcodeArea": "PA76",
+      "summary": "Historic pilgrimage and monastic site.",
+      "website": "https://www.historicenvironment.scot/visit-a-place/places/iona-abbey-and-nunnery/",
+      "lat": 56.3308,
+      "lon": -6.3996
+    },
+    {
+      "name": "Lindisfarne",
+      "location": "Northumberland",
+      "region": "England & Wales",
+      "postcodeArea": "TD15",
+      "summary": "Holy Island pilgrimage and monastic heritage.",
+      "website": "https://www.lindisfarne.org.uk/",
+      "lat": 55.6692,
+      "lon": -1.7891
+    }
+  ]
+}

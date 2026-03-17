@@ -1,0 +1,15 @@
+[
+  {
+    "id": "saint_st_columba",
+    "slug": "st-columba",
+    "saint_name": "Saint Columba",
+    "feast_day_mmdd": "06-09",
+    "patronage_summary": "Missionary abbot and evangeliser of the islands.",
+    "associated_regions": [
+      "Scotland",
+      "Ireland"
+    ],
+    "summary": "Linked to Iona and the spread of Christianity through monastic witness.",
+    "status": "published"
+  }
+]

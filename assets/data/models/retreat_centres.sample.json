@@ -1,0 +1,15 @@
+[
+  {
+    "id": "ret_minsteracres",
+    "slug": "minsteracres-retreat-centre",
+    "centre_name": "Minsteracres Retreat Centre",
+    "centre_type": "retreat_house",
+    "town_city": "Consett",
+    "country": "United Kingdom",
+    "island_region": "England",
+    "latitude": 54.8402,
+    "longitude": -1.9803,
+    "website_url": "https://www.minsteracres.org/",
+    "status": "published"
+  }
+]

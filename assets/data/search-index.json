@@ -1,0 +1,341 @@
+[
+  {
+    "url": "index.html",
+    "title": "Home",
+    "section": "Home",
+    "description": "Overview of the six pillars, liturgical rhythm, and the purpose of The Catholic Experiment.",
+    "keywords": "catholic experiment six pillars faith work budgeting community preparedness renewal"
+  },
+  {
+    "url": "about.html",
+    "title": "About the Experiment",
+    "section": "About",
+    "description": "Purpose, tone, and six-pillar structure of the project.",
+    "keywords": "about purpose catholic experiment six pillars rule of life"
+  },
+  {
+    "url": "resources.html",
+    "title": "Resources",
+    "section": "Resources",
+    "description": "Books, templates, habits, and practical tools.",
+    "keywords": "resources books templates budgeting prayer checklist"
+  },
+  {
+    "url": "contact.html",
+    "title": "Contact",
+    "section": "Contact",
+    "description": "A restrained contact path with a simple contact path.",
+    "keywords": "contact form email"
+  },
+  {
+    "url": "newsletter.html",
+    "title": "Newsletter",
+    "section": "Newsletter",
+    "description": "Occasional updates and seasonal notes sign-up page.",
+    "keywords": "newsletter subscribe email updates"
+  },
+  {
+    "url": "faith-formation.html",
+    "title": "Faith & Formation",
+    "section": "Pillar",
+    "description": "Prayer, study, discipline, and the quiet forming of the soul.",
+    "keywords": "Faith & Formation pillar catholic life Prayer, study, discipline, and the quiet forming of the soul."
+  },
+  {
+    "url": "vocation-work.html",
+    "title": "Vocation & Work",
+    "section": "Pillar",
+    "description": "Purposeful labour, craftsmanship, and the sanctification of effort.",
+    "keywords": "Vocation & Work pillar catholic life Purposeful labour, craftsmanship, and the sanctification of effort."
+  },
+  {
+    "url": "household-budgeting.html",
+    "title": "Household & Budgeting",
+    "section": "Pillar",
+    "description": "Domestic order, prudent budgeting, and the faithful use of resources.",
+    "keywords": "Household & Budgeting pillar catholic life Domestic order, prudent budgeting, and the faithful use of resources."
+  },
+  {
+    "url": "community-relationships.html",
+    "title": "Community & Relationships",
+    "section": "Pillar",
+    "description": "Belonging, service, and the duties we owe to one another.",
+    "keywords": "Community & Relationships pillar catholic life Belonging, service, and the duties we owe to one another."
+  },
+  {
+    "url": "health-preparedness.html",
+    "title": "Health & Preparedness",
+    "section": "Pillar",
+    "description": "Resilience, embodied life, and responsible planning.",
+    "keywords": "Health & Preparedness pillar catholic life Resilience, embodied life, and responsible planning."
+  },
+  {
+    "url": "rest-renewal.html",
+    "title": "Rest & Renewal",
+    "section": "Pillar",
+    "description": "Sabbath, leisure, silence, and the recovery of right proportion.",
+    "keywords": "Rest & Renewal pillar catholic life Sabbath, leisure, silence, and the recovery of right proportion."
+  },
+  {
+    "url": "prayer-rhythm.html",
+    "title": "Prayer Rhythm",
+    "section": "Faith & Formation",
+    "description": "A daily rhythm of prayer need not be dramatic to be faithful. The point is not performance but return: morning offering, pauses of recollect",
+    "keywords": "Prayer Rhythm Faith & Formation"
+  },
+  {
+    "url": "saints-examples.html",
+    "title": "Saints & Examples",
+    "section": "Faith & Formation",
+    "description": "The saints are not decorative additions to the Christian life. They are proof that grace takes root in every kind of temperament, trade, and",
+    "keywords": "Saints & Examples Faith & Formation"
+  },
+  {
+    "url": "work-as-vocation.html",
+    "title": "Work as Vocation",
+    "section": "Vocation & Work",
+    "description": "Vocation in work is not limited to grand careers. It often appears in the conscientious answering of duty, in craftsmanship, in honesty, and",
+    "keywords": "Work as Vocation Vocation & Work"
+  },
+  {
+    "url": "craft-excellence.html",
+    "title": "Craft & Excellence",
+    "section": "Vocation & Work",
+    "description": "There is something deeply Christian about making things carefully. Precision, patience, and beauty resist the culture of disposability. The ",
+    "keywords": "Craft & Excellence Vocation & Work"
+  },
+  {
+    "url": "budgeting-stewardship.html",
+    "title": "Budgeting as Stewardship",
+    "section": "Household & Budgeting",
+    "description": "A household budget can be an instrument of peace. It names reality, prevents self-deception, and gives shape to prudence. It also reveals wh",
+    "keywords": "Budgeting as Stewardship Household & Budgeting"
+  },
+  {
+    "url": "household-order.html",
+    "title": "Household Order",
+    "section": "Household & Budgeting",
+    "description": "Domestic order is more than tidiness. It is the set of rhythms by which a home supports rather than drains its people: meal planning, paper ",
+    "keywords": "Household Order Household & Budgeting"
+  },
+  {
+    "url": "parish-belonging.html",
+    "title": "Parish & Belonging",
+    "section": "Community & Relationships",
+    "description": "To belong to a parish is to accept the discipline of proximity. It means showing up, learning names, bearing inconveniences, and discovering",
+    "keywords": "Parish & Belonging Community & Relationships"
+  },
+  {
+    "url": "hospitality-charity.html",
+    "title": "Hospitality & Charity",
+    "section": "Community & Relationships",
+    "description": "Hospitality is not limited to dinner parties. It includes ordinary availability, attentiveness, and the willingness to make room for others ",
+    "keywords": "Hospitality & Charity Community & Relationships"
+  },
+  {
+    "url": "stability-preparedness.html",
+    "title": "Stability & Preparedness",
+    "section": "Health & Preparedness",
+    "description": "Stability grows when foreseeable risks are reduced. Preparedness can include basic emergency plans, a will, insurance awareness, duplicate r",
+    "keywords": "Stability & Preparedness Health & Preparedness"
+  },
+  {
+    "url": "bodily-care.html",
+    "title": "Bodily Care",
+    "section": "Health & Preparedness",
+    "description": "The body is not an inconvenience to the spiritual life. Sleep, walking, posture, nourishment, and appropriate medical care shape how well a ",
+    "keywords": "Bodily Care Health & Preparedness"
+  },
+  {
+    "url": "sabbath-rhythm.html",
+    "title": "Sabbath Rhythm",
+    "section": "Rest & Renewal",
+    "description": "One day must not be consumed by productivity alone. Sabbath reminds us that we are creatures before we are output. Worship, rest, family lif",
+    "keywords": "Sabbath Rhythm Rest & Renewal"
+  },
+  {
+    "url": "beauty-leisure.html",
+    "title": "Beauty & Leisure",
+    "section": "Rest & Renewal",
+    "description": "Beauty is not an extra for the already comfortable. It is one of the ways the soul is recalled to gratitude. Leisure rightly understood incl",
+    "keywords": "Beauty & Leisure Rest & Renewal"
+  },
+  {
+    "url": "privacy.html",
+    "title": "Privacy Policy",
+    "section": "Legal",
+    "description": "This privacy policy is written for a broad UK and Ireland audience and covers contact forms, newsletter sign-up, consent-based analytics, and moderated submissions.",
+    "keywords": "Privacy Policy privacy cookies gdpr accessibility terms"
+  },
+  {
+    "url": "cookies.html",
+    "title": "Cookie Policy",
+    "section": "Legal",
+    "description": "This cookie policy distinguishes strictly necessary cookies from optional analytics or engagement cookies. The banner defaults to no optional cookies until a visitor chooses.",
+    "keywords": "Cookie Policy privacy cookies gdpr accessibility terms"
+  },
+  {
+    "url": "terms.html",
+    "title": "Terms of Use",
+    "section": "Legal",
+    "description": "The terms page sets expectations around the informational nature of the content, respectful use of comment areas, intellectual property in original material, and the absence of liability for reliance on general guidance.",
+    "keywords": "Terms of Use privacy cookies gdpr accessibility terms"
+  },
+  {
+    "url": "data-protection.html",
+    "title": "Data Protection",
+    "section": "Legal",
+    "description": "This page gathers together the site\u2019s data-protection commitments in a simpler explanatory form, pointing visitors towards privacy details, cookie choices, and rights information.",
+    "keywords": "Data Protection privacy cookies gdpr accessibility terms"
+  },
+  {
+    "url": "accessibility.html",
+    "title": "Accessibility Statement",
+    "section": "Legal",
+    "description": "This accessibility statement sets out the current measures in place, recognised limitations, and a clear route for feedback. It also notes dark mode, keyboard navigation, reduced motion handling, and semantic structure.",
+    "keywords": "Accessibility Statement privacy cookies gdpr accessibility terms"
+  },
+  {
+    "url": "admin.html",
+    "title": "Site Steward",
+    "section": "Admin",
+    "description": "Prototype steward panel for comment approval and JSON export.",
+    "keywords": "admin cms comments moderation"
+  },
+  {
+    "title": "Join the Experiment",
+    "description": "Make a simple commitment and sign up for occasional prompts.",
+    "keywords": "join experiment signup commitment",
+    "url": "join.html",
+    "section": "Explore"
+  },
+  {
+    "title": "Tools",
+    "description": "Catholic tools, apps, bishops conferences, and Vatican references.",
+    "keywords": "universalis hallow vatican bishops catechism tools",
+    "url": "tools.html",
+    "section": "Explore"
+  },
+  {
+    "title": "Catholic Business Directory",
+    "description": "Prototype directory for Catholic businesses by place and category.",
+    "keywords": "business directory catholic businesses bristol ireland scotland",
+    "url": "directory.html",
+    "section": "Explore"
+  },
+  {
+    "title": "Find a Diocese",
+    "url": "find-diocese.html",
+    "summary": "A diocesan directory for Britain and Ireland.",
+    "tags": [
+      "diocese",
+      "directory",
+      "explore"
+    ]
+  },
+  {
+    "title": "Find a Parish",
+    "url": "find-parish.html",
+    "summary": "Postcode-first parish finder concept with parish data scaffold.",
+    "tags": [
+      "parish",
+      "mass",
+      "postcode"
+    ]
+  },
+  {
+    "title": "Catholic Media",
+    "url": "catholic-media.html",
+    "summary": "Catholic media and reporting directory.",
+    "tags": [
+      "media",
+      "news",
+      "podcast"
+    ]
+  },
+  {
+    "title": "Catholic Charities",
+    "url": "catholic-charities.html",
+    "summary": "Charity and volunteering hub.",
+    "tags": [
+      "charity",
+      "alms",
+      "volunteering"
+    ]
+  },
+  {
+    "title": "Vocations",
+    "url": "vocations.html",
+    "summary": "Discernment and vocational pathways.",
+    "tags": [
+      "vocation",
+      "priesthood",
+      "religious life"
+    ]
+  },
+  {
+    "title": "Retreat Centres",
+    "url": "retreat-centres.html",
+    "summary": "Retreat houses and monasteries across these islands.",
+    "tags": [
+      "retreat",
+      "monastery",
+      "renewal"
+    ]
+  },
+  {
+    "title": "Catholic Events",
+    "url": "catholic-events.html",
+    "summary": "Pilgrimages, talks, vigils, and conferences.",
+    "tags": [
+      "events",
+      "calendar"
+    ]
+  },
+  {
+    "title": "Study the Faith",
+    "url": "study-the-faith.html",
+    "summary": "Trusted pathways for prayer, catechism, scripture, and saints.",
+    "tags": [
+      "faith",
+      "formation",
+      "prayer",
+      "saints"
+    ]
+  },
+  {
+    "title": "Catholic Britain & Ireland",
+    "url": "catholic-britain-ireland.html",
+    "summary": "Big-map and regional-hub concept for the whole archipelago.",
+    "tags": [
+      "map",
+      "regions",
+      "britain",
+      "ireland"
+    ]
+  },
+  {
+    "title": "Content model",
+    "url": "content-model.html",
+    "summary": "Pass 1 and Pass 2 data-model notes and sample collections.",
+    "tags": [
+      "schema",
+      "data model",
+      "build notes"
+    ]
+  },
+  {
+    "url": "businesses.html",
+    "title": "Catholic Businesses",
+    "section": "Explore",
+    "description": "A directory of Catholic businesses across Britain and Ireland.",
+    "keywords": "catholic businesses directory uk ireland"
+  },
+  {
+    "url": "pilgrimage-map.html",
+    "title": "Pilgrimage Map",
+    "section": "Explore",
+    "description": "Pilgrimage places and routes across Britain and Ireland.",
+    "keywords": "pilgrimage map shrines routes britain ireland"
+  }
+]

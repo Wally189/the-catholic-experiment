@@ -1,0 +1,16 @@
+[
+  {
+    "id": "par_st_nicholas_tolentino",
+    "slug": "st-nicholas-tolentino-bristol",
+    "parish_name": "St Nicholas of Tolentino",
+    "diocese_id": "dio_clifton",
+    "town_city": "Bristol",
+    "country": "United Kingdom",
+    "island_region": "England",
+    "postcode": "BS5 0RE",
+    "latitude": 51.4592,
+    "longitude": -2.5725,
+    "website_url": "https://tolentino.org.uk/",
+    "status": "published"
+  }
+]
