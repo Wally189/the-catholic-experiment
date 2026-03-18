@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thecatholicexperiment.local/schemas/jurisdictions.schema.json",
+  "title": "Jurisdiction",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": true,
+    "required": ["id", "name", "slug", "type", "country_scope", "verification_status", "sources"],
+    "properties": {
+      "id": { "type": "string" },
+      "name": { "type": "string" },
+      "slug": { "type": "string" },
+      "type": { "type": "string", "enum": ["episcopal_conference", "ordinariate", "eparchy", "other"] },
+      "country_scope": { "$ref": "entity-common.schema.json#/$defs/stringList" },
+      "website_url": { "type": "string", "format": "uri" },
+      "summary": { "type": "string" },
+      "search_terms": { "$ref": "entity-common.schema.json#/$defs/stringList" },
+      "verification_status": { "$ref": "entity-common.schema.json#/$defs/verification" },
+      "sources": {
+        "type": "array",
+        "items": { "$ref": "entity-common.schema.json#/$defs/source" },
+        "minItems": 1
+      }
+    }
+  }
+}

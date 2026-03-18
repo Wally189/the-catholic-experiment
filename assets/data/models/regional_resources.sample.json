@@ -1,0 +1,29 @@
+{
+  "id": "orkney-quick-links",
+  "region": "Orkney",
+  "title": "Orkney quick links",
+  "description": "Island-first routes for Catholic discovery in Orkney, including the regional hub and diocesan-path guidance.",
+  "keywords": [
+    "orkney",
+    "catholic",
+    "parish",
+    "diocese",
+    "islands"
+  ],
+  "url": "catholic-britain-ireland.html#orkney-and-shetland",
+  "section": "Region",
+  "contexts": [
+    "home",
+    "hub"
+  ],
+  "cardTitle": "Orkney",
+  "cardSummary": "Start with the regional hub, then use parish and diocesan routes suited to a remote island context.",
+  "primaryLink": {
+    "label": "Open Orkney hub",
+    "url": "catholic-britain-ireland.html#orkney-and-shetland"
+  },
+  "secondaryLink": {
+    "label": "Check diocesan path",
+    "url": "find-diocese.html"
+  }
+}

@@ -1,0 +1,1855 @@
+[
+  {
+    "id": "diocese-archdiocese-of-birmingham",
+    "name": "Archdiocese of Birmingham",
+    "slug": "archdiocese-of-birmingham",
+    "short_name": "Birmingham",
+    "type": "archdiocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://www.birminghamdiocese.org.uk/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/birmingham/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The Archdiocese of Birmingham is divided into the three Pastoral Areas of Birmingham, Kidderminster and Worcester.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Birmingham",
+      "Archdiocese of Birmingham"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Birmingham profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/birmingham/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Archdiocese of Birmingham",
+        "url": "https://www.birminghamdiocese.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-archdiocese-of-liverpool",
+    "name": "Archdiocese of Liverpool",
+    "slug": "archdiocese-of-liverpool",
+    "short_name": "Liverpool",
+    "type": "archdiocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://www.liverpoolcatholic.org.uk/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/liverpool/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The Archdiocese of Liverpool covers the city itself and the surrounding areas including Wigan, St Helens, Southport and the Isle of Man.",
+    "islands": [
+      "Isle of Man"
+    ],
+    "verification_status": "trusted",
+    "search_terms": [
+      "Liverpool",
+      "Archdiocese of Liverpool",
+      "Isle of Man"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Liverpool profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/liverpool/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Archdiocese of Liverpool",
+        "url": "https://www.cbcew.org.uk/home/dioceses/liverpool/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-archdiocese-of-southwark",
+    "name": "Archdiocese of Southwark",
+    "slug": "archdiocese-of-southwark",
+    "short_name": "Southwark",
+    "type": "archdiocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "http://www.rcsouthwark.co.uk/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/southwark/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The Archdiocese of Southwark covers the London boroughs south of the Thames, the County of Kent and the Medway Unitary Authority.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Southwark",
+      "Archdiocese of Southwark"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Southwark profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/southwark/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Archdiocese of Southwark",
+        "url": "http://www.rcsouthwark.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-archdiocese-of-westminster",
+    "name": "Archdiocese of Westminster",
+    "slug": "archdiocese-of-westminster",
+    "short_name": "Westminster",
+    "type": "archdiocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://rcdow.org.uk/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/westminster/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "Home to Westminster Cathedral, the mother church for Catholics in England and Wales, the Diocese of Westminster has 214 parishes.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Westminster",
+      "Archdiocese of Westminster"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Westminster profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/westminster/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Archdiocese of Westminster",
+        "url": "https://rcdow.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-arundel-and-brighton",
+    "name": "Diocese of Arundel and Brighton",
+    "slug": "diocese-of-arundel-and-brighton",
+    "short_name": "Arundel and Brighton",
+    "type": "diocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://www.dabnet.org/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/arundel-and-brighton/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The Diocese of Arundel and Brighton serves the counties of Sussex and those parts of Surrey outside the Greater London Boroughs.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Arundel and Brighton",
+      "Diocese of Arundel and Brighton"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Arundel and Brighton profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/arundel-and-brighton/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Arundel and Brighton",
+        "url": "https://www.dabnet.org/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-brentwood",
+    "name": "Diocese of Brentwood",
+    "slug": "diocese-of-brentwood",
+    "short_name": "Brentwood",
+    "type": "diocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://www.dioceseofbrentwood.net/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/brentwood/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "Official diocesan route for England.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Brentwood",
+      "Diocese of Brentwood"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Brentwood profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/brentwood/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Brentwood",
+        "url": "https://www.dioceseofbrentwood.net/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-clifton",
+    "name": "Diocese of Clifton",
+    "slug": "diocese-of-clifton",
+    "short_name": "Clifton",
+    "type": "diocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://cliftondiocese.com/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/clifton/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The Diocese of Clifton covers the West of England and includes the City and County of Bristol, the counties of Gloucestershire, Somerset, Wiltshire, North Somerset, South Gloucestershire and Bath and North East Somerset.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Clifton",
+      "Diocese of Clifton"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Clifton profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/clifton/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Clifton",
+        "url": "https://www.cbcew.org.uk/home/dioceses/clifton/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-east-anglia",
+    "name": "Diocese of East Anglia",
+    "slug": "diocese-of-east-anglia",
+    "short_name": "East Anglia",
+    "type": "diocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://www.rcdea.org.uk/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/east-anglia/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The Diocese of East Anglia spans the Counties of Norfolk, Suffolk, Cambridgeshire and the Unitary Authority of Peterborough.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "East Anglia",
+      "Diocese of East Anglia"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "East Anglia profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/east-anglia/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of East Anglia",
+        "url": "https://www.rcdea.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-hallam",
+    "name": "Diocese of Hallam",
+    "slug": "diocese-of-hallam",
+    "short_name": "Hallam",
+    "type": "diocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://hallam-diocese.com/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/hallam/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The Diocese of Hallam was formed in May 1980 after the division of the Dioceses of Leeds and Nottingham.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Hallam",
+      "Diocese of Hallam"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Hallam profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/hallam/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Hallam",
+        "url": "https://www.cbcew.org.uk/home/dioceses/hallam/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-hexham-and-newcastle",
+    "name": "Diocese of Hexham and Newcastle",
+    "slug": "diocese-of-hexham-and-newcastle",
+    "short_name": "Hexham and Newcastle",
+    "type": "diocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://diocesehn.org.uk/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/hexham-and-newcastle/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The Diocese of Hexham and Newcastle covers a large part of the North East including the counties of Northumberland, Tyne and Wear and Durham.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Hexham and Newcastle",
+      "Diocese of Hexham and Newcastle"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Hexham and Newcastle profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/hexham-and-newcastle/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Hexham and Newcastle",
+        "url": "https://diocesehn.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-lancaster",
+    "name": "Diocese of Lancaster",
+    "slug": "diocese-of-lancaster",
+    "short_name": "Lancaster",
+    "type": "diocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://www.lrcd.org.uk/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/lancaster/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The Diocese of Lancaster extends along the west of England from the Ribble River in the south of Preston to the Scottish border, comprising the counties of Cumbria and much of Lancashire.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Lancaster",
+      "Diocese of Lancaster"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Lancaster profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/lancaster/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Lancaster",
+        "url": "https://www.cbcew.org.uk/home/dioceses/lancaster/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-leeds",
+    "name": "Diocese of Leeds",
+    "slug": "diocese-of-leeds",
+    "short_name": "Leeds",
+    "type": "diocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "http://www.dioceseofleeds.org.uk/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/leeds/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The Diocese of Leeds comprises the whole of West Yorkshire together with parishes in the East Riding, North Yorkshire, Greater Manchester and Lancashire.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Leeds",
+      "Diocese of Leeds"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Leeds profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/leeds/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Leeds",
+        "url": "http://www.dioceseofleeds.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-middlesbrough",
+    "name": "Diocese of Middlesbrough",
+    "slug": "diocese-of-middlesbrough",
+    "short_name": "Middlesbrough",
+    "type": "diocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "http://middlesbrough-diocese.org.uk/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/middlesbrough/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The Diocese of Middlesbrough consists of the boroughs of Middlesbrough, Redcar and Cleveland, Stockton on Tees (south of the river), the cities of Kingston upon Hull and York, East Yorkshire and most of North Yorkshire.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Middlesbrough",
+      "Diocese of Middlesbrough"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Middlesbrough profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/middlesbrough/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Middlesbrough",
+        "url": "http://middlesbrough-diocese.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-northampton",
+    "name": "Diocese of Northampton",
+    "slug": "diocese-of-northampton",
+    "short_name": "Northampton",
+    "type": "diocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://northamptondiocese.org/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/northampton/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The Diocese of Northampton consists of the counties of Bedford, Buckingham and Northampton. The town of Slough also falls within the diocesan boundary.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Northampton",
+      "Diocese of Northampton"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Northampton profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/northampton/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Northampton",
+        "url": "https://www.cbcew.org.uk/home/dioceses/northampton/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-nottingham",
+    "name": "Diocese of Nottingham",
+    "slug": "diocese-of-nottingham",
+    "short_name": "Nottingham",
+    "type": "diocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "http://www.dioceseofnottingham.uk/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/nottingham/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The Diocese of Nottingham was founded in 1850 and covers the counties of Nottinghamshire, Derbyshire, Leicestershire and Rutland, and Lincolnshire.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Nottingham",
+      "Diocese of Nottingham"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Nottingham profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/nottingham/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Nottingham",
+        "url": "http://www.dioceseofnottingham.uk/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-plymouth",
+    "name": "Diocese of Plymouth",
+    "slug": "diocese-of-plymouth",
+    "short_name": "Plymouth",
+    "type": "diocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://www.plymouth-diocese.org.uk/",
+    "conference_profile_url": "https://www.cbcew.org.uk/plymouth-diocese/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The Diocese of Plymouth covers almost the whole of south-west England, serving Catholics in Devon, Dorset and Cornwall - including the Isles of Scilly.",
+    "islands": [
+      "Isles of Scilly"
+    ],
+    "verification_status": "trusted",
+    "search_terms": [
+      "Plymouth",
+      "Diocese of Plymouth",
+      "Isles of Scilly"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Plymouth profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/plymouth-diocese/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Plymouth",
+        "url": "https://www.cbcew.org.uk/plymouth-diocese/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-portsmouth",
+    "name": "Diocese of Portsmouth",
+    "slug": "diocese-of-portsmouth",
+    "short_name": "Portsmouth",
+    "type": "diocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://portsmouthdiocese.org.uk/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/portsmouth/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "Official diocesan route for England.",
+    "islands": [
+      "Isle of Wight",
+      "Channel Islands",
+      "Jersey",
+      "Guernsey"
+    ],
+    "verification_status": "trusted",
+    "search_terms": [
+      "Portsmouth",
+      "Diocese of Portsmouth",
+      "Isle of Wight",
+      "Channel Islands",
+      "Jersey",
+      "Guernsey"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Portsmouth profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/portsmouth/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Portsmouth",
+        "url": "https://www.cbcew.org.uk/home/dioceses/portsmouth/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-salford",
+    "name": "Diocese of Salford",
+    "slug": "diocese-of-salford",
+    "short_name": "Salford",
+    "type": "diocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://www.dioceseofsalford.org.uk/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/salford/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The diocese sits in the north-west of England and centres on the city of Salford, a large industrial centre that neighbours Manchester.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Salford",
+      "Diocese of Salford"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Salford profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/salford/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Salford",
+        "url": "https://www.cbcew.org.uk/home/dioceses/salford/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-shrewsbury",
+    "name": "Diocese of Shrewsbury",
+    "slug": "diocese-of-shrewsbury",
+    "short_name": "Shrewsbury",
+    "type": "diocese",
+    "country": "England",
+    "region": "England",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://www.dioceseofshrewsbury.org/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/shrewsbury/",
+    "summary": "Official diocesan route for England.",
+    "coverage_note": "The Diocese of Shrewsbury encompasses parts of the North West of England and parts of the West Midlands. The bishop is the Right Reverend Mark Davies.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Shrewsbury",
+      "Diocese of Shrewsbury"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Shrewsbury profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/shrewsbury/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Shrewsbury",
+        "url": "https://www.cbcew.org.uk/home/dioceses/shrewsbury/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-archdiocese-of-cashel-and-emly",
+    "name": "Archdiocese of Cashel and Emly",
+    "slug": "archdiocese-of-cashel-and-emly",
+    "short_name": "Cashel & Emly",
+    "type": "archdiocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/cashel-emly/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Archdiocese of Cashel and Emly serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Cashel & Emly",
+      "Archdiocese of Cashel and Emly"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Cashel & Emly profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/cashel-emly/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Archdiocese of Cashel and Emly",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-archdiocese-of-dublin",
+    "name": "Archdiocese of Dublin",
+    "slug": "archdiocese-of-dublin",
+    "short_name": "Dublin",
+    "type": "archdiocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/dublin/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Archdiocese of Dublin serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Dublin",
+      "Archdiocese of Dublin"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Dublin profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/dublin/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Archdiocese of Dublin",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-archdiocese-of-tuam",
+    "name": "Archdiocese of Tuam",
+    "slug": "archdiocese-of-tuam",
+    "short_name": "Tuam",
+    "type": "archdiocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/tuam/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Archdiocese of Tuam serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Tuam",
+      "Archdiocese of Tuam"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Tuam profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/tuam/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Archdiocese of Tuam",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-achonry",
+    "name": "Diocese of Achonry",
+    "slug": "diocese-of-achonry",
+    "short_name": "Achonry",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/achonry/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Achonry serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Achonry",
+      "Diocese of Achonry"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Achonry profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/achonry/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Achonry",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-ardagh-and-clonmacnoise",
+    "name": "Diocese of Ardagh and Clonmacnoise",
+    "slug": "diocese-of-ardagh-and-clonmacnoise",
+    "short_name": "Ardagh & Clonmacnoise",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/ardagh-clonmacnois/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Ardagh and Clonmacnoise serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Ardagh & Clonmacnoise",
+      "Diocese of Ardagh and Clonmacnoise"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Ardagh & Clonmacnoise profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/ardagh-clonmacnois/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Ardagh and Clonmacnoise",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-clogher",
+    "name": "Diocese of Clogher",
+    "slug": "diocese-of-clogher",
+    "short_name": "Clogher",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/clogher/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Clogher serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Clogher",
+      "Diocese of Clogher"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Clogher profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/clogher/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Clogher",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-clonfert",
+    "name": "Diocese of Clonfert",
+    "slug": "diocese-of-clonfert",
+    "short_name": "Clonfert",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/clonfert/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Clonfert serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Clonfert",
+      "Diocese of Clonfert"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Clonfert profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/clonfert/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Clonfert",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-cloyne",
+    "name": "Diocese of Cloyne",
+    "slug": "diocese-of-cloyne",
+    "short_name": "Cloyne",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/cloyne/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Cloyne serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Cloyne",
+      "Diocese of Cloyne"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Cloyne profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/cloyne/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Cloyne",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-cork-and-ross",
+    "name": "Diocese of Cork and Ross",
+    "slug": "diocese-of-cork-and-ross",
+    "short_name": "Cork & Ross",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/cork-ross/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Cork and Ross serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Cork & Ross",
+      "Diocese of Cork and Ross"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Cork & Ross profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/cork-ross/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Cork and Ross",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-elphin",
+    "name": "Diocese of Elphin",
+    "slug": "diocese-of-elphin",
+    "short_name": "Elphin",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/elphin/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Elphin serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Elphin",
+      "Diocese of Elphin"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Elphin profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/elphin/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Elphin",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-ferns",
+    "name": "Diocese of Ferns",
+    "slug": "diocese-of-ferns",
+    "short_name": "Ferns",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/ferns/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Ferns serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Ferns",
+      "Diocese of Ferns"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Ferns profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/ferns/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Ferns",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-galway-kilmacduagh-and-kilfenora",
+    "name": "Diocese of Galway, Kilmacduagh and Kilfenora",
+    "slug": "diocese-of-galway-kilmacduagh-and-kilfenora",
+    "short_name": "Galway, Kilmacduagh & Kilfenora",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/galway-kilmacduagh-kilfenora/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Galway, Kilmacduagh and Kilfenora serves Catholics through its official diocesan structures and parish network.",
+    "islands": [
+      "Aran Islands"
+    ],
+    "verification_status": "trusted",
+    "search_terms": [
+      "Galway, Kilmacduagh & Kilfenora",
+      "Diocese of Galway, Kilmacduagh and Kilfenora",
+      "Aran Islands"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Galway, Kilmacduagh & Kilfenora profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/galway-kilmacduagh-kilfenora/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Galway, Kilmacduagh and Kilfenora",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-kerry",
+    "name": "Diocese of Kerry",
+    "slug": "diocese-of-kerry",
+    "short_name": "Kerry",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/kerry/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Kerry serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Kerry",
+      "Diocese of Kerry"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Kerry profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/kerry/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Kerry",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-kildare-and-leighlin",
+    "name": "Diocese of Kildare and Leighlin",
+    "slug": "diocese-of-kildare-and-leighlin",
+    "short_name": "Kildare & Leighlin",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/kildare-leighlin/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Kildare and Leighlin serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Kildare & Leighlin",
+      "Diocese of Kildare and Leighlin"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Kildare & Leighlin profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/kildare-leighlin/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Kildare and Leighlin",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-killala",
+    "name": "Diocese of Killala",
+    "slug": "diocese-of-killala",
+    "short_name": "Killala",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/killala/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Killala serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Killala",
+      "Diocese of Killala"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Killala profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/killala/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Killala",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-killaloe",
+    "name": "Diocese of Killaloe",
+    "slug": "diocese-of-killaloe",
+    "short_name": "Killaloe",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/killaloe/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Killaloe serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Killaloe",
+      "Diocese of Killaloe"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Killaloe profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/killaloe/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Killaloe",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-kilmore",
+    "name": "Diocese of Kilmore",
+    "slug": "diocese-of-kilmore",
+    "short_name": "Kilmore",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/kilmore/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Kilmore serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Kilmore",
+      "Diocese of Kilmore"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Kilmore profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/kilmore/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Kilmore",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-limerick",
+    "name": "Diocese of Limerick",
+    "slug": "diocese-of-limerick",
+    "short_name": "Limerick",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/limerick/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Limerick serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Limerick",
+      "Diocese of Limerick"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Limerick profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/limerick/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Limerick",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-meath",
+    "name": "Diocese of Meath",
+    "slug": "diocese-of-meath",
+    "short_name": "Meath",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/meath/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Meath serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Meath",
+      "Diocese of Meath"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Meath profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/meath/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Meath",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-ossory",
+    "name": "Diocese of Ossory",
+    "slug": "diocese-of-ossory",
+    "short_name": "Ossory",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/ossory/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Ossory serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Ossory",
+      "Diocese of Ossory"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Ossory profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/ossory/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Ossory",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-raphoe",
+    "name": "Diocese of Raphoe",
+    "slug": "diocese-of-raphoe",
+    "short_name": "Raphoe",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/raphoe/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Raphoe serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Raphoe",
+      "Diocese of Raphoe"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Raphoe profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/raphoe/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Raphoe",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-waterford-and-lismore",
+    "name": "Diocese of Waterford and Lismore",
+    "slug": "diocese-of-waterford-and-lismore",
+    "short_name": "Waterford & Lismore",
+    "type": "diocese",
+    "country": "Ireland",
+    "region": "Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/waterford-lismore/",
+    "summary": "Official diocesan route for Ireland.",
+    "coverage_note": "Diocese of Waterford and Lismore serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Waterford & Lismore",
+      "Diocese of Waterford and Lismore"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Waterford & Lismore profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/waterford-lismore/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Waterford and Lismore",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-archdiocese-of-armagh",
+    "name": "Archdiocese of Armagh",
+    "slug": "archdiocese-of-armagh",
+    "short_name": "Armagh",
+    "type": "archdiocese",
+    "country": "Northern Ireland",
+    "region": "Northern Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/armagh/",
+    "summary": "Official diocesan route for Northern Ireland.",
+    "coverage_note": "Archdiocese of Armagh serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Armagh",
+      "Archdiocese of Armagh"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Armagh profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/armagh/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Archdiocese of Armagh",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-derry",
+    "name": "Diocese of Derry",
+    "slug": "diocese-of-derry",
+    "short_name": "Derry",
+    "type": "diocese",
+    "country": "Northern Ireland",
+    "region": "Northern Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/derry/",
+    "summary": "Official diocesan route for Northern Ireland.",
+    "coverage_note": "Diocese of Derry serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Derry",
+      "Diocese of Derry"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Derry profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/derry/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Derry",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-down-and-connor",
+    "name": "Diocese of Down and Connor",
+    "slug": "diocese-of-down-and-connor",
+    "short_name": "Down & Connor",
+    "type": "diocese",
+    "country": "Northern Ireland",
+    "region": "Northern Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/down-connor/",
+    "summary": "Official diocesan route for Northern Ireland.",
+    "coverage_note": "Diocese of Down and Connor serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Down & Connor",
+      "Diocese of Down and Connor"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Down & Connor profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/down-connor/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Down and Connor",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-dromore",
+    "name": "Diocese of Dromore",
+    "slug": "diocese-of-dromore",
+    "short_name": "Dromore",
+    "type": "diocese",
+    "country": "Northern Ireland",
+    "region": "Northern Ireland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-irish-bishops",
+    "cathedral_city": "",
+    "website_url": "https://www.catholicbi",
+    "conference_profile_url": "https://www.catholicbishops.ie/dioceses/dromore/",
+    "summary": "Official diocesan route for Northern Ireland.",
+    "coverage_note": "Diocese of Dromore serves Catholics through its official diocesan structures and parish network.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Dromore",
+      "Diocese of Dromore"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Dromore profile | Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/dioceses/dromore/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Dromore",
+        "url": "https://www.catholicbi"
+      }
+    ]
+  },
+  {
+    "id": "diocese-archdiocese-of-glasgow",
+    "name": "Archdiocese of Glasgow",
+    "slug": "archdiocese-of-glasgow",
+    "short_name": "Glasgow",
+    "type": "archdiocese",
+    "country": "Scotland",
+    "region": "Scotland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-bcos",
+    "cathedral_city": "",
+    "website_url": "https://rcag.org.uk/",
+    "conference_profile_url": "https://www.bcos.org.uk/",
+    "summary": "Official metropolitan route for Glasgow and surrounding districts.",
+    "coverage_note": "Covers Glasgow and surrounding communities in west central Scotland.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Glasgow",
+      "Archdiocese of Glasgow"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Bishops' Conference of Scotland",
+        "url": "https://www.bcos.org.uk/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Archdiocese of Glasgow",
+        "url": "https://rcag.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-archdiocese-of-st-andrews-and-edinburgh",
+    "name": "Archdiocese of St Andrews and Edinburgh",
+    "slug": "archdiocese-of-st-andrews-and-edinburgh",
+    "short_name": "St Andrews & Edinburgh",
+    "type": "archdiocese",
+    "country": "Scotland",
+    "region": "Scotland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-bcos",
+    "cathedral_city": "",
+    "website_url": "https://archedinburgh.org/",
+    "conference_profile_url": "https://www.bcos.org.uk/",
+    "summary": "Official metropolitan route for Edinburgh, Fife and the Borders.",
+    "coverage_note": "Covers Edinburgh, Fife, Falkirk, Stirling, the Borders and surrounding districts.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "St Andrews & Edinburgh",
+      "Archdiocese of St Andrews and Edinburgh"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Bishops' Conference of Scotland",
+        "url": "https://www.bcos.org.uk/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Archdiocese of St Andrews and Edinburgh",
+        "url": "https://archedinburgh.org/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-aberdeen",
+    "name": "Diocese of Aberdeen",
+    "slug": "diocese-of-aberdeen",
+    "short_name": "Aberdeen",
+    "type": "diocese",
+    "country": "Scotland",
+    "region": "Scotland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-bcos",
+    "cathedral_city": "",
+    "website_url": "https://www.dioceseofaberdeen.org/",
+    "conference_profile_url": "https://www.bcos.org.uk/",
+    "summary": "Official diocesan route for north-east Scotland, including Orkney and Shetland.",
+    "coverage_note": "Covers north-east Scotland, including Orkney and Shetland.",
+    "islands": [
+      "Orkney",
+      "Shetland"
+    ],
+    "verification_status": "trusted",
+    "search_terms": [
+      "Aberdeen",
+      "Diocese of Aberdeen",
+      "Orkney",
+      "Shetland"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Bishops' Conference of Scotland",
+        "url": "https://www.bcos.org.uk/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Aberdeen",
+        "url": "https://www.dioceseofaberdeen.org/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-argyll-and-the-isles",
+    "name": "Diocese of Argyll and the Isles",
+    "slug": "diocese-of-argyll-and-the-isles",
+    "short_name": "Argyll and the Isles",
+    "type": "diocese",
+    "country": "Scotland",
+    "region": "Scotland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-bcos",
+    "cathedral_city": "",
+    "website_url": "https://www.rcdai.org.uk/",
+    "conference_profile_url": "https://www.bcos.org.uk/",
+    "summary": "Official diocesan route for Argyll, Bute and the western islands.",
+    "coverage_note": "Covers the west Highlands and islands, including the Hebrides.",
+    "islands": [
+      "Inner Hebrides",
+      "Outer Hebrides"
+    ],
+    "verification_status": "trusted",
+    "search_terms": [
+      "Argyll and the Isles",
+      "Diocese of Argyll and the Isles",
+      "Inner Hebrides",
+      "Outer Hebrides"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Bishops' Conference of Scotland",
+        "url": "https://www.bcos.org.uk/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Argyll and the Isles",
+        "url": "https://www.rcdai.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-dunkeld",
+    "name": "Diocese of Dunkeld",
+    "slug": "diocese-of-dunkeld",
+    "short_name": "Dunkeld",
+    "type": "diocese",
+    "country": "Scotland",
+    "region": "Scotland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-bcos",
+    "cathedral_city": "",
+    "website_url": "https://dunkelddiocese.co.uk/",
+    "conference_profile_url": "https://www.bcos.org.uk/",
+    "summary": "Official diocesan route for Dundee, Angus and Perthshire.",
+    "coverage_note": "Covers Dundee, Angus, Perthshire and surrounding districts.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Dunkeld",
+      "Diocese of Dunkeld"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Bishops' Conference of Scotland",
+        "url": "https://www.bcos.org.uk/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Dunkeld",
+        "url": "https://dunkelddiocese.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-galloway",
+    "name": "Diocese of Galloway",
+    "slug": "diocese-of-galloway",
+    "short_name": "Galloway",
+    "type": "diocese",
+    "country": "Scotland",
+    "region": "Scotland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-bcos",
+    "cathedral_city": "",
+    "website_url": "https://www.gallowaydiocese.org.uk/",
+    "conference_profile_url": "https://www.bcos.org.uk/",
+    "summary": "Official diocesan route for south-west Scotland.",
+    "coverage_note": "Covers Ayrshire, Dumfries and Galloway and neighbouring districts.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Galloway",
+      "Diocese of Galloway"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Bishops' Conference of Scotland",
+        "url": "https://www.bcos.org.uk/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Galloway",
+        "url": "https://www.gallowaydiocese.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-motherwell",
+    "name": "Diocese of Motherwell",
+    "slug": "diocese-of-motherwell",
+    "short_name": "Motherwell",
+    "type": "diocese",
+    "country": "Scotland",
+    "region": "Scotland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-bcos",
+    "cathedral_city": "",
+    "website_url": "https://www.rcdom.org.uk/",
+    "conference_profile_url": "https://www.bcos.org.uk/",
+    "summary": "Official diocesan route for Lanarkshire and neighbouring communities.",
+    "coverage_note": "Covers Lanarkshire and neighbouring communities to the south and east of Glasgow.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Motherwell",
+      "Diocese of Motherwell"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Bishops' Conference of Scotland",
+        "url": "https://www.bcos.org.uk/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Motherwell",
+        "url": "https://www.rcdom.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-paisley",
+    "name": "Diocese of Paisley",
+    "slug": "diocese-of-paisley",
+    "short_name": "Paisley",
+    "type": "diocese",
+    "country": "Scotland",
+    "region": "Scotland",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-bcos",
+    "cathedral_city": "",
+    "website_url": "https://rcdop.org.uk/",
+    "conference_profile_url": "https://www.bcos.org.uk/",
+    "summary": "Official diocesan route for Renfrewshire and Inverclyde.",
+    "coverage_note": "Covers Renfrewshire, Inverclyde and nearby west-central Scottish communities.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Paisley",
+      "Diocese of Paisley"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Bishops' Conference of Scotland",
+        "url": "https://www.bcos.org.uk/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Paisley",
+        "url": "https://rcdop.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-archdiocese-of-cardiff-menevia",
+    "name": "Archdiocese of Cardiff-Menevia",
+    "slug": "archdiocese-of-cardiff-menevia",
+    "short_name": "Cardiff-Menevia",
+    "type": "archdiocese",
+    "country": "Wales",
+    "region": "Wales",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://rcadc.org/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/cardiff/",
+    "summary": "Official diocesan route for Wales.",
+    "coverage_note": "The Archdiocese of Cardiff-Menevia has several deaneries covering Cardiff, the Welsh valleys, Bridgend, Hereford, Newport, North Gwent, Pontypridd, Swansea, Carmarthen, Llandrindod wells, Haverfordwest and Port Talbot.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Cardiff-Menevia",
+      "Archdiocese of Cardiff-Menevia"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Cardiff-Menevia profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/cardiff/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Archdiocese of Cardiff-Menevia",
+        "url": "https://rcadc.org/"
+      }
+    ]
+  },
+  {
+    "id": "diocese-diocese-of-wrexham",
+    "name": "Diocese of Wrexham",
+    "slug": "diocese-of-wrexham",
+    "short_name": "Wrexham",
+    "type": "diocese",
+    "country": "Wales",
+    "region": "Wales",
+    "rite": "Roman Rite",
+    "jurisdiction_id": "jurisdiction-cbcew",
+    "cathedral_city": "",
+    "website_url": "https://www.rcdwxm.org.uk/",
+    "conference_profile_url": "https://www.cbcew.org.uk/home/dioceses/wrexham/",
+    "summary": "Official diocesan route for Wales.",
+    "coverage_note": "The Diocese of Wrexham covers North Wales - the areas surrounding Caernarfon, Colwyn Bay, Dolgellau, Flint, Rhyl and of course, Wrexham.",
+    "islands": [
+      "Anglesey"
+    ],
+    "verification_status": "trusted",
+    "search_terms": [
+      "Wrexham",
+      "Diocese of Wrexham",
+      "Anglesey"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Wrexham profile | Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/home/dioceses/wrexham/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Wrexham",
+        "url": "https://www.rcdwxm.org.uk/"
+      }
+    ]
+  }
+]

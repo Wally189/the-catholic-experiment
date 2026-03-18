@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thecatholicexperiment.local/schemas/parishes.schema.json",
+  "title": "Parish",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": true,
+    "required": ["id", "name", "slug", "country", "verification_status", "sources"],
+    "properties": {
+      "id": { "type": "string" },
+      "name": { "type": "string" },
+      "slug": { "type": "string" },
+      "parish_type": { "type": "string", "enum": ["parish", "cathedral", "pro_cathedral", "chaplaincy", "mission"] },
+      "diocese_id": { "type": "string" },
+      "country": { "type": "string" },
+      "region": { "type": "string" },
+      "locality": { "type": "string" },
+      "postcode": { "type": "string" },
+      "website_url": { "type": "string", "format": "uri" },
+      "summary": { "type": "string" },
+      "mass_times_url": { "type": "string", "format": "uri" },
+      "search_terms": { "$ref": "entity-common.schema.json#/$defs/stringList" },
+      "verification_status": { "$ref": "entity-common.schema.json#/$defs/verification" },
+      "sources": {
+        "type": "array",
+        "items": { "$ref": "entity-common.schema.json#/$defs/source" },
+        "minItems": 1
+      }
+    }
+  }
+}

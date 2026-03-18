@@ -1,0 +1,18 @@
+{
+  "name": "the-catholic-experiment",
+  "private": true,
+  "scripts": {
+    "import:dioceses": "node scripts/directory_cli.mjs import dioceses",
+    "import:parishes": "node scripts/directory_cli.mjs import parishes",
+    "import:businesses": "node scripts/directory_cli.mjs import businesses",
+    "import:organisations": "node scripts/directory_cli.mjs import organisations",
+    "import:schools": "node scripts/directory_cli.mjs import schools",
+    "import:places": "node scripts/directory_cli.mjs import places",
+    "import:directory": "node scripts/directory_cli.mjs import all",
+    "validate:directory": "node scripts/directory_cli.mjs validate",
+    "geocode:directory": "node scripts/directory_cli.mjs geocode",
+    "dedupe:directory": "node scripts/directory_cli.mjs dedupe",
+    "build:directory-search": "node scripts/directory_cli.mjs build-search",
+    "build:directory": "node scripts/directory_cli.mjs all"
+  }
+}

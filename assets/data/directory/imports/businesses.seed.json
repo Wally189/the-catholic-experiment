@@ -1,0 +1,22 @@
+[
+  {
+    "id": "business-cts-books",
+    "name": "Catholic Truth Society",
+    "slug": "catholic-truth-society",
+    "business_type": "publisher",
+    "country": "England",
+    "region": "London",
+    "locality": "London",
+    "website_url": "https://www.ctsbooks.org/",
+    "summary": "Catholic publisher and bookshop offering prayer books, catechetical resources, and spiritual reading.",
+    "verification_status": "trusted",
+    "search_terms": ["CTS Books", "Catholic Truth Society"],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "Catholic Truth Society",
+        "url": "https://www.ctsbooks.org/"
+      }
+    ]
+  }
+]

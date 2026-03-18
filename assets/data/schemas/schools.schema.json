@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thecatholicexperiment.local/schemas/schools.schema.json",
+  "title": "School",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": true,
+    "required": ["id", "name", "slug", "school_type", "country", "verification_status", "sources"],
+    "properties": {
+      "id": { "type": "string" },
+      "name": { "type": "string" },
+      "slug": { "type": "string" },
+      "school_type": { "type": "string", "enum": ["primary-school", "secondary-school", "independent-school", "college", "university", "other"] },
+      "diocese_id": { "type": "string" },
+      "country": { "type": "string" },
+      "region": { "type": "string" },
+      "locality": { "type": "string" },
+      "website_url": { "type": "string", "format": "uri" },
+      "summary": { "type": "string" },
+      "search_terms": { "$ref": "entity-common.schema.json#/$defs/stringList" },
+      "verification_status": { "$ref": "entity-common.schema.json#/$defs/verification" },
+      "sources": {
+        "type": "array",
+        "items": { "$ref": "entity-common.schema.json#/$defs/source" },
+        "minItems": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "jurisdiction-bcos",
+    "name": "Bishops' Conference of Scotland",
+    "slug": "bishops-conference-scotland",
+    "type": "episcopal_conference",
+    "country_scope": [
+      "Scotland"
+    ],
+    "website_url": "https://www.bcos.org.uk/",
+    "summary": "The bishops' conference serving Catholic dioceses in Scotland.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "BCOS",
+      "Scottish bishops"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Bishops' Conference of Scotland",
+        "url": "https://www.bcos.org.uk/"
+      }
+    ],
+    "entity_type": "jurisdiction",
+    "detail_url": "directory.html#jurisdiction-bcos"
+  },
+  {
+    "id": "jurisdiction-cbcew",
+    "name": "Catholic Bishops' Conference of England and Wales",
+    "slug": "catholic-bishops-conference-england-wales",
+    "type": "episcopal_conference",
+    "country_scope": [
+      "England",
+      "Wales"
+    ],
+    "website_url": "https://www.cbcew.org.uk/",
+    "summary": "The episcopal conference for Latin Catholic dioceses in England and Wales.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "CBCEW",
+      "England and Wales bishops"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Catholic Bishops' Conference of England and Wales",
+        "url": "https://www.cbcew.org.uk/"
+      }
+    ],
+    "entity_type": "jurisdiction",
+    "detail_url": "directory.html#jurisdiction-cbcew"
+  },
+  {
+    "id": "jurisdiction-irish-bishops",
+    "name": "Irish Catholic Bishops' Conference",
+    "slug": "irish-catholic-bishops-conference",
+    "type": "episcopal_conference",
+    "country_scope": [
+      "Ireland",
+      "Northern Ireland"
+    ],
+    "website_url": "https://www.catholicbishops.ie/",
+    "summary": "The bishops' conference for the Catholic Church on the island of Ireland.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Irish bishops",
+      "Catholic bishops Ireland"
+    ],
+    "sources": [
+      {
+        "authority": "episcopal-conference",
+        "title": "Irish Catholic Bishops' Conference",
+        "url": "https://www.catholicbishops.ie/"
+      }
+    ],
+    "entity_type": "jurisdiction",
+    "detail_url": "directory.html#jurisdiction-irish-bishops"
+  }
+]

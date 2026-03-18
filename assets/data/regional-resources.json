@@ -1,0 +1,242 @@
+[
+  {
+    "id": "orkney-quick-links",
+    "region": "Orkney",
+    "title": "Orkney quick links",
+    "description": "Island-first routes for Catholic discovery in Orkney, including the regional hub and diocesan-path guidance.",
+    "keywords": [
+      "orkney",
+      "catholic",
+      "parish",
+      "diocese",
+      "islands",
+      "northern isles"
+    ],
+    "url": "catholic-britain-ireland.html#orkney-and-shetland",
+    "section": "Region",
+    "contexts": [
+      "home",
+      "hub"
+    ],
+    "cardTitle": "Orkney",
+    "cardSummary": "Start with the regional hub, then use parish and diocesan routes suited to a remote island context.",
+    "primaryLink": {
+      "label": "Open Orkney hub",
+      "url": "catholic-britain-ireland.html#orkney-and-shetland"
+    },
+    "secondaryLink": {
+      "label": "Check diocesan path",
+      "url": "find-diocese.html"
+    }
+  },
+  {
+    "id": "isle-of-man-quick-links",
+    "region": "Isle of Man",
+    "title": "Isle of Man quick links",
+    "description": "Quick routes for Isle of Man Catholic life, including parish discovery and regional resources.",
+    "keywords": [
+      "isle of man",
+      "manx",
+      "catholic",
+      "parish",
+      "diocese",
+      "island"
+    ],
+    "url": "catholic-britain-ireland.html#isle-of-man",
+    "section": "Region",
+    "contexts": [
+      "home",
+      "hub"
+    ],
+    "cardTitle": "Isle of Man",
+    "cardSummary": "Use island-specific parish and directory routes for Catholic life on the Isle of Man.",
+    "primaryLink": {
+      "label": "Open Isle of Man hub",
+      "url": "catholic-britain-ireland.html#isle-of-man"
+    },
+    "secondaryLink": {
+      "label": "Find island parish routes",
+      "url": "find-parish.html"
+    }
+  },
+  {
+    "id": "channel-islands-quick-links",
+    "region": "Channel Islands / Jersey",
+    "title": "Channel Islands quick links",
+    "description": "Regional quick routes for Jersey and the wider Channel Islands, including parish, diocesan, and directory discovery.",
+    "keywords": [
+      "channel islands",
+      "jersey",
+      "guernsey",
+      "catholic",
+      "parish",
+      "diocese"
+    ],
+    "url": "catholic-britain-ireland.html#channel-islands-jersey",
+    "section": "Region",
+    "contexts": [
+      "home",
+      "hub"
+    ],
+    "cardTitle": "Channel Islands / Jersey",
+    "cardSummary": "Quick access to regional parish, diocesan, and directory paths for Jersey and the surrounding islands.",
+    "primaryLink": {
+      "label": "Open Channel Islands hub",
+      "url": "catholic-britain-ireland.html#channel-islands-jersey"
+    },
+    "secondaryLink": {
+      "label": "Browse island resources",
+      "url": "businesses.html"
+    }
+  },
+  {
+    "id": "shetland-quick-links",
+    "region": "Shetland",
+    "title": "Shetland quick links",
+    "description": "Northern-isles routes for Shetland, using diocesan and parish pathways rather than copied local listings.",
+    "keywords": [
+      "shetland",
+      "catholic",
+      "parish",
+      "diocese",
+      "islands",
+      "scotland"
+    ],
+    "url": "catholic-britain-ireland.html#orkney-and-shetland",
+    "section": "Region",
+    "contexts": [
+      "home",
+      "hub"
+    ],
+    "cardTitle": "Shetland",
+    "cardSummary": "Use the northern-isles hub, then follow official diocesan and parish routes for Shetland.",
+    "primaryLink": {
+      "label": "Open Shetland hub",
+      "url": "catholic-britain-ireland.html#orkney-and-shetland"
+    },
+    "secondaryLink": {
+      "label": "Find parish routes",
+      "url": "find-parish.html"
+    }
+  },
+  {
+    "id": "hebrides-quick-links",
+    "region": "Hebrides",
+    "title": "Hebrides quick links",
+    "description": "Island-aware Catholic routes for the Inner and Outer Hebrides through Scottish diocesan coverage and trusted parish search.",
+    "keywords": [
+      "hebrides",
+      "outer hebrides",
+      "inner hebrides",
+      "catholic",
+      "scotland",
+      "parish"
+    ],
+    "url": "catholic-britain-ireland.html#scotland",
+    "section": "Region",
+    "contexts": [
+      "home",
+      "hub"
+    ],
+    "cardTitle": "Hebrides",
+    "cardSummary": "Start with Scotland, then open diocesan and parish routes that cover the Hebridean islands.",
+    "primaryLink": {
+      "label": "Open Scotland hub",
+      "url": "catholic-britain-ireland.html#scotland"
+    },
+    "secondaryLink": {
+      "label": "Browse diocesan coverage",
+      "url": "find-diocese.html"
+    }
+  },
+  {
+    "id": "aran-islands-quick-links",
+    "region": "Aran Islands",
+    "title": "Aran Islands quick links",
+    "description": "Island-specific routes for Catholic life in the Aran Islands through Irish diocesan and education pathways.",
+    "keywords": [
+      "aran islands",
+      "aran",
+      "ireland",
+      "catholic",
+      "parish",
+      "diocese"
+    ],
+    "url": "catholic-britain-ireland.html#ireland",
+    "section": "Region",
+    "contexts": [
+      "home",
+      "hub"
+    ],
+    "cardTitle": "Aran Islands",
+    "cardSummary": "Open the Ireland hub first, then use official diocesan and parish routes serving the Aran Islands.",
+    "primaryLink": {
+      "label": "Open Ireland hub",
+      "url": "catholic-britain-ireland.html#ireland"
+    },
+    "secondaryLink": {
+      "label": "Find parish routes",
+      "url": "find-parish.html"
+    }
+  },
+  {
+    "id": "anglesey-quick-links",
+    "region": "Anglesey",
+    "title": "Anglesey quick links",
+    "description": "Welsh island routes for Anglesey, including diocese-first guidance and trusted parish search.",
+    "keywords": [
+      "anglesey",
+      "ynys mon",
+      "wales",
+      "catholic",
+      "parish",
+      "diocese"
+    ],
+    "url": "catholic-britain-ireland.html#wales",
+    "section": "Region",
+    "contexts": [
+      "home",
+      "hub"
+    ],
+    "cardTitle": "Anglesey",
+    "cardSummary": "Use the Wales hub to reach the diocesan and parish routes that cover Anglesey.",
+    "primaryLink": {
+      "label": "Open Wales hub",
+      "url": "catholic-britain-ireland.html#wales"
+    },
+    "secondaryLink": {
+      "label": "Find diocesan route",
+      "url": "find-diocese.html"
+    }
+  },
+  {
+    "id": "isles-of-scilly-quick-links",
+    "region": "Isles of Scilly",
+    "title": "Isles of Scilly quick links",
+    "description": "Catholic discovery routes for the Isles of Scilly via English diocesan coverage, parish search, and regional hub links.",
+    "keywords": [
+      "isles of scilly",
+      "scilly",
+      "england",
+      "catholic",
+      "parish",
+      "diocese"
+    ],
+    "url": "catholic-britain-ireland.html#england",
+    "section": "Region",
+    "contexts": [
+      "home",
+      "hub"
+    ],
+    "cardTitle": "Isles of Scilly",
+    "cardSummary": "Begin with the England hub, then use diocesan and parish routes that actually serve the Isles of Scilly.",
+    "primaryLink": {
+      "label": "Open England hub",
+      "url": "catholic-britain-ireland.html#england"
+    },
+    "secondaryLink": {
+      "label": "Find parish routes",
+      "url": "find-parish.html"
+    }
+  }
+]

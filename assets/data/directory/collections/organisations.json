@@ -1,0 +1,53 @@
+[
+  {
+    "id": "organisation-cafod",
+    "name": "CAFOD",
+    "slug": "cafod",
+    "organisation_type": "charity",
+    "country_scope": [
+      "England",
+      "Wales"
+    ],
+    "website_url": "https://www.cafod.org.uk/",
+    "summary": "The Catholic Agency for Overseas Development, official overseas aid agency of the Catholic Church in England and Wales.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Catholic Agency for Overseas Development",
+      "Caritas Internationalis"
+    ],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "CAFOD",
+        "url": "https://www.cafod.org.uk/"
+      }
+    ],
+    "entity_type": "organisation",
+    "detail_url": "organisations.html#organisation-cafod"
+  },
+  {
+    "id": "organisation-westminster-education-service",
+    "name": "Diocese of Westminster Education Service",
+    "slug": "diocese-of-westminster-education-service",
+    "organisation_type": "education-service",
+    "country_scope": [
+      "England"
+    ],
+    "website_url": "https://education.rcdow.org.uk/",
+    "summary": "Diocesan education service supporting Catholic schools in Westminster.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Westminster Education Service",
+      "Catholic schools Westminster"
+    ],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "Diocese of Westminster Education Service",
+        "url": "https://education.rcdow.org.uk/"
+      }
+    ],
+    "entity_type": "organisation",
+    "detail_url": "organisations.html#organisation-westminster-education-service"
+  }
+]

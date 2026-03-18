@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "collections": [
+    {
+      "name": "jurisdictions",
+      "entity_type": "jurisdiction",
+      "imports": "assets/data/directory/imports/jurisdictions.seed.json",
+      "output": "assets/data/directory/collections/jurisdictions.json",
+      "schema": "assets/data/schemas/jurisdictions.schema.json",
+      "listing_page": "directory.html",
+      "required_fields": ["id", "name", "slug", "type", "country_scope", "verification_status", "sources"]
+    },
+    {
+      "name": "dioceses",
+      "entity_type": "diocese",
+      "imports": "assets/data/directory/imports/dioceses.seed.json",
+      "output": "assets/data/directory/collections/dioceses.json",
+      "schema": "assets/data/schemas/dioceses.schema.json",
+      "listing_page": "find-diocese.html",
+      "detail_page": "diocese.html",
+      "required_fields": ["id", "name", "slug", "type", "country", "verification_status", "sources"]
+    },
+    {
+      "name": "parishes",
+      "entity_type": "parish",
+      "imports": "assets/data/directory/imports/parishes.seed.json",
+      "output": "assets/data/directory/collections/parishes.json",
+      "schema": "assets/data/schemas/parishes.schema.json",
+      "listing_page": "find-parish.html",
+      "detail_page": "parish.html",
+      "required_fields": ["id", "name", "slug", "country", "verification_status", "sources"]
+    },
+    {
+      "name": "organisations",
+      "entity_type": "organisation",
+      "imports": "assets/data/directory/imports/organisations.seed.json",
+      "output": "assets/data/directory/collections/organisations.json",
+      "schema": "assets/data/schemas/organisations.schema.json",
+      "listing_page": "organisations.html",
+      "required_fields": ["id", "name", "slug", "organisation_type", "country_scope", "verification_status", "sources"]
+    },
+    {
+      "name": "businesses",
+      "entity_type": "business",
+      "imports": "assets/data/directory/imports/businesses.seed.json",
+      "output": "assets/data/directory/collections/businesses.json",
+      "schema": "assets/data/schemas/businesses.schema.json",
+      "listing_page": "businesses.html",
+      "required_fields": ["id", "name", "slug", "business_type", "country", "verification_status", "sources"]
+    },
+    {
+      "name": "schools",
+      "entity_type": "school",
+      "imports": "assets/data/directory/imports/schools.seed.json",
+      "output": "assets/data/directory/collections/schools.json",
+      "schema": "assets/data/schemas/schools.schema.json",
+      "listing_page": "schools.html",
+      "required_fields": ["id", "name", "slug", "school_type", "country", "verification_status", "sources"]
+    },
+    {
+      "name": "places",
+      "entity_type": "place",
+      "imports": "assets/data/directory/imports/places.seed.json",
+      "output": "assets/data/directory/collections/places.json",
+      "schema": "assets/data/schemas/places.schema.json",
+      "listing_page": "places.html",
+      "required_fields": ["id", "name", "slug", "place_type", "country", "verification_status", "sources"]
+    }
+  ]
+}

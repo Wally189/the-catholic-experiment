@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thecatholicexperiment.local/schemas/entity-common.schema.json",
+  "title": "Directory Entity Common Fields",
+  "$defs": {
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["authority", "title", "url"],
+      "properties": {
+        "authority": {
+          "type": "string",
+          "enum": [
+            "official",
+            "diocesan",
+            "parish",
+            "episcopal-conference",
+            "school",
+            "organisation",
+            "religious-order",
+            "manual-review"
+          ]
+        },
+        "title": { "type": "string", "minLength": 1 },
+        "url": { "type": "string", "format": "uri" },
+        "note": { "type": "string" }
+      }
+    },
+    "stringList": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "verification": {
+      "type": "string",
+      "enum": ["trusted", "provisional", "manual-review"]
+    }
+  }
+}

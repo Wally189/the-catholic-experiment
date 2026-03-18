@@ -1,0 +1,125 @@
+[
+  {
+    "id": "parish-clifton-cathedral",
+    "name": "Clifton Cathedral",
+    "slug": "clifton-cathedral",
+    "parish_type": "cathedral",
+    "diocese_id": "diocese-diocese-of-clifton",
+    "country": "England",
+    "region": "South West England",
+    "locality": "Bristol",
+    "postcode": "BS1",
+    "website_url": "https://cliftoncathedral.org/",
+    "summary": "Cathedral Church of Saints Peter and Paul in Bristol.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Cathedral Church of Saints Peter and Paul",
+      "Bristol cathedral"
+    ],
+    "sources": [
+      {
+        "authority": "parish",
+        "title": "Clifton Cathedral",
+        "url": "https://cliftoncathedral.org/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Clifton",
+        "url": "https://cliftondiocese.com/"
+      }
+    ],
+    "entity_type": "parish",
+    "detail_url": "parish.html?id=parish-clifton-cathedral"
+  },
+  {
+    "id": "parish-westminster-cathedral",
+    "name": "Westminster Cathedral",
+    "slug": "westminster-cathedral",
+    "parish_type": "cathedral",
+    "diocese_id": "diocese-archdiocese-of-westminster",
+    "country": "England",
+    "region": "London",
+    "locality": "London",
+    "postcode": "SW1P 1QW",
+    "website_url": "https://www.westminstercathedral.org.uk/",
+    "summary": "The Roman Catholic Metropolitan Cathedral of the Most Precious Blood, seat of the Archbishop of Westminster.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Metropolitan Cathedral of the Most Precious Blood",
+      "Westminster Cathedral"
+    ],
+    "sources": [
+      {
+        "authority": "parish",
+        "title": "Westminster Cathedral",
+        "url": "https://www.westminstercathedral.org.uk/"
+      },
+      {
+        "authority": "diocesan",
+        "title": "Diocese of Westminster",
+        "url": "https://rcdow.org.uk/"
+      }
+    ],
+    "entity_type": "parish",
+    "detail_url": "parish.html?id=parish-westminster-cathedral"
+  },
+  {
+    "id": "parish-pro-cathedral-dublin",
+    "name": "Pro-Cathedral of the Assumption",
+    "slug": "pro-cathedral-of-the-assumption-dublin",
+    "parish_type": "pro_cathedral",
+    "diocese_id": "diocese-archdiocese-of-dublin",
+    "country": "Ireland",
+    "region": "Dublin",
+    "locality": "Dublin",
+    "postcode": "D01 RX04",
+    "website_url": "https://www.procathedral.ie/",
+    "summary": "Metropolitan parish and pro-cathedral for the Archdiocese of Dublin.",
+    "verification_status": "provisional",
+    "search_terms": [
+      "St Mary's Pro-Cathedral",
+      "Dublin pro-cathedral"
+    ],
+    "sources": [
+      {
+        "authority": "diocesan",
+        "title": "Archdiocese of Dublin",
+        "url": "https://www.dublindiocese.ie/"
+      },
+      {
+        "authority": "parish",
+        "title": "St Mary's Pro-Cathedral",
+        "url": "https://www.procathedral.ie/"
+      }
+    ],
+    "entity_type": "parish",
+    "detail_url": "parish.html?id=parish-pro-cathedral-dublin"
+  },
+  {
+    "id": "parish-st-marys-cathedral-edinburgh",
+    "name": "St Mary's Catholic Cathedral",
+    "slug": "st-marys-catholic-cathedral-edinburgh",
+    "parish_type": "cathedral",
+    "diocese_id": "diocese-archdiocese-of-st-andrews-and-edinburgh",
+    "country": "Scotland",
+    "region": "Edinburgh",
+    "locality": "Edinburgh",
+    "postcode": "EH1 3JR",
+    "website_url": "https://www.stmaryscathedral.co.uk/",
+    "summary": "Seat of the Archdiocese of St Andrews and Edinburgh and home of the National Shrine of St Andrew.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "St Mary's Cathedral Edinburgh",
+      "National Shrine of St Andrew"
+    ],
+    "sources": [
+      {
+        "authority": "parish",
+        "title": "St Mary's Catholic Cathedral, Edinburgh",
+        "url": "https://www.stmaryscathedral.co.uk/"
+      }
+    ],
+    "entity_type": "parish",
+    "detail_url": "parish.html?id=parish-st-marys-cathedral-edinburgh"
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "id": "education-catholic-education-service",
+    "name": "Catholic Education Service",
+    "slug": "catholic-education-service",
+    "school_type": "education-service",
+    "country": "England & Wales",
+    "region": "National",
+    "locality": "England & Wales",
+    "website_url": "https://www.catholiceducation.org.uk/",
+    "summary": "National Catholic education body and official route into school, college, governance, and policy resources for England and Wales.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "CES",
+      "Catholic schools England",
+      "Catholic schools Wales"
+    ],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "Catholic Education Service",
+        "url": "https://www.catholiceducation.org.uk/"
+      }
+    ],
+    "entity_type": "school",
+    "detail_url": "schools.html#education-catholic-education-service"
+  },
+  {
+    "id": "education-newman-university",
+    "name": "Newman University",
+    "slug": "newman-university",
+    "school_type": "university",
+    "country": "England",
+    "region": "West Midlands",
+    "locality": "Birmingham",
+    "website_url": "https://www.newman.ac.uk/",
+    "summary": "Catholic university in Birmingham rooted in the intellectual and pastoral tradition of Saint John Henry Newman.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Newman University Birmingham",
+      "Catholic university Birmingham"
+    ],
+    "sources": [
+      {
+        "authority": "school",
+        "title": "Newman University",
+        "url": "https://www.newman.ac.uk/"
+      }
+    ],
+    "entity_type": "school",
+    "detail_url": "schools.html#education-newman-university"
+  },
+  {
+    "id": "education-st-marys-twickenham",
+    "name": "St Mary's University, Twickenham",
+    "slug": "st-marys-university-twickenham",
+    "school_type": "university",
+    "country": "England",
+    "region": "London",
+    "locality": "Twickenham",
+    "website_url": "https://www.stmarys.ac.uk/",
+    "summary": "Catholic university in Twickenham with teacher training, humanities, sport, and theology provision.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "St Mary's Twickenham",
+      "Catholic university England"
+    ],
+    "sources": [
+      {
+        "authority": "school",
+        "title": "St Mary's University, Twickenham",
+        "url": "https://www.stmarys.ac.uk/"
+      }
+    ],
+    "entity_type": "school",
+    "detail_url": "schools.html#education-st-marys-twickenham"
+  },
+  {
+    "id": "education-ceist",
+    "name": "Catholic Education Irish Schools Trust",
+    "slug": "catholic-education-irish-schools-trust",
+    "school_type": "trust-body",
+    "country": "Ireland",
+    "region": "National",
+    "locality": "Ireland",
+    "website_url": "https://ceist.ie/",
+    "summary": "Catholic trust body for a large network of post-primary schools in Ireland.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "CEIST",
+      "Catholic secondary schools Ireland"
+    ],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "Catholic Education Irish Schools Trust",
+        "url": "https://ceist.ie/"
+      }
+    ],
+    "entity_type": "school",
+    "detail_url": "schools.html#education-ceist"
+  },
+  {
+    "id": "education-cpsma",
+    "name": "Catholic Primary School Management Association",
+    "slug": "catholic-primary-school-management-association",
+    "school_type": "schools-body",
+    "country": "Ireland",
+    "region": "National",
+    "locality": "Ireland",
+    "website_url": "https://cpsma.ie/",
+    "summary": "National management association supporting Catholic primary schools in Ireland.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "CPSMA",
+      "Catholic primary schools Ireland"
+    ],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "Catholic Primary School Management Association",
+        "url": "https://cpsma.ie/"
+      }
+    ],
+    "entity_type": "school",
+    "detail_url": "schools.html#education-cpsma"
+  },
+  {
+    "id": "education-mary-immaculate-college",
+    "name": "Mary Immaculate College",
+    "slug": "mary-immaculate-college",
+    "school_type": "college-university",
+    "country": "Ireland",
+    "region": "Limerick",
+    "locality": "Limerick",
+    "website_url": "https://www.mic.ul.ie/",
+    "summary": "Catholic-founded college in Limerick with strong teacher education and humanities provision.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "MIC",
+      "Mary Immaculate",
+      "Catholic college Ireland"
+    ],
+    "sources": [
+      {
+        "authority": "school",
+        "title": "Mary Immaculate College",
+        "url": "https://www.mic.ul.ie/"
+      }
+    ],
+    "entity_type": "school",
+    "detail_url": "schools.html#education-mary-immaculate-college"
+  },
+  {
+    "id": "education-sppu",
+    "name": "St Patrick's Pontifical University, Maynooth",
+    "slug": "st-patricks-pontifical-university-maynooth",
+    "school_type": "pontifical-university",
+    "country": "Ireland",
+    "region": "County Kildare",
+    "locality": "Maynooth",
+    "website_url": "https://sppu.ie/",
+    "summary": "Pontifical university in Maynooth for theology, philosophy, canon law, and pastoral formation.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "SPPU",
+      "Maynooth pontifical university"
+    ],
+    "sources": [
+      {
+        "authority": "school",
+        "title": "St Patrick's Pontifical University, Maynooth",
+        "url": "https://sppu.ie/"
+      }
+    ],
+    "entity_type": "school",
+    "detail_url": "schools.html#education-sppu"
+  },
+  {
+    "id": "education-ccms",
+    "name": "Council for Catholic Maintained Schools",
+    "slug": "council-for-catholic-maintained-schools",
+    "school_type": "schools-body",
+    "country": "Northern Ireland",
+    "region": "National",
+    "locality": "Northern Ireland",
+    "website_url": "https://onlineccms.com/",
+    "summary": "Official route into the Catholic maintained school sector in Northern Ireland.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "CCMS",
+      "Catholic maintained schools Northern Ireland"
+    ],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "Council for Catholic Maintained Schools",
+        "url": "https://onlineccms.com/"
+      }
+    ],
+    "entity_type": "school",
+    "detail_url": "schools.html#education-ccms"
+  },
+  {
+    "id": "education-st-marys-belfast",
+    "name": "St Mary's University College Belfast",
+    "slug": "st-marys-university-college-belfast",
+    "school_type": "university-college",
+    "country": "Northern Ireland",
+    "region": "Belfast",
+    "locality": "Belfast",
+    "website_url": "https://www.stmarys-belfast.ac.uk/",
+    "summary": "Catholic university college in Belfast with teacher education and liberal arts provision.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "St Mary's Belfast",
+      "Catholic college Belfast"
+    ],
+    "sources": [
+      {
+        "authority": "school",
+        "title": "St Mary's University College Belfast",
+        "url": "https://www.stmarys-belfast.ac.uk/"
+      }
+    ],
+    "entity_type": "school",
+    "detail_url": "schools.html#education-st-marys-belfast"
+  },
+  {
+    "id": "education-scottish-catholic-education-service",
+    "name": "Scottish Catholic Education Service",
+    "slug": "scottish-catholic-education-service",
+    "school_type": "education-service",
+    "country": "Scotland",
+    "region": "National",
+    "locality": "Scotland",
+    "website_url": "https://sces.uk.com/",
+    "summary": "Official national education service established by the Bishops' Conference of Scotland for Catholic schools, teachers, and dioceses.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "SCES",
+      "Catholic schools Scotland"
+    ],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "Scottish Catholic Education Service",
+        "url": "https://sces.uk.com/"
+      }
+    ],
+    "entity_type": "school",
+    "detail_url": "schools.html#education-scottish-catholic-education-service"
+  }
+]

@@ -1,0 +1,434 @@
+[
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-archdiocese-of-birmingham",
+    "query": "Archdiocese of Birmingham, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-archdiocese-of-liverpool",
+    "query": "Archdiocese of Liverpool, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-archdiocese-of-southwark",
+    "query": "Archdiocese of Southwark, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-archdiocese-of-westminster",
+    "query": "Archdiocese of Westminster, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-arundel-and-brighton",
+    "query": "Diocese of Arundel and Brighton, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-brentwood",
+    "query": "Diocese of Brentwood, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-clifton",
+    "query": "Diocese of Clifton, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-east-anglia",
+    "query": "Diocese of East Anglia, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-hallam",
+    "query": "Diocese of Hallam, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-hexham-and-newcastle",
+    "query": "Diocese of Hexham and Newcastle, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-lancaster",
+    "query": "Diocese of Lancaster, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-leeds",
+    "query": "Diocese of Leeds, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-middlesbrough",
+    "query": "Diocese of Middlesbrough, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-northampton",
+    "query": "Diocese of Northampton, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-nottingham",
+    "query": "Diocese of Nottingham, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-plymouth",
+    "query": "Diocese of Plymouth, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-portsmouth",
+    "query": "Diocese of Portsmouth, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-salford",
+    "query": "Diocese of Salford, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-shrewsbury",
+    "query": "Diocese of Shrewsbury, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-archdiocese-of-cashel-and-emly",
+    "query": "Archdiocese of Cashel and Emly, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-archdiocese-of-dublin",
+    "query": "Archdiocese of Dublin, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-archdiocese-of-tuam",
+    "query": "Archdiocese of Tuam, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-achonry",
+    "query": "Diocese of Achonry, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-ardagh-and-clonmacnoise",
+    "query": "Diocese of Ardagh and Clonmacnoise, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-clogher",
+    "query": "Diocese of Clogher, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-clonfert",
+    "query": "Diocese of Clonfert, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-cloyne",
+    "query": "Diocese of Cloyne, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-cork-and-ross",
+    "query": "Diocese of Cork and Ross, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-elphin",
+    "query": "Diocese of Elphin, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-ferns",
+    "query": "Diocese of Ferns, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-galway-kilmacduagh-and-kilfenora",
+    "query": "Diocese of Galway, Kilmacduagh and Kilfenora, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-kerry",
+    "query": "Diocese of Kerry, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-kildare-and-leighlin",
+    "query": "Diocese of Kildare and Leighlin, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-killala",
+    "query": "Diocese of Killala, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-killaloe",
+    "query": "Diocese of Killaloe, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-kilmore",
+    "query": "Diocese of Kilmore, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-limerick",
+    "query": "Diocese of Limerick, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-meath",
+    "query": "Diocese of Meath, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-ossory",
+    "query": "Diocese of Ossory, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-raphoe",
+    "query": "Diocese of Raphoe, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-waterford-and-lismore",
+    "query": "Diocese of Waterford and Lismore, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-archdiocese-of-armagh",
+    "query": "Archdiocese of Armagh, Northern Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-derry",
+    "query": "Diocese of Derry, Northern Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-down-and-connor",
+    "query": "Diocese of Down and Connor, Northern Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-dromore",
+    "query": "Diocese of Dromore, Northern Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-archdiocese-of-glasgow",
+    "query": "Archdiocese of Glasgow, Scotland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-archdiocese-of-st-andrews-and-edinburgh",
+    "query": "Archdiocese of St Andrews and Edinburgh, Scotland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-aberdeen",
+    "query": "Diocese of Aberdeen, Scotland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-argyll-and-the-isles",
+    "query": "Diocese of Argyll and the Isles, Scotland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-dunkeld",
+    "query": "Diocese of Dunkeld, Scotland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-galloway",
+    "query": "Diocese of Galloway, Scotland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-motherwell",
+    "query": "Diocese of Motherwell, Scotland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-paisley",
+    "query": "Diocese of Paisley, Scotland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-archdiocese-of-cardiff-menevia",
+    "query": "Archdiocese of Cardiff-Menevia, Wales",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "dioceses",
+    "record_id": "diocese-diocese-of-wrexham",
+    "query": "Diocese of Wrexham, Wales",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "parishes",
+    "record_id": "parish-clifton-cathedral",
+    "query": "Clifton Cathedral, Bristol, BS1, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "parishes",
+    "record_id": "parish-westminster-cathedral",
+    "query": "Westminster Cathedral, London, SW1P 1QW, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "parishes",
+    "record_id": "parish-pro-cathedral-dublin",
+    "query": "Pro-Cathedral of the Assumption, Dublin, D01 RX04, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "parishes",
+    "record_id": "parish-st-marys-cathedral-edinburgh",
+    "query": "St Mary's Catholic Cathedral, Edinburgh, EH1 3JR, Scotland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-cts-books",
+    "query": "Catholic Truth Society, London, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "schools",
+    "record_id": "education-catholic-education-service",
+    "query": "Catholic Education Service, England & Wales, England & Wales",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "schools",
+    "record_id": "education-newman-university",
+    "query": "Newman University, Birmingham, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "schools",
+    "record_id": "education-st-marys-twickenham",
+    "query": "St Mary's University, Twickenham, Twickenham, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "schools",
+    "record_id": "education-ceist",
+    "query": "Catholic Education Irish Schools Trust, Ireland, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "schools",
+    "record_id": "education-cpsma",
+    "query": "Catholic Primary School Management Association, Ireland, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "schools",
+    "record_id": "education-mary-immaculate-college",
+    "query": "Mary Immaculate College, Limerick, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "schools",
+    "record_id": "education-sppu",
+    "query": "St Patrick's Pontifical University, Maynooth, Maynooth, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "schools",
+    "record_id": "education-ccms",
+    "query": "Council for Catholic Maintained Schools, Northern Ireland, Northern Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "schools",
+    "record_id": "education-st-marys-belfast",
+    "query": "St Mary's University College Belfast, Belfast, Northern Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "schools",
+    "record_id": "education-scottish-catholic-education-service",
+    "query": "Scottish Catholic Education Service, Scotland, Scotland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-knock-shrine",
+    "query": "Knock Shrine, Knock, F12 Y226, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-national-shrine-st-andrew",
+    "query": "National Shrine of St Andrew, Edinburgh, Scotland",
+    "status": "pending-manual-geocode"
+  }
+]

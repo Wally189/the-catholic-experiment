@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thecatholicexperiment.local/schemas/places.schema.json",
+  "title": "Place",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": true,
+    "required": ["id", "name", "slug", "place_type", "country", "verification_status", "sources"],
+    "properties": {
+      "id": { "type": "string" },
+      "name": { "type": "string" },
+      "slug": { "type": "string" },
+      "place_type": { "type": "string", "enum": ["shrine", "religious-house", "chaplaincy", "mass-centre", "retreat-centre", "other"] },
+      "country": { "type": "string" },
+      "region": { "type": "string" },
+      "locality": { "type": "string" },
+      "postcode": { "type": "string" },
+      "website_url": { "type": "string", "format": "uri" },
+      "summary": { "type": "string" },
+      "related_parish_id": { "type": "string" },
+      "search_terms": { "$ref": "entity-common.schema.json#/$defs/stringList" },
+      "verification_status": { "$ref": "entity-common.schema.json#/$defs/verification" },
+      "sources": {
+        "type": "array",
+        "items": { "$ref": "entity-common.schema.json#/$defs/source" },
+        "minItems": 1
+      }
+    }
+  }
+}

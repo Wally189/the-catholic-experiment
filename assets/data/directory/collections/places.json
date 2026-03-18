@@ -1,0 +1,55 @@
+[
+  {
+    "id": "place-knock-shrine",
+    "name": "Knock Shrine",
+    "slug": "knock-shrine",
+    "place_type": "shrine",
+    "country": "Ireland",
+    "region": "County Mayo",
+    "locality": "Knock",
+    "postcode": "F12 Y226",
+    "website_url": "https://www.knockshrine.ie/",
+    "summary": "Ireland's international Eucharistic and Marian shrine at Knock, County Mayo.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Knock",
+      "Marian shrine",
+      "Eucharistic shrine"
+    ],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "Knock Shrine",
+        "url": "https://www.knockshrine.ie/"
+      }
+    ],
+    "entity_type": "place",
+    "detail_url": "places.html#place-knock-shrine"
+  },
+  {
+    "id": "place-national-shrine-st-andrew",
+    "name": "National Shrine of St Andrew",
+    "slug": "national-shrine-of-st-andrew",
+    "place_type": "shrine",
+    "country": "Scotland",
+    "region": "Edinburgh",
+    "locality": "Edinburgh",
+    "website_url": "https://www.stmaryscathedral.co.uk/standrew",
+    "summary": "Shrine located within St Mary's Catholic Cathedral, Edinburgh.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "St Andrew shrine",
+      "Edinburgh shrine"
+    ],
+    "related_parish_id": "parish-st-marys-cathedral-edinburgh",
+    "sources": [
+      {
+        "authority": "parish",
+        "title": "St Mary's Catholic Cathedral, Edinburgh",
+        "url": "https://www.stmaryscathedral.co.uk/"
+      }
+    ],
+    "entity_type": "place",
+    "detail_url": "places.html#place-national-shrine-st-andrew"
+  }
+]

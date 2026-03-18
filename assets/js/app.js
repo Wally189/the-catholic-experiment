@@ -1,5 +1,15 @@
 const TCE = (() => {
-  const config = Object.assign({}, window.__TCE_CONFIG__ || {});
+  const config = Object.assign({
+    support_page_url: 'donate.html',
+    support_one_off_url: '',
+    support_monthly_url: '',
+    support_partnerships_url: 'contact.html',
+    support_featured_listing_url: 'businesses.html#future-supported-listings',
+    liturgical_locale: '',
+  }, window.__TCE_CONFIG__ || {});
+
+  let regionalResourcesPromise = null;
+  let siteConfigPromise = null;
 
   function safeLocalStorage(action, key, value = null) {
     try {
@@ -44,9 +54,41 @@ const TCE = (() => {
     return advent1;
   }
 
+  function normalizeLocale(locale) {
+    const value = String(locale || '').trim().toLowerCase();
+    if (!value) return '';
+    if (['ie', 'ireland', 'roi', 'republic-of-ireland'].includes(value)) return 'ie';
+    return 'gb';
+  }
+
   function currentLocale() {
+    const configured = normalizeLocale(config.liturgical_locale);
+    if (configured) return configured;
     const host = window.location.hostname || '';
     return host.endsWith('.ie') ? 'ie' : 'gb';
+  }
+
+  function epiphanyDate(year, locale) {
+    if (locale === 'ie') return new Date(year, 0, 6);
+    const jan2 = new Date(year, 0, 2);
+    return addDays(jan2, (7 - jan2.getDay()) % 7);
+  }
+
+  function baptismOfLordDate(year, locale) {
+    const epiphany = dateOnly(epiphanyDate(year, locale));
+    if (locale === 'ie') {
+      return addDays(epiphany, epiphany.getDay() === 0 ? 7 : (7 - epiphany.getDay()) % 7);
+    }
+    return epiphany.getDate() >= 7 ? addDays(epiphany, 1) : addDays(epiphany, 7);
+  }
+
+  function isChristmasSeason(date, locale) {
+    const today = dateOnly(date);
+    const year = today.getFullYear();
+    return (
+      between(today, new Date(year, 0, 1), addDays(baptismOfLordDate(year, locale), 1)) ||
+      between(today, new Date(year, 11, 25), addDays(baptismOfLordDate(year + 1, locale), 1))
+    );
   }
 
 
@@ -130,12 +172,6 @@ const TCE = (() => {
     const holySaturday = addDays(easter, -1);
     const pentecost = addDays(easter, 49);
     const trinitySunday = addDays(pentecost, 7);
-    const baptismOfLord = (() => {
-      const jan6 = new Date(year, 0, 6);
-      const nextSunday = new Date(jan6);
-      nextSunday.setDate(jan6.getDate() + ((7 - jan6.getDay()) % 7 || 7));
-      return dateOnly(nextSunday);
-    })();
     const advent = dateOnly(firstSundayOfAdvent(year));
     const christmas = new Date(year, 11, 25);
     const today = dateOnly(now);
@@ -184,7 +220,7 @@ const TCE = (() => {
       return { label: `${weekdayName(today)} of the ${week}${week === 1 ? 'st' : week === 2 ? 'nd' : week === 3 ? 'rd' : 'th'} week of Advent`, rank: 'Weekday' };
     }
 
-    if (between(today, new Date(year, 0, 1), addDays(baptismOfLord, 1)) || between(today, christmas, new Date(year + 1, 0, 13))) {
+    if (isChristmasSeason(today, locale)) {
       return { label: 'Christmastide', rank: 'Seasonal day' };
     }
 
@@ -194,16 +230,30 @@ const TCE = (() => {
   function feastOverride(date, locale) {
     const mmdd = `${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
     const overrides = {
+      common: {
+        '01-01': { key: 'white', season: 'Mary, Mother of God', accent: 'White / Gold' },
+        '03-19': { key: 'white', season: 'Saint Joseph', accent: 'White / Gold' },
+        '03-25': { key: 'white', season: 'The Annunciation', accent: 'White / Gold' },
+        '06-29': { key: 'martyr', season: 'Saints Peter and Paul', accent: 'Red' },
+        '08-15': { key: 'white', season: 'The Assumption', accent: 'White / Gold' },
+        '11-01': { key: 'white', season: 'All Saints', accent: 'White / Gold' },
+        '12-08': { key: 'white', season: 'The Immaculate Conception', accent: 'White / Gold' },
+        '12-26': { key: 'martyr', season: 'Saint Stephen', accent: 'Red' },
+        '12-27': { key: 'white', season: 'Saint John', accent: 'White / Gold' },
+        '12-28': { key: 'martyr', season: 'Holy Innocents', accent: 'Red' },
+      },
       gb: {
+        '03-17': { key: 'white', season: 'Saint Patrick', accent: 'White / Gold' },
         '04-23': { key: 'martyr', season: 'Saint George', accent: 'Red' },
+        '11-30': { key: 'martyr', season: 'Saint Andrew', accent: 'Red' },
         '12-29': { key: 'martyr', season: 'Saint Thomas Becket', accent: 'Red' },
       },
       ie: {
-        '02-01': { key: 'white', season: 'Saint Brigid', accent: 'White' },
-        '03-17': { key: 'white', season: 'Saint Patrick', accent: 'White' },
+        '02-01': { key: 'white', season: 'Saint Brigid', accent: 'White / Gold' },
+        '03-17': { key: 'white', season: 'Saint Patrick', accent: 'White / Gold' },
       },
     };
-    return overrides[locale]?.[mmdd] || null;
+    return overrides[locale]?.[mmdd] || overrides.common[mmdd] || null;
   }
 
   function liturgicalInfo(now = new Date()) {
@@ -220,12 +270,6 @@ const TCE = (() => {
     goodFriday.setDate(easter.getDate() - 2);
     const pentecost = new Date(easter);
     pentecost.setDate(easter.getDate() + 49);
-    const baptismOfLord = (() => {
-      const jan6 = new Date(year, 0, 6);
-      const nextSunday = new Date(jan6);
-      nextSunday.setDate(jan6.getDate() + ((7 - jan6.getDay()) % 7 || 7));
-      return nextSunday;
-    })();
     const advent = firstSundayOfAdvent(year);
     const christmas = new Date(year, 11, 25);
     const override = feastOverride(now, locale);
@@ -244,12 +288,12 @@ const TCE = (() => {
     if (isGaudete || isLaetare) return { key: 'rose', season: isGaudete ? 'Gaudete Sunday' : 'Laetare Sunday', accent: 'Rose', locale };
     if (override) return { ...override, locale };
     if (sameDate(now, palmSunday)) return { key: 'holyweek', season: 'Palm Sunday', accent: 'Red', locale };
-    if (sameDate(now, holyThursday)) return { key: 'white', season: 'Holy Thursday', accent: 'White', locale };
+    if (sameDate(now, holyThursday)) return { key: 'white', season: 'Holy Thursday', accent: 'White / Gold', locale };
     if (sameDate(now, goodFriday)) return { key: 'holyweek', season: 'Good Friday', accent: 'Red', locale };
     if (sameDate(now, pentecost)) return { key: 'pentecost', season: 'Pentecost', accent: 'Red', locale };
-    if (between(now, new Date(year, 0, 1), baptismOfLord) || between(now, christmas, new Date(year + 1, 0, 13))) return { key: 'christmas', season: 'Christmastide', accent: 'White', locale };
+    if (isChristmasSeason(now, locale)) return { key: 'christmas', season: 'Christmastide', accent: 'White / Gold', locale };
     if (between(now, ashWednesday, easter)) return { key: 'lent', season: 'Lent', accent: 'Violet', locale };
-    if (between(now, easter, new Date(pentecost.getFullYear(), pentecost.getMonth(), pentecost.getDate() + 1))) return { key: 'easter', season: 'Eastertide', accent: 'White', locale };
+    if (between(now, easter, new Date(pentecost.getFullYear(), pentecost.getMonth(), pentecost.getDate() + 1))) return { key: 'easter', season: 'Eastertide', accent: 'White / Gold', locale };
     if (between(now, advent, christmas)) return { key: 'advent', season: 'Advent', accent: 'Violet', locale };
     return { key: 'ordinary', season: 'Ordinary Time', accent: 'Green', locale };
   }
@@ -261,6 +305,81 @@ const TCE = (() => {
     document.querySelectorAll('[data-season-accent]').forEach((el) => { el.textContent = info.accent; });
     document.querySelectorAll('[data-locale-name]').forEach((el) => {
       el.textContent = info.locale === 'ie' ? 'Ireland' : 'England, Wales & Scotland';
+    });
+  }
+
+  let chromeSyncFrame = 0;
+
+  function syncChromeOffset() {
+    const root = document.documentElement;
+    const topbar = document.querySelector('.topbar');
+    const header = document.querySelector('.site-header');
+    const topbarHeight = topbar ? Math.ceil(topbar.getBoundingClientRect().height) : 0;
+    const headerHeight = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
+    if (topbarHeight) root.style.setProperty('--topbar-h', `${topbarHeight}px`);
+    if (headerHeight) root.style.setProperty('--header-h', `${headerHeight}px`);
+    root.style.setProperty('--chrome-offset', `${topbarHeight + headerHeight}px`);
+  }
+
+  function queueChromeSync() {
+    if (chromeSyncFrame) return;
+    chromeSyncFrame = window.requestAnimationFrame(() => {
+      chromeSyncFrame = 0;
+      syncChromeOffset();
+    });
+  }
+
+  function stableHash(input) {
+    let hash = 0;
+    const value = String(input || '');
+    for (let index = 0; index < value.length; index += 1) {
+      hash = ((hash << 5) - hash) + value.charCodeAt(index);
+      hash |= 0;
+    }
+    return Math.abs(hash);
+  }
+
+  function diversifyHeroImages() {
+    const heroImages = [
+      'assets/img/20240406_143636.jpg',
+      'assets/img/20240406_143646.jpg',
+      'assets/img/20240406_143657.jpg',
+      'assets/img/20240406_143845.jpg',
+      'assets/img/20240406_143858.jpg',
+      'assets/img/20240406_143907.jpg',
+      'assets/img/20240406_143931.jpg',
+      'assets/img/20240406_143941.jpg',
+      'assets/img/20240406_143954.jpg',
+      'assets/img/20240406_144013.jpg',
+      'assets/img/20240406_144030.jpg',
+      'assets/img/20240406_144053.jpg',
+      'assets/img/20240413_143159.jpg',
+      'assets/img/20240413_143207.jpg',
+      'assets/img/20240413_143211.jpg',
+      'assets/img/20240413_143244.jpg',
+      'assets/img/20240413_143309.jpg',
+      'assets/img/20240413_143313.jpg',
+      'assets/img/20240413_143339.jpg',
+      'assets/img/20240413_143443.jpg',
+      'assets/img/20240413_143512.jpg',
+      'assets/img/20240413_143514.jpg',
+      'assets/img/20240413_143525.jpg',
+      'assets/img/20240413_143603.jpg',
+      'assets/img/20240413_144034.jpg',
+      'assets/img/20240413_144041.jpg',
+      'assets/img/20240413_144515.jpg',
+      'assets/img/20240413_144527.jpg',
+      'assets/img/20240413_144545.jpg',
+      'assets/img/20240413_144550.jpg',
+    ];
+    const heroes = Array.from(document.querySelectorAll('.subhero.with-image'));
+    heroes.forEach((hero, index) => {
+      const inlineStyle = hero.getAttribute('style') || '';
+      if (!/20240406_143639\.jpg/i.test(inlineStyle)) return;
+      const title = hero.querySelector('h1')?.textContent || '';
+      const seed = `${window.location.pathname}|${title}|${index}`;
+      const image = heroImages[stableHash(seed) % heroImages.length];
+      hero.style.backgroundImage = `url('${image}')`;
     });
   }
 
@@ -323,7 +442,12 @@ const TCE = (() => {
   }
 
   function initStickyHeader() {
-    const onScroll = () => document.body.classList.toggle('header-condensed', window.scrollY > 48);
+    const onScroll = () => {
+      const next = window.scrollY > 48;
+      if (document.body.classList.contains('header-condensed') === next) return;
+      document.body.classList.toggle('header-condensed', next);
+      queueChromeSync();
+    };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
   }
@@ -335,6 +459,7 @@ const TCE = (() => {
 const languages = [
   { code: 'en-GB', label: 'English' },
   { code: 'ga', label: 'Gaeilge' },
+  { code: 'gv', label: 'Manx (Gaelg)' },
   { code: 'cy', label: 'Cymraeg' },
   { code: 'gd', label: 'Gàidhlig' },
   { code: 'sco', label: 'Scots' },
@@ -376,16 +501,35 @@ const languages = [
   function initNav() {
     document.querySelectorAll('.dropdown-toggle').forEach((button) => {
       button.setAttribute('type', 'button');
+      button.setAttribute('aria-expanded', 'false');
       button.addEventListener('click', (event) => {
         event.preventDefault();
         const parent = button.closest('.dropdown');
         if (!parent) return;
-        parent.classList.toggle('open');
+        const willOpen = !parent.classList.contains('open');
+        document.querySelectorAll('.dropdown.open').forEach((menu) => {
+          if (menu !== parent) {
+            menu.classList.remove('open');
+            menu.querySelector('.dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+          }
+        });
+        parent.classList.toggle('open', willOpen);
+        button.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
       });
     });
     document.addEventListener('click', (event) => {
       document.querySelectorAll('.dropdown.open').forEach((menu) => {
-        if (!menu.contains(event.target)) menu.classList.remove('open');
+        if (!menu.contains(event.target)) {
+          menu.classList.remove('open');
+          menu.querySelector('.dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+      document.querySelectorAll('.dropdown.open').forEach((menu) => {
+        menu.classList.remove('open');
+        menu.querySelector('.dropdown-toggle')?.setAttribute('aria-expanded', 'false');
       });
     });
   }
@@ -412,6 +556,7 @@ const languages = [
       nav.classList.remove('open');
       button.setAttribute('aria-expanded', 'false');
       document.body.classList.remove('mobile-nav-open');
+      queueChromeSync();
     };
 
     const syncMode = () => {
@@ -422,6 +567,7 @@ const languages = [
         button.setAttribute('aria-expanded', 'false');
         document.body.classList.remove('mobile-nav-open');
       }
+      queueChromeSync();
     };
 
     button.addEventListener('click', () => {
@@ -430,16 +576,23 @@ const languages = [
       nav.classList.toggle('open', open);
       button.setAttribute('aria-expanded', open ? 'true' : 'false');
       document.body.classList.toggle('mobile-nav-open', open);
+      queueChromeSync();
     });
 
     window.addEventListener('scroll', () => {
       if (window.matchMedia('(max-width: 980px)').matches && window.scrollY > 24) closeNav();
     }, { passive: true });
     window.addEventListener('resize', () => { syncMode(); updateCurrentHourLink(); });
+    window.visualViewport?.addEventListener('resize', queueChromeSync);
+    window.addEventListener('orientationchange', queueChromeSync);
+    window.addEventListener('load', queueChromeSync);
     nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNav));
     document.addEventListener('click', (event) => {
       if (!window.matchMedia('(max-width: 980px)').matches) return;
       if (!nav.contains(event.target) && !button.contains(event.target)) closeNav();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeNav();
     });
     syncMode();
   }
@@ -448,6 +601,93 @@ const languages = [
     const response = await fetch(path);
     if (!response.ok) throw new Error(`Failed to fetch ${path}`);
     return response.json();
+  }
+
+  function loadSiteConfig() {
+    if (!siteConfigPromise) {
+      siteConfigPromise = fetchJSON('assets/data/site.json')
+        .then((data) => {
+          if (data && typeof data === 'object') {
+            Object.assign(config, data);
+          }
+          return config;
+        })
+        .catch(() => config);
+    }
+    return siteConfigPromise;
+  }
+
+  function fetchRegionalResources() {
+    if (!regionalResourcesPromise) {
+      regionalResourcesPromise = fetchJSON('assets/data/regional-resources.json')
+        .then((data) => Array.isArray(data) ? data : [])
+        .catch(() => []);
+    }
+    return regionalResourcesPromise;
+  }
+
+  function normalizeSearchItem(item, fallbackSection = 'Explore') {
+    if (!item || typeof item !== 'object') return null;
+
+    const title = String(item.title || item.cardTitle || item.name || '').trim();
+    const url = String(item.url || item.href || '').trim();
+    const description = String(item.description || item.summary || item.cardSummary || '').trim();
+    const keywords = Array.isArray(item.keywords)
+      ? item.keywords.join(' ')
+      : Array.isArray(item.tags)
+        ? item.tags.join(' ')
+        : String(item.keywords || '').trim();
+    const section = String(item.section || item.region || fallbackSection).trim() || fallbackSection;
+
+    if (!title || !url) return null;
+    return { title, url, description, keywords, section };
+  }
+
+  function dedupeSearchItems(items) {
+    const seen = new Set();
+    return items.filter((item) => {
+      const key = `${item.url}::${item.title}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  }
+
+  function renderRegionalQuickLink(item) {
+    const primary = item.primaryLink || {};
+    const secondary = item.secondaryLink || {};
+
+    return `
+      <article class="tile">
+        <div class="kicker">Region</div>
+        <h3><a href="${item.url}">${item.cardTitle || item.title || ''}</a></h3>
+        <p>${item.cardSummary || item.description || ''}</p>
+        <div class="hero-actions">
+          <a class="btn ghost" href="${primary.url || item.url}">${primary.label || 'Open region'}</a>
+          ${secondary.url ? `<a class="more" href="${secondary.url}">${secondary.label || 'More links'}</a>` : ''}
+        </div>
+      </article>`;
+  }
+
+  async function initRegionalQuickLinks() {
+    const containers = Array.from(document.querySelectorAll('[data-regional-quick-links]'));
+    if (!containers.length) return;
+
+    const resources = await fetchRegionalResources();
+
+    containers.forEach((container) => {
+      const context = container.getAttribute('data-regional-quick-links') || '';
+      const items = resources.filter((item) => !context || !Array.isArray(item.contexts) || item.contexts.includes(context));
+      const section = container.closest('[data-regional-quick-links-section]');
+
+      if (!items.length) {
+        if (section) section.hidden = true;
+        return;
+      }
+
+      container.innerHTML = items.map(renderRegionalQuickLink).join('');
+      if (section) section.hidden = false;
+    });
   }
 
   async function initSearch() {
@@ -459,7 +699,21 @@ const languages = [
     if (!panel || !input || !results) return;
 
     let index = [];
-    try { index = await fetchJSON('assets/data/search-index.json'); } catch (_) { index = []; }
+    try {
+      const [baseIndex, directoryIndex, regionalResources] = await Promise.all([
+        fetchJSON('assets/data/search-index.json').catch(() => []),
+        fetchJSON('assets/data/directory/derived/search-index.json').catch(() => []),
+        fetchRegionalResources(),
+      ]);
+
+      index = dedupeSearchItems([
+        ...baseIndex.map((item) => normalizeSearchItem(item)).filter(Boolean),
+        ...directoryIndex.map((item) => normalizeSearchItem(item, 'Directory')).filter(Boolean),
+        ...regionalResources.map((item) => normalizeSearchItem(item, 'Region')).filter(Boolean),
+      ]);
+    } catch (_) {
+      index = [];
+    }
 
     const render = (items) => {
       results.innerHTML = items.length
@@ -522,6 +776,162 @@ const languages = [
     window.filterParishes = apply;
   }
 
+  function configuredEmail(value) {
+    const email = String(value || '').trim();
+    if (!email || /@example\.com$/i.test(email)) return '';
+    return email;
+  }
+
+  function bindEmailChannel(type, email) {
+    const hasEmail = Boolean(email);
+
+    document.querySelectorAll(`[data-${type}-email-link]`).forEach((link) => {
+      if (!hasEmail) {
+        link.hidden = true;
+        link.removeAttribute('href');
+        return;
+      }
+
+      link.hidden = false;
+      link.setAttribute('href', `mailto:${email}`);
+      if (!link.textContent.trim() || link.hasAttribute(`data-${type}-email-text`)) {
+        link.textContent = email;
+      }
+    });
+
+    document.querySelectorAll(`[data-${type}-email-text]`).forEach((node) => {
+      node.textContent = email;
+      node.hidden = !hasEmail;
+    });
+
+    document.querySelectorAll(`[data-${type}-email-block]`).forEach((node) => {
+      node.hidden = !hasEmail;
+    });
+
+    document.querySelectorAll(`[data-${type}-email-pending]`).forEach((node) => {
+      node.hidden = hasEmail;
+    });
+  }
+
+  function initContactChannels() {
+    const contactEmail = configuredEmail(config.contact_email);
+    const newsletterEmail = configuredEmail(config.newsletter_email) || contactEmail;
+
+    bindEmailChannel('contact', contactEmail);
+    bindEmailChannel('newsletter', newsletterEmail);
+  }
+
+  function initLiveForms() {
+    const forms = Array.from(document.querySelectorAll('form[data-live-form]'));
+    if (!forms.length) return;
+
+    forms.forEach((form) => {
+      const status = form.querySelector('[data-form-status]');
+      const submit = form.querySelector('button[type="submit"]');
+      const consent = form.querySelector('[data-consent]');
+      const kind = form.getAttribute('data-form-kind') || 'contact';
+      const recipient = kind === 'newsletter'
+        ? configuredEmail(config.newsletter_email) || configuredEmail(config.contact_email)
+        : configuredEmail(config.contact_email);
+
+      if (!recipient) {
+        if (status) {
+          status.textContent = kind === 'newsletter'
+            ? 'Newsletter signup is not configured yet. A working list contact will appear here once the site email is set.'
+            : 'Form service is not configured yet. A working contact email will appear on this page once the site inbox is set.';
+        }
+        return;
+      }
+
+      const endpoint = `https://formsubmit.co/ajax/${encodeURIComponent(recipient)}`;
+      form.setAttribute('action', endpoint);
+      form.setAttribute('method', 'post');
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        if (consent && !consent.checked) {
+          if (status) {
+            status.textContent = 'Please confirm consent before submitting this form.';
+          }
+          return;
+        }
+
+        const formData = new FormData(form);
+        if (status) status.textContent = 'Sending...';
+        if (submit) submit.disabled = true;
+
+        try {
+          const response = await fetch(endpoint, {
+            method: 'POST',
+            body: formData,
+            headers: { Accept: 'application/json' },
+          });
+
+          if (!response.ok) throw new Error('Submission failed');
+          if (status) status.textContent = 'Thank you. Your submission has been received.';
+          form.reset();
+        } catch (_) {
+          if (status) {
+            status.textContent = 'Submission failed. Please try again, or use the direct email contact on this page.';
+          }
+        } finally {
+          if (submit) submit.disabled = false;
+        }
+      });
+    });
+  }
+
+  function initSupportLinks() {
+    const supportPageUrl = String(config.support_page_url || 'donate.html').trim() || 'donate.html';
+    const oneOffUrl = String(config.support_one_off_url || '').trim();
+    const monthlyUrl = String(config.support_monthly_url || '').trim();
+    const partnershipsUrl = String(config.support_partnerships_url || 'contact.html').trim() || 'contact.html';
+    const featuredListingUrl = String(config.support_featured_listing_url || 'businesses.html#future-supported-listings').trim()
+      || 'businesses.html#future-supported-listings';
+
+    document.querySelectorAll('a[href="donate.html"], a[href="support.html"], a[data-support-page]').forEach((link) => {
+      link.setAttribute('href', supportPageUrl);
+
+      if (link.classList.contains('donate-mini')) {
+        link.textContent = 'Support';
+        link.setAttribute('aria-label', 'Support this project');
+        return;
+      }
+
+      if (link.closest('.site-footer')) {
+        link.textContent = 'Support this project';
+      }
+    });
+
+    document.querySelectorAll('[data-support-link]').forEach((link) => {
+      const type = link.getAttribute('data-support-link');
+      const url = type === 'one_off'
+        ? oneOffUrl
+        : type === 'monthly'
+          ? monthlyUrl
+          : type === 'partnerships'
+            ? partnershipsUrl
+            : featuredListingUrl;
+
+      if (url) {
+        link.hidden = false;
+        link.setAttribute('href', url);
+        if (/^https?:\/\//i.test(url)) {
+          link.setAttribute('rel', 'noopener');
+          link.setAttribute('target', '_blank');
+        }
+        return;
+      }
+
+      link.hidden = true;
+    });
+
+    const pendingNote = document.querySelector('[data-support-pending]');
+    if (pendingNote) {
+      pendingNote.hidden = Boolean(oneOffUrl || monthlyUrl);
+    }
+  }
+
   function initAdmin() {
     const admin = document.querySelector('[data-admin]');
     if (!admin) return;
@@ -560,6 +970,12 @@ const languages = [
           title: config.title || 'The Catholic Experiment',
           tagline: config.tagline || '',
           contact_email: config.contact_email || '',
+          support_page_url: config.support_page_url || '',
+          support_one_off_url: config.support_one_off_url || '',
+          support_monthly_url: config.support_monthly_url || '',
+          support_partnerships_url: config.support_partnerships_url || '',
+          support_featured_listing_url: config.support_featured_listing_url || '',
+          liturgical_locale: config.liturgical_locale || '',
           footer_credit: config.footer_credit || '',
           footer_url: config.footer_url || '',
         };
@@ -573,17 +989,27 @@ const languages = [
     }
   }
 
-  function init() {
+  async function init() {
+    await loadSiteConfig();
     applyLiturgicalTheme();
+    diversifyHeroImages();
     updateCurrentHourLink();
     initStickyHeader();
     initLanguageSwitch();
     initDarkMode();
     initNav();
     initMobileNav();
+    queueChromeSync();
+    if (document.fonts?.ready) {
+      document.fonts.ready.then(queueChromeSync).catch(() => {});
+    }
     initSearch();
+    initRegionalQuickLinks();
+    initContactChannels();
     initCookieBanner();
     initParishFilter();
+    initLiveForms();
+    initSupportLinks();
     initAdmin();
   }
 

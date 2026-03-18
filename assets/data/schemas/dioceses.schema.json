@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://thecatholicexperiment.local/schemas/dioceses.schema.json",
+  "title": "Diocese",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "additionalProperties": true,
+    "required": ["id", "name", "slug", "type", "country", "verification_status", "sources"],
+    "properties": {
+      "id": { "type": "string" },
+      "name": { "type": "string" },
+      "slug": { "type": "string" },
+      "short_name": { "type": "string" },
+      "type": { "type": "string", "enum": ["diocese", "archdiocese", "eparchy", "ordinariate"] },
+      "country": { "type": "string" },
+      "region": { "type": "string" },
+      "rite": { "type": "string" },
+      "jurisdiction_id": { "type": "string" },
+      "cathedral_city": { "type": "string" },
+      "website_url": { "type": "string", "format": "uri" },
+      "summary": { "type": "string" },
+      "coverage_note": { "type": "string" },
+      "search_terms": { "$ref": "entity-common.schema.json#/$defs/stringList" },
+      "verification_status": { "$ref": "entity-common.schema.json#/$defs/verification" },
+      "sources": {
+        "type": "array",
+        "items": { "$ref": "entity-common.schema.json#/$defs/source" },
+        "minItems": 1
+      }
+    }
+  }
+}

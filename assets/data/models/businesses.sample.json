@@ -8,6 +8,8 @@
     "town_city": "Dublin",
     "country": "Ireland",
     "island_region": "Republic of Ireland",
+    "region_tag": "Ireland",
+    "verification_label": "Local Catholic",
     "website_url": "https://example.org",
     "catholic_connection_statement": "Catholic bookshop with a focus on prayer, theology, and family formation.",
     "status": "published"
