@@ -232,15 +232,15 @@ select:focus-visible{
   right:0;
   z-index:140;
   min-height:var(--header-h);
-  background:rgba(253,251,248,.94);
+  background:color-mix(in srgb, var(--surface) 96%, white 4%);
   border-bottom:1px solid rgba(180,95,125,.16);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
   box-shadow:0 8px 24px rgba(0,0,0,.03);
 }
 
 [data-theme="dark"] .site-header{
-  background:rgba(23,29,37,.92);
+  background:rgba(17,23,31,.97);
 }
 
 .site-header::before{
@@ -297,7 +297,7 @@ select:focus-visible{
   justify-content:center;
   gap:.35rem;
   min-width:0;
-  flex-wrap:wrap;
+  flex-wrap:nowrap;
 }
 
 .nav > a,
@@ -306,12 +306,12 @@ select:focus-visible{
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding:.62rem .82rem;
+  padding:.62rem .7rem;
   border:1px solid color-mix(in srgb, var(--season) 22%, transparent);
   border-radius:999px;
   background:var(--season-soft);
   font-family:Inter,system-ui,sans-serif;
-  font-size:.93rem;
+  font-size:.9rem;
   font-weight:500;
   white-space:nowrap;
   transition:
@@ -351,15 +351,17 @@ select:focus-visible{
   top:calc(100% + .65rem);
   min-width:290px;
   padding:.75rem;
-  background:rgba(253,251,248,.98);
+  background:color-mix(in srgb, var(--surface) 96%, white 4%);
   border:1px solid rgba(180,95,125,.18);
   border-radius:20px;
   box-shadow:0 20px 60px rgba(0,0,0,.10);
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
   z-index:260;
 }
 
 [data-theme="dark"] .dropdown-menu{
-  background:rgba(23,29,37,.98);
+  background:rgba(17,23,31,.98);
   border-color:var(--line);
 }
 
@@ -2059,6 +2061,7 @@ body.header-condensed .brand span{display:block !important;opacity:.88;max-heigh
 }
 
 .nav-group{
+  flex:1 1 0;
   min-width:0;
 }
 

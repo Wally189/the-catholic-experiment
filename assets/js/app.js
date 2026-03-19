@@ -542,6 +542,25 @@ const languages = [
     });
   }
 
+  function ensureTopbarLinks() {
+    const topbar = document.querySelector('.topbar-left');
+    if (!topbar) return;
+
+    if (!topbar.querySelector('a[href="contact.html"]')) {
+      const link = document.createElement('a');
+      link.href = 'contact.html';
+      link.className = 'topbar-btn';
+      link.textContent = 'Contact';
+
+      const joinLink = topbar.querySelector('a[href="join.html"]');
+      if (joinLink) {
+        joinLink.insertAdjacentElement('afterend', link);
+      } else {
+        topbar.append(link);
+      }
+    }
+  }
+
   function refinePrimaryNav() {
     const nav = document.querySelector('.nav');
     if (!nav) return;
@@ -579,35 +598,38 @@ const languages = [
       }
     }
 
-    if (nav.querySelector('[data-nav-group="other-resources"]')) return;
-
-    const group = document.createElement('div');
-    group.className = 'dropdown nav-group';
-    group.setAttribute('data-nav-group', 'other-resources');
-
-    const button = document.createElement('button');
-    button.className = 'dropdown-toggle';
-    button.type = 'button';
-    button.textContent = 'Other resources';
-
-    const menu = document.createElement('div');
-    menu.className = 'dropdown-menu';
-
-    [
-      { href: 'resources.html', label: 'Overview' },
-      { href: 'resources.html#north-america', label: 'North America' },
-      { href: 'resources.html#latin-america', label: 'Latin America' },
-      { href: 'resources.html#europe', label: 'Europe' },
-      { href: 'resources.html#africa-asia-pacific', label: 'Africa & Asia-Pacific' },
-    ].forEach((item) => {
-      const link = document.createElement('a');
-      link.href = item.href;
-      link.textContent = item.label;
-      menu.append(link);
+    nav.querySelectorAll('.dropdown-menu a[href="businesses.html"]').forEach((link) => {
+      link.textContent = 'Business Directory';
     });
 
-    group.append(button, menu);
-    nav.append(group);
+    let group = nav.querySelector('[data-nav-group="other-resources"]');
+    if (!group) {
+      group = document.createElement('div');
+      group.className = 'dropdown nav-group';
+      group.setAttribute('data-nav-group', 'other-resources');
+      group.append(document.createElement('button'), document.createElement('div'));
+      nav.append(group);
+    }
+
+    const button = group.querySelector('.dropdown-toggle') || document.createElement('button');
+    button.className = 'dropdown-toggle';
+    button.type = 'button';
+    button.textContent = 'Global Resources';
+
+    const menu = group.querySelector('.dropdown-menu') || document.createElement('div');
+    menu.className = 'dropdown-menu';
+    menu.replaceChildren(
+      buildNavLink({ href: 'resources.html', label: 'Overview' }),
+      buildNavLink({ href: 'resources.html#north-america', label: 'North America' }),
+      buildNavLink({ href: 'resources.html#latin-america', label: 'Latin America' }),
+      buildNavLink({ href: 'resources.html#europe', label: 'Europe' }),
+      buildNavLink({ href: 'resources.html#africa', label: 'Africa' }),
+      buildNavLink({ href: 'resources.html#asia', label: 'Asia' }),
+      buildNavLink({ href: 'resources.html#australia-oceania', label: 'Australia & Oceania' }),
+    );
+
+    if (!button.parentNode) group.append(button);
+    if (!menu.parentNode) group.append(menu);
   }
 
   function initNav() {
@@ -1135,6 +1157,7 @@ const languages = [
     } catch (_) {}
     applyLiturgicalTheme();
     diversifyHeroImages();
+    ensureTopbarLinks();
     initSupportLinks();
     refinePrimaryNav();
     ensureFloatingLinks();
