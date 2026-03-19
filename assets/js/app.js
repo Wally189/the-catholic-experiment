@@ -430,6 +430,7 @@ const TCE = (() => {
       currentHourLink.append(label, ' - Universalis');
     }
 
+    todayLink.textContent = "Today's readings";
     todayLink.classList.remove('secondary');
     currentHourLink.classList.add('secondary');
     floating.replaceChildren(todayLink, currentHourLink);
@@ -545,11 +546,38 @@ const languages = [
     const nav = document.querySelector('.nav');
     if (!nav) return;
 
+    const buildNavLink = (item) => {
+      const link = document.createElement('a');
+      link.href = item.href;
+      link.textContent = item.label;
+      if (item.external) {
+        link.target = '_blank';
+        link.rel = 'noopener';
+      }
+      return link;
+    };
+
+    let vaticanGroup = null;
     nav.querySelectorAll('.nav-group > .dropdown-toggle').forEach((button) => {
-      if (/Official\s*\/\s*Vatican/i.test(button.textContent || '')) {
+      if (/(Official\s*\/\s*Vatican|Vatican Resources)/i.test(button.textContent || '')) {
         button.textContent = 'Vatican Resources';
+        vaticanGroup = button.closest('.nav-group');
       }
     });
+
+    if (vaticanGroup) {
+      const menu = vaticanGroup.querySelector('.dropdown-menu');
+      if (menu) {
+        menu.replaceChildren(
+          buildNavLink({ href: 'vatican-resources.html', label: 'Overview' }),
+          buildNavLink({ href: 'https://www.vatican.va/', label: 'Holy See', external: true }),
+          buildNavLink({ href: 'https://www.vaticannews.va/en.html', label: 'Vatican News', external: true }),
+          buildNavLink({ href: 'https://www.vatican.va/content/romancuria/en.html', label: 'Roman Curia', external: true }),
+          buildNavLink({ href: 'https://www.vatican.va/archive/ENG0015/_INDEX.HTM', label: 'Catechism', external: true }),
+          buildNavLink({ href: 'https://www.vatican.va/archive/cod-iuris-canonici/cic_index_en.html', label: 'Canon Law', external: true }),
+        );
+      }
+    }
 
     if (nav.querySelector('[data-nav-group="other-resources"]')) return;
 
@@ -567,7 +595,6 @@ const languages = [
 
     [
       { href: 'resources.html', label: 'Overview' },
-      { href: 'resources.html#rome', label: 'Rome & universal Church' },
       { href: 'resources.html#north-america', label: 'North America' },
       { href: 'resources.html#latin-america', label: 'Latin America' },
       { href: 'resources.html#europe', label: 'Europe' },
@@ -695,15 +722,6 @@ const languages = [
       setNavState(open);
     });
 
-    window.addEventListener('scroll', () => {
-      if (isMobile() && window.scrollY > 12) closeNav();
-    }, { passive: true });
-    document.addEventListener('wheel', () => {
-      if (isMobile() && nav.classList.contains('open')) closeNav();
-    }, { passive: true });
-    document.addEventListener('touchmove', () => {
-      if (isMobile() && nav.classList.contains('open')) closeNav();
-    }, { passive: true });
     window.addEventListener('resize', () => { syncMode(); updateCurrentHourLink(); });
     window.visualViewport?.addEventListener('resize', queueChromeSync);
     window.addEventListener('orientationchange', queueChromeSync);
@@ -1112,7 +1130,9 @@ const languages = [
   }
 
   async function init() {
-    await loadSiteConfig();
+    try {
+      await loadSiteConfig();
+    } catch (_) {}
     applyLiturgicalTheme();
     diversifyHeroImages();
     initSupportLinks();

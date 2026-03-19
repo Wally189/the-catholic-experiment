@@ -2712,6 +2712,8 @@ body.header-condensed .brand span{display:block !important;opacity:.88;max-heigh
     border-radius:20px;
     max-height:none;
     overflow:auto;
+    overscroll-behavior:contain;
+    -webkit-overflow-scrolling:touch;
     z-index:340;
   }
 
