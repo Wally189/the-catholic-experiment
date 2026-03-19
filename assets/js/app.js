@@ -564,6 +564,12 @@ const languages = [
       button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       button.textContent = open ? 'Close' : 'Menu';
       document.body.classList.toggle('mobile-nav-open', open);
+      if (!open) {
+        nav.querySelectorAll('.dropdown.open').forEach((menu) => {
+          menu.classList.remove('open');
+          menu.querySelector('.dropdown-toggle')?.setAttribute('aria-expanded', 'false');
+        });
+      }
       if (open) {
         document.body.classList.remove('header-condensed');
       } else if (isMobile()) {
