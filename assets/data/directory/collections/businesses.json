@@ -22,6 +22,8 @@
         "url": "https://www.catholicgiftshop.co.uk/"
       }
     ],
+    "type": "catholic-goods",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-catholic-gift-shop"
   },
@@ -48,6 +50,8 @@
         "url": "https://www.catholicseasons.com/"
       }
     ],
+    "type": "catholic-goods",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-catholic-seasons"
   },
@@ -73,6 +77,8 @@
         "url": "https://www.ctsbooks.org/"
       }
     ],
+    "type": "catholic-goods",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-cts-books"
   },
@@ -99,6 +105,8 @@
         "url": "https://www.gracewing.co.uk/"
       }
     ],
+    "type": "catholic-goods",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-gracewing"
   },
@@ -125,6 +133,8 @@
         "url": "https://holyshop.co.uk/"
       }
     ],
+    "type": "catholic-goods",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-holyshop"
   },
@@ -151,6 +161,8 @@
         "url": "https://www.mccrimmons.com/"
       }
     ],
+    "type": "catholic-goods",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-mccrimmons"
   },
@@ -177,6 +189,8 @@
         "url": "https://www.paulineuk.org/"
       }
     ],
+    "type": "ecclesial",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-pauline-books-media"
   },
@@ -203,6 +217,8 @@
         "url": "https://www.rpbooks.co.uk/"
       }
     ],
+    "type": "ecclesial",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-redemptorist-publications"
   },
@@ -229,6 +245,8 @@
         "url": "https://www.tangney-tours.com/"
       }
     ],
+    "type": "catholic-serving",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-tangney-tours"
   },
@@ -255,6 +273,8 @@
         "url": "https://www.tentenresources.co.uk/"
       }
     ],
+    "type": "catholic-goods",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-ten-ten-resources"
   },
@@ -281,6 +301,8 @@
         "url": "https://thecatholicherald.com/"
       }
     ],
+    "type": "catholic-serving",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-catholic-herald"
   },
@@ -307,6 +329,8 @@
         "url": "https://www.thetablet.co.uk/"
       }
     ],
+    "type": "catholic-serving",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-the-tablet"
   },
@@ -333,6 +357,8 @@
         "url": "https://www.catholicireland.net/"
       }
     ],
+    "type": "catholic-serving",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-catholic-ireland"
   },
@@ -359,6 +385,8 @@
         "url": "https://joewalshtours.ie/"
       }
     ],
+    "type": "catholic-serving",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-joe-walsh-tours"
   },
@@ -385,6 +413,8 @@
         "url": "https://marian.ie/"
       }
     ],
+    "type": "catholic-serving",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-marian-pilgrimages"
   },
@@ -411,6 +441,8 @@
         "url": "https://www.messenger.ie/"
       }
     ],
+    "type": "ecclesial",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-messenger-publications"
   },
@@ -437,6 +469,8 @@
         "url": "https://www.pauline.ie/"
       }
     ],
+    "type": "ecclesial",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-pauline-books-media-ireland"
   },
@@ -463,6 +497,8 @@
         "url": "https://www.irishcatholic.com/"
       }
     ],
+    "type": "catholic-serving",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-irish-catholic"
   },
@@ -489,6 +525,8 @@
         "url": "https://www.veritasbooksonline.com/"
       }
     ],
+    "type": "catholic-goods",
+    "verification": "reviewed",
     "entity_type": "business",
     "detail_url": "businesses.html#business-veritas"
   }

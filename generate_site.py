@@ -9,11 +9,11 @@ base = Path('/mnt/data/catholic-experiment-site')
 site = {
     'title': 'The Catholic Experiment',
     'tagline': 'A life ordered by faith, work, and stewardship.',
-    'description': 'A personal and project site exploring Catholic living in the UK and Ireland through faith, work, stewardship, community, preparedness, and renewal.',
+    'description': 'A Catholic directory and gateway for Britain, Ireland, and the islands: parishes, dioceses, pilgrimages, retreats, trusted resources, and practical Catholic routes.',
     'footer_credit': 'Website built by Waylight Atlantic',
     'footer_url': 'https://www.waylight-atlantic.co.uk/',
-    'contact_email': 'hello@example.com',
-    'newsletter_email': 'newsletter@example.com',
+    'contact_email': 'thecatholicexperiment@gmail.com',
+    'newsletter_email': 'thecatholicexperiment@gmail.com',
     'cms_pin': '',
 }
 
@@ -26,7 +26,7 @@ pages = [
     ('newsletter.html','Newsletter','newsletter','subhero'),
     ('faith-formation.html','Faith & Formation','faith','pillar'),
     ('vocation-work.html','Vocation & Work','vocation','pillar'),
-    ('household-budgeting.html','Household & Budgeting','household','pillar'),
+    ('household-budgeting.html','Home & Family','household','pillar'),
     ('community-relationships.html','Community & Relationships','community','pillar'),
     ('health-preparedness.html','Health & Preparedness','health','pillar'),
     ('rest-renewal.html','Rest & Renewal','rest','pillar'),
@@ -53,7 +53,7 @@ pages = [
 pillar_info = {
     'faith': {'title':'Faith & Formation','summary':'Prayer, study, discipline, and the slow forming of the soul.','image':'assets/img/20240406_143639.jpg'},
     'vocation': {'title':'Vocation & Work','summary':'Purposeful labour, craftsmanship, honest work, and the sanctification of ordinary effort.','image':'assets/img/20240406_143639.jpg'},
-    'household': {'title':'Household & Budgeting','summary':'Stewardship, budgeting, provisioning, and the ordinary duties of home.','image':'assets/img/20240406_143639.jpg'},
+    'household': {'title':'Home & Family','summary':'Stewardship, budgeting, provisioning, family life, and the ordinary duties of home.','image':'assets/img/20240406_143639.jpg'},
     'community': {'title':'Community & Relationships','summary':'Parish life, hospitality, friendship, and the shared life of charity.','image':'assets/img/20240406_143639.jpg'},
     'health': {'title':'Health & Preparedness','summary':'Care of body and mind, resilience, prudence, and planning for the road ahead.','image':'assets/img/20240406_143639.jpg'},
     'rest': {'title':'Rest & Renewal','summary':'Sabbath, silence, leisure, beauty, and the restoring of proper rhythm.','image':'assets/img/20240406_143639.jpg'},
@@ -572,7 +572,7 @@ articles = {
 
 legal_content = {
 'privacy.html': ('Privacy Policy','This starter privacy policy is written for a broad UK and Ireland audience and assumes the site may offer a contact form, newsletter sign-up, analytics subject to consent, and moderation of journal comments. It should be reviewed before any live launch.','Key points','<ul><li>Personal data is collected only where necessary for contact, subscriptions, moderation, security, and the lawful operation of the site.</li><li>Analytics and optional cookies should only run after consent where required.</li><li>Users should be told how to exercise their rights of access, rectification, erasure, restriction, objection, and complaint.</li></ul>'),
-'cookies.html': ('Cookie Policy','This starter cookie policy distinguishes strictly necessary cookies from optional analytics or engagement cookies. The demo banner defaults to no optional cookies until a visitor chooses.','Categories used in the demo','<ul><li>Strictly necessary: accessibility and theme preferences stored locally.</li><li>Optional analytics: placeholder only, disabled by default.</li><li>Functional enhancements: search and comment moderation helpers stored locally.</li></ul>'),
+'cookies.html': ('Cookie Policy','This starter cookie policy distinguishes strictly necessary cookies from optional analytics or engagement cookies. The banner defaults to no optional cookies until a visitor chooses.','Cookie categories','<ul><li>Strictly necessary: accessibility and theme preferences stored locally.</li><li>Optional analytics: placeholder only, disabled by default.</li><li>Functional enhancements: search and comment moderation helpers stored locally.</li></ul>'),
 'terms.html': ('Terms of Use','The terms page sets expectations around the informational nature of the content, respectful use of comment areas, intellectual property in original material, and the absence of liability for reliance on general guidance.','Points to refine before going live','<ul><li>Who operates the site</li><li>How comments are moderated</li><li>How external links are handled</li><li>What happens if services or mailing lists are withdrawn</li></ul>'),
 'data-protection.html': ('Data Protection','This page gathers together the site’s data-protection commitments in a simpler explanatory form, pointing visitors towards privacy details, cookie choices, and rights information.','Suggested sections','<ul><li>Lawful bases for processing</li><li>Retention and deletion periods</li><li>International transfers if any service providers are used</li><li>How to complain to the relevant authority</li></ul>'),
 'accessibility.html': ('Accessibility Statement','This accessibility statement sets out the current measures in place, recognised limitations, and a clear route for feedback. It also notes dark mode, keyboard navigation, reduced motion handling, and semantic structure.','Current accessibility features','<ul><li>Skip link and semantic landmarks</li><li>Keyboard-friendly navigation</li><li>Dark mode and reduced motion support</li><li>Readable contrast and scalable text</li></ul>'),

@@ -20,7 +20,9 @@
         "title": "Catholic Truth Society",
         "url": "https://www.ctsbooks.org/"
       }
-    ]
+    ],
+    "type": "catholic-goods",
+    "verification": "reviewed"
   },
   {
     "id": "business-pauline-books-media",
@@ -44,7 +46,9 @@
         "title": "Pauline Books & Media UK",
         "url": "https://www.paulineuk.org/"
       }
-    ]
+    ],
+    "type": "ecclesial",
+    "verification": "reviewed"
   },
   {
     "id": "business-gracewing",
@@ -68,7 +72,9 @@
         "title": "Gracewing",
         "url": "https://www.gracewing.co.uk/"
       }
-    ]
+    ],
+    "type": "catholic-goods",
+    "verification": "reviewed"
   },
   {
     "id": "business-redemptorist-publications",
@@ -92,7 +98,9 @@
         "title": "Redemptorist Publications",
         "url": "https://www.rpbooks.co.uk/"
       }
-    ]
+    ],
+    "type": "ecclesial",
+    "verification": "reviewed"
   },
   {
     "id": "business-mccrimmons",
@@ -116,7 +124,9 @@
         "title": "McCrimmon Publishing",
         "url": "https://www.mccrimmons.com/"
       }
-    ]
+    ],
+    "type": "catholic-goods",
+    "verification": "reviewed"
   },
   {
     "id": "business-catholic-gift-shop",
@@ -140,7 +150,9 @@
         "title": "Catholic Gift Shop",
         "url": "https://www.catholicgiftshop.co.uk/"
       }
-    ]
+    ],
+    "type": "catholic-goods",
+    "verification": "reviewed"
   },
   {
     "id": "business-catholic-seasons",
@@ -164,7 +176,9 @@
         "title": "Catholic Seasons",
         "url": "https://www.catholicseasons.com/"
       }
-    ]
+    ],
+    "type": "catholic-goods",
+    "verification": "reviewed"
   },
   {
     "id": "business-messenger-publications",
@@ -188,7 +202,9 @@
         "title": "Messenger Publications",
         "url": "https://www.messenger.ie/"
       }
-    ]
+    ],
+    "type": "ecclesial",
+    "verification": "reviewed"
   },
   {
     "id": "business-marian-pilgrimages",
@@ -212,7 +228,9 @@
         "title": "Marian Pilgrimages",
         "url": "https://marian.ie/"
       }
-    ]
+    ],
+    "type": "catholic-serving",
+    "verification": "reviewed"
   },
   {
     "id": "business-joe-walsh-tours",
@@ -236,7 +254,9 @@
         "title": "Joe Walsh Tours",
         "url": "https://joewalshtours.ie/"
       }
-    ]
+    ],
+    "type": "catholic-serving",
+    "verification": "reviewed"
   },
   {
     "id": "business-tangney-tours",
@@ -260,7 +280,9 @@
         "title": "Tangney Tours",
         "url": "https://www.tangney-tours.com/"
       }
-    ]
+    ],
+    "type": "catholic-serving",
+    "verification": "reviewed"
   },
   {
     "id": "business-veritas",
@@ -284,7 +306,9 @@
         "title": "Veritas",
         "url": "https://www.veritasbooksonline.com/"
       }
-    ]
+    ],
+    "type": "catholic-goods",
+    "verification": "reviewed"
   },
   {
     "id": "business-ten-ten-resources",
@@ -308,7 +332,9 @@
         "title": "Ten Ten Resources",
         "url": "https://www.tentenresources.co.uk/"
       }
-    ]
+    ],
+    "type": "catholic-goods",
+    "verification": "reviewed"
   },
   {
     "id": "business-the-tablet",
@@ -332,7 +358,9 @@
         "title": "The Tablet",
         "url": "https://www.thetablet.co.uk/"
       }
-    ]
+    ],
+    "type": "catholic-serving",
+    "verification": "reviewed"
   },
   {
     "id": "business-catholic-herald",
@@ -356,7 +384,9 @@
         "title": "The Catholic Herald",
         "url": "https://thecatholicherald.com/"
       }
-    ]
+    ],
+    "type": "catholic-serving",
+    "verification": "reviewed"
   },
   {
     "id": "business-irish-catholic",
@@ -380,7 +410,9 @@
         "title": "The Irish Catholic",
         "url": "https://www.irishcatholic.com/"
       }
-    ]
+    ],
+    "type": "catholic-serving",
+    "verification": "reviewed"
   },
   {
     "id": "business-pauline-books-media-ireland",
@@ -404,7 +436,9 @@
         "title": "Pauline Books & Media Ireland",
         "url": "https://www.pauline.ie/"
       }
-    ]
+    ],
+    "type": "ecclesial",
+    "verification": "reviewed"
   },
   {
     "id": "business-holyshop",
@@ -428,7 +462,9 @@
         "title": "Holyshop",
         "url": "https://holyshop.co.uk/"
       }
-    ]
+    ],
+    "type": "catholic-goods",
+    "verification": "reviewed"
   },
   {
     "id": "business-catholic-ireland",
@@ -452,6 +488,8 @@
         "title": "CatholicIreland.net",
         "url": "https://www.catholicireland.net/"
       }
-    ]
+    ],
+    "type": "catholic-serving",
+    "verification": "reviewed"
   }
 ]

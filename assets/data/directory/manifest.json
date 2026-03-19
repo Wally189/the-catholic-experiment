@@ -46,7 +46,7 @@
       "output": "assets/data/directory/collections/businesses.json",
       "schema": "assets/data/schemas/businesses.schema.json",
       "listing_page": "businesses.html",
-      "required_fields": ["id", "name", "slug", "business_type", "country", "verification_status", "sources"]
+      "required_fields": ["id", "name", "slug", "type", "business_type", "country", "verification", "sources"]
     },
     {
       "name": "schools",

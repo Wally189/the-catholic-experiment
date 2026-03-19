@@ -234,6 +234,54 @@
     "summary": "A simple next-step page pointing to seeker, parish, contact, and support routes."
   },
   {
+    "title": "New to the Faith",
+    "url": "discovery-paths.html",
+    "section": "Faith & Formation",
+    "description": "A calm starting point for people who are curious about Catholic life, parish worship, OCIA, and how to begin gradually.",
+    "keywords": "new to the faith seeker catholic faith parish mass ocia enquiry beginner",
+    "summary": "A calm starting point for people who are curious about Catholic life, parish worship, OCIA, and how to begin gradually."
+  },
+  {
+    "title": "Study the Faith",
+    "url": "study-the-faith.html",
+    "section": "Faith & Formation",
+    "description": "A steady route through the Gospels, the Creed, the sacraments, prayer, and trustworthy Catholic introductory resources.",
+    "keywords": "study the faith gospel creed catechism sacraments prayer catholic teaching",
+    "summary": "A steady route through the Gospels, the Creed, the sacraments, prayer, and trustworthy Catholic introductory resources."
+  },
+  {
+    "title": "What is OCIA?",
+    "url": "what-is-ocia.html",
+    "section": "Faith & Formation",
+    "description": "A calm explanation of OCIA, the ordinary parish route for adults enquiring about becoming Catholic.",
+    "keywords": "ocia order of christian initiation of adults parish enquiry becoming catholic",
+    "summary": "A calm explanation of OCIA, the ordinary parish route for adults enquiring about becoming Catholic."
+  },
+  {
+    "title": "What Happens at Mass?",
+    "url": "what-happens-at-mass.html",
+    "section": "Faith & Formation",
+    "description": "A simple guide to the shape of the Mass for those visiting a Catholic parish for the first time.",
+    "keywords": "mass catholic parish liturgy communion first visit worship",
+    "summary": "A simple guide to the shape of the Mass for those visiting a Catholic parish for the first time."
+  },
+  {
+    "title": "What Catholics Believe",
+    "url": "what-catholics-believe.html",
+    "section": "Faith & Formation",
+    "description": "A measured introduction to Catholic belief, including God, Jesus Christ, the Church, sacraments, and moral life.",
+    "keywords": "what catholics believe creed jesus church sacraments prayer moral life",
+    "summary": "A measured introduction to Catholic belief, including God, Jesus Christ, the Church, sacraments, and moral life."
+  },
+  {
+    "title": "Questions and Difficult Topics",
+    "url": "difficult-questions.html",
+    "section": "Faith & Formation",
+    "description": "A measured starting point for difficult Catholic moral and historical questions that deserve careful reading.",
+    "keywords": "difficult questions catholic abortion crusades history moral questions church teaching",
+    "summary": "A measured starting point for difficult Catholic moral and historical questions that deserve careful reading."
+  },
+  {
     "title": "Tools",
     "description": "Catholic tools, apps, bishops conferences, and Vatican references.",
     "keywords": "universalis hallow vatican bishops catechism tools",
@@ -321,17 +369,6 @@
     ]
   },
   {
-    "title": "Study the Faith",
-    "url": "study-the-faith.html",
-    "summary": "Trusted pathways for prayer, catechism, scripture, and saints.",
-    "tags": [
-      "faith",
-      "formation",
-      "prayer",
-      "saints"
-    ]
-  },
-  {
     "title": "Catholic Britain & Ireland",
     "url": "catholic-britain-ireland.html",
     "summary": "Big-map and regional-hub concept for the whole archipelago.",
@@ -357,7 +394,7 @@
   },
   {
     "url": "businesses.html",
-    "title": "Catholic Businesses",
+    "title": "Catholic Business Directory",
     "section": "Explore",
     "description": "A directory of Catholic businesses across Britain and Ireland.",
     "keywords": "catholic businesses directory uk ireland"
@@ -375,6 +412,20 @@
     "section": "Governance",
     "description": "Safeguarding boundaries, reporting routes, and contact expectations for the public site.",
     "keywords": "safeguarding reporting boundaries cssa ireland scotland"
+  },
+  {
+    "url": "business-directory-policy.html",
+    "title": "Business directory policy",
+    "section": "Directory policy",
+    "description": "Policy, categories, verification levels, and guardrails for the Catholic Business Directory.",
+    "keywords": "business directory policy catholic-owned catholic-serving ecclesial reviewed priest diocesan"
+  },
+  {
+    "url": "add-a-business.html",
+    "title": "Submit a business",
+    "section": "Directory policy",
+    "description": "Submission route for the Catholic Business Directory, with intake fields and review expectations.",
+    "keywords": "submit a business catholic directory listing form review"
   },
   {
     "id": "directory:jurisdictions:jurisdiction-bcos",
@@ -958,7 +1009,7 @@
     "title": "Catholic Gift Shop",
     "section": "Directory: Businesses",
     "description": "Online Catholic retailer specialising in rosaries, Lourdes gifts, medals, sacramental gifts, and devotional items.",
-    "keywords": "Catholic Gift Shop retail London England Lourdes gifts rosaries",
+    "keywords": "Catholic Gift Shop catholic-goods reviewed London England Lourdes gifts rosaries",
     "source": "directory"
   },
   {
@@ -967,7 +1018,7 @@
     "title": "Catholic Seasons",
     "section": "Directory: Businesses",
     "description": "UK Catholic home and gift shop focused on liturgical living, sacramental gifts, beeswax candles, and domestic church goods.",
-    "keywords": "Catholic Seasons maker Online England domestic church Catholic home and gift shop",
+    "keywords": "Catholic Seasons catholic-goods reviewed Online England domestic church Catholic home and gift shop",
     "source": "directory"
   },
   {
@@ -976,7 +1027,7 @@
     "title": "Catholic Truth Society",
     "section": "Directory: Businesses",
     "description": "Catholic publisher and bookshop offering prayer books, catechetical resources, and spiritual reading.",
-    "keywords": "Catholic Truth Society publisher London England CTS Books",
+    "keywords": "Catholic Truth Society catholic-goods reviewed London England CTS Books",
     "source": "directory"
   },
   {
@@ -985,7 +1036,7 @@
     "title": "Gracewing",
     "section": "Directory: Businesses",
     "description": "Catholic publisher and UK distributor carrying theology, spirituality, saints, liturgy, and church titles.",
-    "keywords": "Gracewing publisher Leominster England Catholic publisher",
+    "keywords": "Gracewing catholic-goods reviewed Leominster England Catholic publisher",
     "source": "directory"
   },
   {
@@ -994,7 +1045,7 @@
     "title": "Holyshop",
     "section": "Directory: Businesses",
     "description": "Catholic devotional and sacramental shop offering rosaries, medals, statues, icons, and gifts.",
-    "keywords": "Holyshop retail Online England Catholic devotional shop rosaries and medals",
+    "keywords": "Holyshop catholic-goods reviewed Online England Catholic devotional shop rosaries and medals",
     "source": "directory"
   },
   {
@@ -1003,7 +1054,7 @@
     "title": "McCrimmon Publishing",
     "section": "Directory: Businesses",
     "description": "Publisher and church supplier known for hymnals, parish mass books, banners, and school resources.",
-    "keywords": "McCrimmon Publishing publisher Great Wakering England McCrimmons Catholic Parish Mass Book church banners",
+    "keywords": "McCrimmon Publishing catholic-goods reviewed Great Wakering England McCrimmons Catholic Parish Mass Book church banners",
     "source": "directory"
   },
   {
@@ -1012,7 +1063,7 @@
     "title": "Pauline Books & Media UK",
     "section": "Directory: Businesses",
     "description": "Catholic books, media, prayer resources, and gifts offered through the Daughters of St Paul in Liverpool.",
-    "keywords": "Pauline Books & Media UK publisher Liverpool England Pauline Books and Media Pauline Book Centre Daughters of St Paul",
+    "keywords": "Pauline Books & Media UK ecclesial reviewed Liverpool England Pauline Books and Media Pauline Book Centre Daughters of St Paul",
     "source": "directory"
   },
   {
@@ -1021,7 +1072,7 @@
     "title": "Redemptorist Publications",
     "section": "Directory: Businesses",
     "description": "Catholic publisher producing liturgical, catechetical, pastoral, and parish resources in everyday language.",
-    "keywords": "Redemptorist Publications publisher Chawton England RP Books Catholic publisher",
+    "keywords": "Redemptorist Publications ecclesial reviewed Chawton England RP Books Catholic publisher",
     "source": "directory"
   },
   {
@@ -1030,7 +1081,7 @@
     "title": "Tangney Tours",
     "section": "Directory: Businesses",
     "description": "Pilgrimage specialist based in Kent, offering parish, diocesan, and group pilgrimages to Lourdes, the Holy Land, Medjugorje, and beyond.",
-    "keywords": "Tangney Tours travel Kent England pilgrimage specialist",
+    "keywords": "Tangney Tours catholic-serving reviewed Kent England pilgrimage specialist",
     "source": "directory"
   },
   {
@@ -1039,7 +1090,7 @@
     "title": "Ten Ten Resources",
     "section": "Directory: Businesses",
     "description": "Catholic family and sacramental retailer offering rosaries, memorial cards, gifts, and practical parish resources.",
-    "keywords": "Ten Ten Resources retail Online England Catholic gifts sacramental cards",
+    "keywords": "Ten Ten Resources catholic-goods reviewed Online England Catholic gifts sacramental cards",
     "source": "directory"
   },
   {
@@ -1048,7 +1099,7 @@
     "title": "The Catholic Herald",
     "section": "Directory: Businesses",
     "description": "Catholic newspaper and magazine offering reporting, commentary, and Catholic cultural coverage.",
-    "keywords": "The Catholic Herald publisher London England Catholic Herald Catholic newspaper Catholic magazine",
+    "keywords": "The Catholic Herald catholic-serving reviewed London England Catholic Herald Catholic newspaper Catholic magazine",
     "source": "directory"
   },
   {
@@ -1057,7 +1108,7 @@
     "title": "The Tablet",
     "section": "Directory: Businesses",
     "description": "Longstanding Catholic newspaper and publisher serving readers in Britain, Ireland, and beyond.",
-    "keywords": "The Tablet publisher London England Catholic newspaper Catholic magazine",
+    "keywords": "The Tablet catholic-serving reviewed London England Catholic newspaper Catholic magazine",
     "source": "directory"
   },
   {
@@ -1066,7 +1117,7 @@
     "title": "CatholicIreland.net",
     "section": "Directory: Businesses",
     "description": "Irish Catholic resource platform offering articles, directories, and practical Catholic reading and reference material.",
-    "keywords": "CatholicIreland.net other Online Ireland Irish Catholic resources Catholic Ireland",
+    "keywords": "CatholicIreland.net catholic-serving reviewed Online Ireland Irish Catholic resources Catholic Ireland",
     "source": "directory"
   },
   {
@@ -1075,7 +1126,7 @@
     "title": "Joe Walsh Tours",
     "section": "Directory: Businesses",
     "description": "Pilgrimage tour company organising diocesan pilgrimages and pilgrim journeys from Ireland and the UK to major holy sites.",
-    "keywords": "Joe Walsh Tours travel Dublin Ireland diocesan pilgrimages pilgrimage tours",
+    "keywords": "Joe Walsh Tours catholic-serving reviewed Dublin Ireland diocesan pilgrimages pilgrimage tours",
     "source": "directory"
   },
   {
@@ -1084,7 +1135,7 @@
     "title": "Marian Pilgrimages",
     "section": "Directory: Businesses",
     "description": "Irish pilgrimage specialist organising travel to Lourdes, Fatima, Medjugorje, the Holy Land, and other shrines.",
-    "keywords": "Marian Pilgrimages travel Dublin Ireland pilgrimage specialists",
+    "keywords": "Marian Pilgrimages catholic-serving reviewed Dublin Ireland pilgrimage specialists",
     "source": "directory"
   },
   {
@@ -1093,7 +1144,7 @@
     "title": "Messenger Publications",
     "section": "Directory: Businesses",
     "description": "Jesuit publishing house in Ireland offering Catholic books, pastoral resources, and the Sacred Heart Messenger.",
-    "keywords": "Messenger Publications publisher Dublin Ireland Sacred Heart Messenger Jesuits in Ireland",
+    "keywords": "Messenger Publications ecclesial reviewed Dublin Ireland Sacred Heart Messenger Jesuits in Ireland",
     "source": "directory"
   },
   {
@@ -1102,7 +1153,7 @@
     "title": "Pauline Books & Media Ireland",
     "section": "Directory: Businesses",
     "description": "Irish Pauline book and media apostolate offering Catholic books, prayer material, and devotional gifts.",
-    "keywords": "Pauline Books & Media Ireland publisher Dublin Ireland Pauline Ireland Daughters of St Paul Ireland Catholic bookshop Dublin",
+    "keywords": "Pauline Books & Media Ireland ecclesial reviewed Dublin Ireland Pauline Ireland Daughters of St Paul Ireland Catholic bookshop Dublin",
     "source": "directory"
   },
   {
@@ -1111,7 +1162,7 @@
     "title": "The Irish Catholic",
     "section": "Directory: Businesses",
     "description": "Irish Catholic newspaper covering Church life, current affairs, and Catholic commentary.",
-    "keywords": "The Irish Catholic publisher Dublin Ireland Irish Catholic Catholic newspaper Ireland Catholic news",
+    "keywords": "The Irish Catholic catholic-serving reviewed Dublin Ireland Irish Catholic Catholic newspaper Ireland Catholic news",
     "source": "directory"
   },
   {
@@ -1120,7 +1171,7 @@
     "title": "Veritas",
     "section": "Directory: Businesses",
     "description": "Irish Catholic bookseller and publisher offering catechetical, liturgical, devotional, and sacramental resources.",
-    "keywords": "Veritas publisher Dublin Ireland Catholic books Ireland Catholic publisher",
+    "keywords": "Veritas catholic-goods reviewed Dublin Ireland Catholic books Ireland Catholic publisher",
     "source": "directory"
   },
   {

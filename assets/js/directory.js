@@ -30,7 +30,8 @@
       path: 'assets/data/directory/collections/businesses.json',
       title: 'Businesses',
       primaryField: 'country',
-      secondaryField: 'business_type',
+      secondaryField: 'type',
+      tertiaryField: 'verification',
     },
     schools: {
       path: 'assets/data/directory/collections/schools.json',
@@ -44,6 +45,36 @@
       primaryField: 'country',
       secondaryField: 'place_type',
     },
+  };
+
+  const businessDirectoryPolicy = {
+    typeLabels: {
+      'catholic-owned': 'Catholic-owned',
+      'catholic-serving': 'Catholic-serving',
+      'catholic-goods': 'Catholic goods/services',
+      ecclesial: 'Ecclesially referenced',
+    },
+    verificationLabels: {
+      standard: 'Standard listing',
+      reviewed: 'Editorially reviewed',
+      priest: 'Priest referenced',
+      diocesan: 'Diocesan reference',
+    },
+    businessTypeLabels: {
+      publisher: 'Publisher',
+      retail: 'Retail',
+      hospitality: 'Hospitality',
+      'professional-service': 'Professional service',
+      maker: 'Maker',
+      travel: 'Travel',
+      other: 'Other',
+    },
+    guardrails: [
+      'Listings must not promote activity clearly contrary to Catholic moral teaching.',
+      'Listings must not falsely claim parish, diocesan, episcopal, or Vatican endorsement.',
+      'Listings must not be misleading, fraudulent, or materially inaccurate.',
+      'Listings must not damage the public credibility of the directory.',
+    ],
   };
 
   function escapeHtml(value) {
@@ -114,6 +145,32 @@
   function statusBadge(status) {
     const tone = status === 'trusted' ? 'badge-trusted' : status === 'provisional' ? 'badge-provisional' : 'badge-review';
     return badge(status, tone);
+  }
+
+  function businessTypeBadge(value) {
+    const label = businessDirectoryPolicy.typeLabels[value] || value || 'Listing';
+    const tone = {
+      'catholic-owned': 'badge-owned',
+      'catholic-serving': 'badge-serving',
+      'catholic-goods': 'badge-goods',
+      ecclesial: 'badge-ecclesial',
+    }[value] || 'badge-review';
+    return badge(label, tone);
+  }
+
+  function businessVerificationBadge(value) {
+    const label = businessDirectoryPolicy.verificationLabels[value] || value || 'Standard listing';
+    const tone = {
+      standard: 'badge-standard',
+      reviewed: 'badge-reviewed',
+      priest: 'badge-priest',
+      diocesan: 'badge-diocesan',
+    }[value] || 'badge-standard';
+    return badge(label, tone);
+  }
+
+  function businessServiceLabel(value) {
+    return businessDirectoryPolicy.businessTypeLabels[value] || value || 'Business';
   }
 
   function domainFromUrl(value) {
@@ -280,7 +337,7 @@
     return value ? [String(value)] : [];
   }
 
-  function filterRecords(records, query, primaryValue, secondaryValue, meta, lookups) {
+  function filterRecords(records, query, primaryValue, secondaryValue, tertiaryValue, meta, lookups) {
     const normalizedQuery = String(query || '').trim().toLowerCase();
     return records.filter((record) => {
       if (primaryValue) {
@@ -290,6 +347,10 @@
       if (secondaryValue) {
         const values = summarizeValues(record, meta.secondaryField, lookups).map((item) => item.toLowerCase());
         if (!values.includes(secondaryValue.toLowerCase())) return false;
+      }
+      if (tertiaryValue && meta.tertiaryField) {
+        const values = summarizeValues(record, meta.tertiaryField, lookups).map((item) => item.toLowerCase());
+        if (!values.includes(tertiaryValue.toLowerCase())) return false;
       }
       if (!normalizedQuery) return true;
       const haystack = [
@@ -301,6 +362,7 @@
         record.postcode,
         record.short_name,
         record.type,
+        record.verification,
         record.parish_type,
         record.business_type,
         record.school_type,
@@ -316,6 +378,12 @@
     if (field === 'diocese_id') {
       const diocese = lookups.dioceses.get(value);
       return diocese ? (diocese.short_name || diocese.name) : value;
+    }
+    if (field === 'type') {
+      return businessDirectoryPolicy.typeLabels[value] || value;
+    }
+    if (field === 'verification') {
+      return businessDirectoryPolicy.verificationLabels[value] || value;
     }
     return value;
   }
@@ -377,7 +445,7 @@
           <td><strong>${escapeHtml(record.name)}</strong><span class="micro">${escapeHtml(record.summary || '')}</span></td>
           <td>${escapeHtml(record.locality || '')}<div class="micro">${escapeHtml(record.region || '')}</div></td>
           <td>${badge(record.country)}</td>
-          <td>${badge(record.business_type || 'business')}</td>
+          <td>${businessTypeBadge(record.type)} ${businessVerificationBadge(record.verification)}<div class="micro">${escapeHtml(businessServiceLabel(record.business_type))}</div></td>
           <td><a href="${escapeHtml(record.website_url || record.detail_url)}" rel="noopener" target="_blank">Visit site</a></td>
         </tr>`;
     }
@@ -435,7 +503,7 @@
       dioceses: { primary: 'All countries', secondary: 'All jurisdictions' },
       parishes: { primary: 'All countries', secondary: 'All dioceses' },
       organisations: { primary: 'All scopes', secondary: 'All types' },
-      businesses: { primary: 'All countries', secondary: 'All categories' },
+      businesses: { primary: 'All countries', secondary: 'All directory types', tertiary: 'All verification levels' },
       schools: { primary: 'All scopes', secondary: 'All types' },
       places: { primary: 'All countries', secondary: 'All types' },
       jurisdictions: { primary: 'All scopes', secondary: 'All types' },
@@ -444,14 +512,20 @@
     const queryInput = document.querySelector('[data-directory-search]');
     const primarySelect = document.querySelector('[data-directory-filter-primary]');
     const secondarySelect = document.querySelector('[data-directory-filter-secondary]');
+    const tertiarySelect = document.querySelector('[data-directory-filter-tertiary]');
     const countNode = document.querySelector('[data-directory-results-count]');
     const reviewNode = document.querySelector('[data-directory-review-count]');
 
     populateFilter(primarySelect, uniqueFilterValues(records, meta.primaryField), meta.primaryField, lookups, filterLabels[name]?.primary || 'All places');
     populateFilter(secondarySelect, uniqueFilterValues(records, meta.secondaryField), meta.secondaryField, lookups, filterLabels[name]?.secondary || 'All types');
+    if (meta.tertiaryField) {
+      populateFilter(tertiarySelect, uniqueFilterValues(records, meta.tertiaryField), meta.tertiaryField, lookups, filterLabels[name]?.tertiary || 'All statuses');
+    } else if (tertiarySelect) {
+      tertiarySelect.innerHTML = '<option value="">All statuses</option>';
+    }
 
     const render = () => {
-      const filtered = filterRecords(records, queryInput ? queryInput.value : '', primarySelect ? primarySelect.value : '', secondarySelect ? secondarySelect.value : '', meta, lookups);
+      const filtered = filterRecords(records, queryInput ? queryInput.value : '', primarySelect ? primarySelect.value : '', secondarySelect ? secondarySelect.value : '', tertiarySelect ? tertiarySelect.value : '', meta, lookups);
       if (countNode) {
         countNode.textContent = `${filtered.length} of ${records.length} records visible`;
       }
@@ -474,7 +548,7 @@
       reviewNode.textContent = issues.length ? `${issues.length} records still flagged for review.` : 'No current review warnings for this collection.';
     }
 
-    [queryInput, primarySelect, secondarySelect].forEach((control) => {
+    [queryInput, primarySelect, secondarySelect, tertiarySelect].forEach((control) => {
       if (control) control.addEventListener('input', render);
       if (control) control.addEventListener('change', render);
     });
@@ -522,13 +596,15 @@
     if (record.country) metaItems.push(badge(record.country));
     if (record.region) metaItems.push(badge(record.region));
     if (record.locality) metaItems.push(badge(record.locality));
-    if (record.type) metaItems.push(badge(record.type));
+    if (record.type && name !== 'businesses') metaItems.push(badge(record.type));
+    if (name === 'businesses' && record.type) metaItems.push(businessTypeBadge(record.type));
+    if (name === 'businesses' && record.verification) metaItems.push(businessVerificationBadge(record.verification));
     if (record.parish_type) metaItems.push(badge(record.parish_type));
     if (record.business_type) metaItems.push(badge(record.business_type));
     if (record.school_type) metaItems.push(badge(record.school_type));
     if (record.place_type) metaItems.push(badge(record.place_type));
     if (record.organisation_type) metaItems.push(badge(record.organisation_type));
-    metaItems.push(statusBadge(record.verification_status));
+    if (name !== 'businesses') metaItems.push(statusBadge(record.verification_status));
 
     if (record.website_url) {
       metaItems.push(`<a class="btn ghost" href="${escapeHtml(record.website_url)}" rel="noopener" target="_blank">Official site</a>`);

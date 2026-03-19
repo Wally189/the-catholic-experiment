@@ -11,6 +11,8 @@ const REVIEW_DIR = path.join(ROOT, 'assets', 'data', 'directory', 'review');
 const DERIVED_DIR = path.join(ROOT, 'assets', 'data', 'directory', 'derived');
 
 const VALID_VERIFICATION = new Set(['trusted', 'provisional', 'manual-review']);
+const VALID_BUSINESS_TYPES = new Set(['catholic-owned', 'catholic-serving', 'catholic-goods', 'ecclesial']);
+const VALID_BUSINESS_VERIFICATION = new Set(['standard', 'reviewed', 'priest', 'diocesan']);
 
 async function loadJson(filePath) {
   return JSON.parse(await fs.readFile(filePath, 'utf8'));
@@ -132,6 +134,17 @@ function normalizeRecord(record, meta) {
   normalized.search_terms = uniqueStrings(Array.isArray(normalized.search_terms) ? normalized.search_terms : []);
   normalized.detail_url = detailUrl(meta, String(normalized.id || normalized.slug));
 
+  if (meta.name === 'businesses') {
+    const verificationMap = {
+      trusted: 'reviewed',
+      provisional: 'standard',
+      'manual-review': 'standard',
+    };
+    normalized.type = String(normalized.type || 'catholic-serving').trim();
+    normalized.verification = String(normalized.verification || verificationMap[normalized.verification_status] || 'standard').trim();
+    normalized.verification_status = ['reviewed', 'priest', 'diocesan'].includes(normalized.verification) ? 'trusted' : 'manual-review';
+  }
+
   if (Array.isArray(normalized.country_scope)) {
     normalized.country_scope = uniqueStrings(normalized.country_scope);
   }
@@ -236,6 +249,15 @@ async function validateCollections(collections) {
         addIssue(issues, 'error', name, recordId, 'Invalid verification_status.');
       }
 
+      if (name === 'businesses') {
+        if (!VALID_BUSINESS_TYPES.has(record.type)) {
+          addIssue(issues, 'error', name, recordId, 'Invalid business directory type.');
+        }
+        if (!VALID_BUSINESS_VERIFICATION.has(record.verification)) {
+          addIssue(issues, 'error', name, recordId, 'Invalid business verification level.');
+        }
+      }
+
       if (!Array.isArray(record.sources) || !record.sources.length) {
         addIssue(issues, 'error', name, recordId, 'At least one source is required.');
       }
@@ -256,7 +278,9 @@ async function validateCollections(collections) {
         addIssue(issues, 'error', name, recordId, 'Unknown related_parish_id reference.');
       }
 
-      if (record.verification_status !== 'trusted') {
+      if (name === 'businesses' && record.verification === 'standard') {
+        addIssue(issues, 'warning', name, recordId, 'Business listing is still at standard listing level.');
+      } else if (name !== 'businesses' && record.verification_status !== 'trusted') {
         addIssue(issues, 'warning', name, recordId, 'Record still requires editorial review before broad publication.');
       }
     }
@@ -321,6 +345,7 @@ function uniqueSearchKeywords(record) {
     record.name,
     record.short_name,
     record.type || record.parish_type || record.business_type || record.organisation_type || record.school_type || record.place_type,
+    record.verification,
     record.locality,
     record.country,
     ...(record.country_scope || []),

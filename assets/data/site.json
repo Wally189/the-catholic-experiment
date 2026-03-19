@@ -1,17 +1,18 @@
 {
   "title": "The Catholic Experiment",
   "tagline": "A life ordered by faith, work, and stewardship.",
-  "description": "A central Catholic resource for the UK and Ireland: prayer, formation, practical Catholic life, directories, and tools shaped by the liturgical year.",
+  "description": "A Catholic directory and gateway for Britain, Ireland, and the islands: parishes, dioceses, pilgrimages, retreats, trusted resources, and practical Catholic routes.",
   "footer_credit": "Website built by Waylight Atlantic",
   "footer_url": "https://www.waylight-atlantic.co.uk/",
   "contact_email": "thecatholicexperiment@gmail.com",
   "newsletter_email": "thecatholicexperiment@gmail.com",
+  "responsible_person": "Alan Gallagher",
+  "responsible_organisation": "Waylight Atlantic",
+  "public_jurisdiction": "United Kingdom",
+  "ecclesial_review_path": "Diocese of Clifton",
   "cms_pin": "",
   "contact_form_endpoint": "",
   "newsletter_form_endpoint": "",
   "join_form_endpoint": "",
-  "translation_provider": "google-gtx",
-  "translation_endpoint": "",
-  "translation_source_lang": "en",
   "preview_season": ""
 }

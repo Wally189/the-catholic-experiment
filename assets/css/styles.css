@@ -915,6 +915,7 @@ textarea{
   display:inline-flex;
   padding:.28rem .7rem;
   border-radius:999px;
+  border:1px solid transparent;
   background:var(--season-soft);
   font-family:Inter,system-ui,sans-serif;
   font-size:.82rem;
@@ -1994,11 +1995,19 @@ body.header-condensed .brand span{display:block !important;opacity:.88;max-heigh
 }
 
 .directory-toolbar{display:flex;flex-wrap:wrap;gap:.85rem;margin:1.1rem 0 .7rem;}
-.directory-toolbar input,.directory-toolbar select{flex:1 1 12rem;min-width:0;}
+.directory-toolbar input,.directory-toolbar select{flex:1 1 10rem;min-width:0;}
 .directory-results-meta{display:flex;flex-wrap:wrap;gap:.85rem;align-items:center;}
 .badge-trusted{background:rgba(17,122,55,.14);color:#0f5e2c;border-color:rgba(17,122,55,.24);}
 .badge-provisional{background:rgba(180,138,34,.14);color:#876714;border-color:rgba(180,138,34,.24);}
 .badge-review{background:rgba(153,34,48,.14);color:#721723;border-color:rgba(153,34,48,.24);}
+.badge-owned{background:rgba(89,73,143,.12);color:#493682;border-color:rgba(89,73,143,.24);}
+.badge-serving{background:rgba(38,102,122,.14);color:#1d5d72;border-color:rgba(38,102,122,.24);}
+.badge-goods{background:rgba(172,110,25,.14);color:#8a5a11;border-color:rgba(172,110,25,.24);}
+.badge-ecclesial{background:rgba(109,39,72,.14);color:#6d2748;border-color:rgba(109,39,72,.24);}
+.badge-standard{background:rgba(104,95,78,.14);color:#5e574a;border-color:rgba(104,95,78,.22);}
+.badge-reviewed{background:rgba(17,122,55,.14);color:#0f5e2c;border-color:rgba(17,122,55,.24);}
+.badge-priest{background:rgba(52,88,144,.14);color:#214781;border-color:rgba(52,88,144,.24);}
+.badge-diocesan{background:rgba(128,76,16,.14);color:#75430d;border-color:rgba(128,76,16,.24);}
 .trusted-parish-card{display:grid;gap:.9rem;align-content:start;height:100%;padding:1.15rem;border:1px solid color-mix(in srgb, var(--season) 16%, rgba(31,28,24,.12));border-radius:24px;background:linear-gradient(180deg, color-mix(in srgb, var(--season) 5%, white), rgba(255,255,255,.9));box-shadow:0 16px 34px rgba(0,0,0,.05);}
 [data-theme="dark"] .trusted-parish-card{background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));}
 .trusted-parish-card h3{margin:0;}
@@ -2027,7 +2036,7 @@ body.header-condensed .brand span{display:block !important;opacity:.88;max-heigh
   body[data-directory-page="businesses"] .directory-table tbody td:nth-child(1)::before{content:'Business';}
   body[data-directory-page="businesses"] .directory-table tbody td:nth-child(2)::before{content:'Place';}
   body[data-directory-page="businesses"] .directory-table tbody td:nth-child(3)::before{content:'Country';}
-  body[data-directory-page="businesses"] .directory-table tbody td:nth-child(4)::before{content:'Category';}
+  body[data-directory-page="businesses"] .directory-table tbody td:nth-child(4)::before{content:'Type / review';}
   body[data-directory-page="businesses"] .directory-table tbody td:nth-child(5)::before{content:'Link';}
 
   body[data-directory-page="organisations"] .directory-table tbody td:nth-child(1)::before{content:'Organisation';}
@@ -3160,3 +3169,12 @@ body.header-condensed .brand span{display:block !important;opacity:.88;max-heigh
 [data-theme="dark"] .directory-table a{
   color:color-mix(in srgb, var(--season) 42%, white);
 }
+[data-theme="dark"] .badge-owned{background:rgba(128,104,214,.18);color:#d9ccff;border-color:rgba(128,104,214,.3);}
+[data-theme="dark"] .badge-serving{background:rgba(62,146,173,.18);color:#d2f4ff;border-color:rgba(62,146,173,.3);}
+[data-theme="dark"] .badge-goods{background:rgba(197,154,75,.2);color:#ffe7b5;border-color:rgba(197,154,75,.34);}
+[data-theme="dark"] .badge-ecclesial{background:rgba(174,92,130,.18);color:#ffd7e8;border-color:rgba(174,92,130,.34);}
+[data-theme="dark"] .badge-standard{background:rgba(160,144,116,.18);color:#f0e6d0;border-color:rgba(160,144,116,.3);}
+[data-theme="dark"] .badge-reviewed{background:rgba(63,148,88,.18);color:#d6ffe0;border-color:rgba(63,148,88,.3);}
+[data-theme="dark"] .badge-priest{background:rgba(92,134,206,.18);color:#d9e7ff;border-color:rgba(92,134,206,.3);}
+[data-theme="dark"] .badge-diocesan{background:rgba(180,126,63,.18);color:#ffe1b7;border-color:rgba(180,126,63,.3);}
+.field-span-2{grid-column:1 / -1;}

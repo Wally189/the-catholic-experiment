@@ -6,11 +6,12 @@
   "items": {
     "type": "object",
     "additionalProperties": true,
-    "required": ["id", "name", "slug", "business_type", "country", "verification_status", "sources"],
+    "required": ["id", "name", "slug", "type", "business_type", "country", "verification", "sources"],
     "properties": {
       "id": { "type": "string" },
       "name": { "type": "string" },
       "slug": { "type": "string" },
+      "type": { "type": "string", "enum": ["catholic-owned", "catholic-serving", "catholic-goods", "ecclesial"] },
       "business_type": { "type": "string", "enum": ["publisher", "retail", "hospitality", "professional-service", "maker", "travel", "other"] },
       "country": { "type": "string" },
       "region": { "type": "string" },
@@ -18,6 +19,7 @@
       "website_url": { "type": "string", "format": "uri" },
       "summary": { "type": "string" },
       "search_terms": { "$ref": "entity-common.schema.json#/$defs/stringList" },
+      "verification": { "type": "string", "enum": ["standard", "reviewed", "priest", "diocesan"] },
       "verification_status": { "$ref": "entity-common.schema.json#/$defs/verification" },
       "sources": {
         "type": "array",
