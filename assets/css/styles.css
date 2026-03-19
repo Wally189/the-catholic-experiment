@@ -1936,22 +1936,19 @@ body.header-condensed .brand span{display:block !important;opacity:.88;max-heigh
   body[data-directory-page="dioceses"] .directory-table tbody td:nth-child(2)::before{content:'Country / islands';}
   body[data-directory-page="dioceses"] .directory-table tbody td:nth-child(3)::before{content:'Coverage';}
   body[data-directory-page="dioceses"] .directory-table tbody td:nth-child(4)::before{content:'Type / oversight';}
-  body[data-directory-page="dioceses"] .directory-table tbody td:nth-child(5)::before{content:'Status';}
-  body[data-directory-page="dioceses"] .directory-table tbody td:nth-child(6)::before{content:'Official route';}
+  body[data-directory-page="dioceses"] .directory-table tbody td:nth-child(5)::before{content:'Official route';}
 
   body[data-directory-page="parishes"] .directory-table tbody td:nth-child(1)::before{content:'Parish / Cathedral';}
   body[data-directory-page="parishes"] .directory-table tbody td:nth-child(2)::before{content:'Place';}
   body[data-directory-page="parishes"] .directory-table tbody td:nth-child(3)::before{content:'Diocese';}
   body[data-directory-page="parishes"] .directory-table tbody td:nth-child(4)::before{content:'Country / region';}
-  body[data-directory-page="parishes"] .directory-table tbody td:nth-child(5)::before{content:'Status';}
-  body[data-directory-page="parishes"] .directory-table tbody td:nth-child(6)::before{content:'Source';}
+  body[data-directory-page="parishes"] .directory-table tbody td:nth-child(5)::before{content:'Link';}
 
   body[data-directory-page="businesses"] .directory-table tbody td:nth-child(1)::before{content:'Business';}
   body[data-directory-page="businesses"] .directory-table tbody td:nth-child(2)::before{content:'Place';}
   body[data-directory-page="businesses"] .directory-table tbody td:nth-child(3)::before{content:'Country';}
   body[data-directory-page="businesses"] .directory-table tbody td:nth-child(4)::before{content:'Category';}
-  body[data-directory-page="businesses"] .directory-table tbody td:nth-child(5)::before{content:'Status';}
-  body[data-directory-page="businesses"] .directory-table tbody td:nth-child(6)::before{content:'Link';}
+  body[data-directory-page="businesses"] .directory-table tbody td:nth-child(5)::before{content:'Link';}
 
   body[data-directory-page="organisations"] .directory-table tbody td:nth-child(1)::before{content:'Organisation';}
   body[data-directory-page="organisations"] .directory-table tbody td:nth-child(2)::before{content:'Scope';}
@@ -2141,7 +2138,37 @@ body.header-condensed .brand span{display:block !important;opacity:.88;max-heigh
     overflow:auto;
   }
 
+  .topbar,
+  .topbar-inner,
+  .site-header,
+  .site-header .header-row,
+  .header-row,
+  .brand span,
+  .header-tools,
+  .lang-explore-stack,
+  .nav{
+    transition:transform .22s ease, opacity .22s ease, padding .22s ease, gap .22s ease, max-height .22s ease;
+  }
+
+  .topbar{
+    position:sticky;
+    top:0;
+  }
+
+  .topbar-left{
+    display:flex;
+    flex-wrap:nowrap;
+    overflow:auto;
+    scrollbar-width:none;
+  }
+
+  .topbar-left::-webkit-scrollbar{
+    display:none;
+  }
+
   .site-header{
+    position:sticky;
+    top:0;
     min-height:auto !important;
     overflow:visible;
   }
@@ -2149,14 +2176,18 @@ body.header-condensed .brand span{display:block !important;opacity:.88;max-heigh
   .site-header .header-row,
   .header-row{
     grid-template-columns:minmax(0, 1fr) auto;
-    align-items:start;
+    align-items:center;
     min-height:auto;
-    padding:.65rem 0 .75rem;
+    padding:.58rem 0 .64rem;
     gap:.7rem;
   }
 
   .brand{
     min-width:0;
+  }
+
+  .brand span{
+    display:none !important;
   }
 
   .header-tools{
@@ -2186,7 +2217,7 @@ body.header-condensed .brand span{display:block !important;opacity:.88;max-heigh
   .lang-explore-stack .lang-toggle{
     width:auto;
     min-width:0;
-    padding:.62rem .8rem;
+    padding:.58rem .76rem;
     font-size:.86rem;
   }
 
@@ -2200,30 +2231,74 @@ body.header-condensed .brand span{display:block !important;opacity:.88;max-heigh
     padding:.75rem;
     grid-template-columns:1fr !important;
     gap:.45rem;
-    max-height:min(70svh, calc(100svh - var(--chrome-offset, 0px) - 1rem));
+    max-height:min(55svh, calc(100svh - var(--chrome-offset, 0px) - 1rem));
     overflow:auto;
+    overscroll-behavior:contain;
   }
 
   .nav.open{
     display:grid !important;
+  }
+
+  body.header-condensed .topbar{
+    transform:translateY(calc(-100% + 2.2rem));
+  }
+
+  body.header-condensed .topbar-inner{
+    min-height:auto;
+    padding:.18rem 0;
+    justify-content:flex-end;
+  }
+
+  body.header-condensed .topbar-left{
+    opacity:0;
+    pointer-events:none;
+    max-width:0;
+    overflow:hidden;
+  }
+
+  body.header-condensed .site-header .header-row,
+  body.header-condensed .header-row{
+    padding:.42rem 0 .48rem;
+    gap:.52rem;
+  }
+
+  body.header-condensed .brand strong{
+    font-size:1.28rem;
+  }
+
+  body.header-condensed .lang-explore-stack{
+    display:none;
+  }
+
+  body.mobile-nav-open.header-condensed .lang-explore-stack{
+    display:flex;
   }
 }
 
 @media (max-width: 560px){
   .site-header .header-row,
   .header-row{
-    grid-template-columns:1fr;
+    grid-template-columns:minmax(0, 1fr) auto;
   }
 
   .header-tools{
-    width:100%;
-    justify-self:start;
-    justify-content:flex-start;
-    flex-wrap:wrap;
+    width:auto;
+    justify-self:end;
+    justify-content:flex-end;
+    flex-wrap:nowrap;
   }
 
   .nav{
     left:.75rem;
     right:.75rem;
+  }
+
+  .topbar-inner{
+    align-items:center;
+  }
+
+  .season-pill{
+    margin-left:auto;
   }
 }

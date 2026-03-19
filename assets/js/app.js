@@ -443,13 +443,16 @@ const TCE = (() => {
 
   function initStickyHeader() {
     const onScroll = () => {
-      const next = window.scrollY > 48;
+      const mobile = window.matchMedia('(max-width: 980px)').matches;
+      const threshold = mobile ? 18 : 48;
+      const next = window.scrollY > threshold && !document.body.classList.contains('mobile-nav-open');
       if (document.body.classList.contains('header-condensed') === next) return;
       document.body.classList.toggle('header-condensed', next);
       queueChromeSync();
     };
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
   }
 
   function initLanguageSwitch() {
@@ -539,6 +542,7 @@ const languages = [
     const nav = document.querySelector('.nav');
     const headerTools = document.querySelector('.header-tools');
     if (!nav || !headerTools) return;
+    const isMobile = () => window.matchMedia('(max-width: 980px)').matches;
 
     let button = document.querySelector('[data-nav-toggle]');
     if (!button) {
@@ -560,6 +564,11 @@ const languages = [
       button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       button.textContent = open ? 'Close' : 'Menu';
       document.body.classList.toggle('mobile-nav-open', open);
+      if (open) {
+        document.body.classList.remove('header-condensed');
+      } else if (isMobile()) {
+        document.body.classList.toggle('header-condensed', window.scrollY > 18);
+      }
       queueChromeSync();
     };
 
@@ -568,7 +577,7 @@ const languages = [
     };
 
     const syncMode = () => {
-      if (window.matchMedia('(max-width: 980px)').matches) {
+      if (isMobile()) {
         closeNav();
       } else {
         setNavState(false);
@@ -577,13 +586,19 @@ const languages = [
     };
 
     button.addEventListener('click', () => {
-      if (!window.matchMedia('(max-width: 980px)').matches) return;
+      if (!isMobile()) return;
       const open = !nav.classList.contains('open');
       setNavState(open);
     });
 
     window.addEventListener('scroll', () => {
-      if (window.matchMedia('(max-width: 980px)').matches && window.scrollY > 24) closeNav();
+      if (isMobile() && window.scrollY > 12) closeNav();
+    }, { passive: true });
+    document.addEventListener('wheel', () => {
+      if (isMobile() && nav.classList.contains('open')) closeNav();
+    }, { passive: true });
+    document.addEventListener('touchmove', () => {
+      if (isMobile() && nav.classList.contains('open')) closeNav();
     }, { passive: true });
     window.addEventListener('resize', () => { syncMode(); updateCurrentHourLink(); });
     window.visualViewport?.addEventListener('resize', queueChromeSync);
@@ -591,7 +606,7 @@ const languages = [
     window.addEventListener('load', queueChromeSync);
     nav.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeNav));
     document.addEventListener('click', (event) => {
-      if (!window.matchMedia('(max-width: 980px)').matches) return;
+      if (!isMobile()) return;
       if (!nav.contains(event.target) && !button.contains(event.target)) closeNav();
     });
     document.addEventListener('keydown', (event) => {

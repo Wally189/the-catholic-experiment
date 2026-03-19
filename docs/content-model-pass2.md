@@ -9,6 +9,7 @@ This pass adds the collections needed to make the site genuinely useful across t
 - charities
 - media_outlets
 - retreat_centres
+- regional_resources
 
 ## Parishes
 Required: id, slug, parish_name, diocese_id, town_city, country, island_region, postcode, latitude, longitude, website_url, status.
@@ -34,8 +35,14 @@ Types: newspaper, news_site, podcast, radio, video, magazine, diocesan_media.
 Required: id, slug, centre_name, centre_type, town_city, country, island_region, latitude, longitude, website_url, status.
 Types: monastery, priory, retreat_house, conference_centre, shrine_guesthouse.
 
+## Regional resources
+Required: id, region, title, description, url, section, contexts.
+Optional: keywords, cardTitle, cardSummary, primaryLink, secondaryLink.
+Purpose: drive regional quick links for island and edge-case regions, and feed long-term search/discovery without hard-coding every discovery entry into the base search index.
+
 ## Validation priorities
 1. Every map-facing record must have latitude and longitude.
 2. Every directory record must have controlled categories.
 3. Every public-facing suggestion must run through moderation_log.
 4. Postcode search should resolve first to parishes and then to diocesan context.
+5. Regional resource records should be reusable for homepage/hub quick links and search indexing.

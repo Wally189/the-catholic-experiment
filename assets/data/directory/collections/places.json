@@ -1,5 +1,112 @@
 [
   {
+    "id": "place-walsingham-shrine",
+    "name": "Catholic National Shrine of Our Lady, Walsingham",
+    "slug": "catholic-national-shrine-of-our-lady-walsingham",
+    "place_type": "shrine",
+    "country": "England",
+    "region": "Norfolk",
+    "locality": "Walsingham",
+    "postcode": "NR22 6AL",
+    "website_url": "https://www.walsingham.org.uk/",
+    "summary": "National Catholic shrine and basilica at Walsingham, long associated with English pilgrimage and devotion to Our Lady.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Walsingham",
+      "Our Lady of Walsingham",
+      "Slipper Chapel"
+    ],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "Catholic National Shrine of Our Lady, Walsingham",
+        "url": "https://www.walsingham.org.uk/"
+      }
+    ],
+    "entity_type": "place",
+    "detail_url": "places.html#place-walsingham-shrine"
+  },
+  {
+    "id": "place-lindisfarne-priory",
+    "name": "Lindisfarne Priory",
+    "slug": "lindisfarne-priory",
+    "place_type": "other",
+    "country": "England",
+    "region": "Northumberland",
+    "locality": "Holy Island",
+    "website_url": "https://www.english-heritage.org.uk/visit/places/lindisfarne-priory/",
+    "summary": "Ancient monastic site associated with St Aidan, St Cuthbert, and the early Christian life of Northumbria.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Lindisfarne",
+      "Holy Island",
+      "St Cuthbert",
+      "St Aidan"
+    ],
+    "sources": [
+      {
+        "authority": "heritage",
+        "title": "Lindisfarne Priory | English Heritage",
+        "url": "https://www.english-heritage.org.uk/visit/places/lindisfarne-priory/"
+      }
+    ],
+    "entity_type": "place",
+    "detail_url": "places.html#place-lindisfarne-priory"
+  },
+  {
+    "id": "place-our-lady-glastonbury",
+    "name": "Shrine of Our Lady of Glastonbury",
+    "slug": "shrine-of-our-lady-of-glastonbury",
+    "place_type": "shrine",
+    "country": "England",
+    "region": "Somerset",
+    "locality": "Glastonbury",
+    "postcode": "BA6 9EJ",
+    "website_url": "https://www.glastonburyshrine.co.uk/",
+    "summary": "Diocesan shrine on Magdalene Street, across from Glastonbury Abbey, with annual Catholic pilgrimage and Marian devotion.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Glastonbury shrine",
+      "Our Lady of Glastonbury",
+      "Magdalene Street"
+    ],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "The Shrine of Our Lady of Glastonbury",
+        "url": "https://www.glastonburyshrine.co.uk/"
+      }
+    ],
+    "entity_type": "place",
+    "detail_url": "places.html#place-our-lady-glastonbury"
+  },
+  {
+    "id": "place-aylesford-priory",
+    "name": "The Friars, Aylesford Priory",
+    "slug": "the-friars-aylesford-priory",
+    "place_type": "religious-house",
+    "country": "England",
+    "region": "Kent",
+    "locality": "Aylesford",
+    "website_url": "https://www.thefriars.org.uk/",
+    "summary": "Carmelite priory in Kent offering pilgrimage, retreat, prayer, and the National Shrine of St Jude.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Aylesford Priory",
+      "The Friars",
+      "St Jude shrine"
+    ],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "The Friars, Aylesford",
+        "url": "https://www.thefriars.org.uk/"
+      }
+    ],
+    "entity_type": "place",
+    "detail_url": "places.html#place-aylesford-priory"
+  },
+  {
     "id": "place-knock-shrine",
     "name": "Knock Shrine",
     "slug": "knock-shrine",
@@ -27,6 +134,86 @@
     "detail_url": "places.html#place-knock-shrine"
   },
   {
+    "id": "place-lough-derg",
+    "name": "Lough Derg, Sanctuary of Saint Patrick",
+    "slug": "lough-derg-sanctuary-of-saint-patrick",
+    "place_type": "retreat-centre",
+    "country": "Ireland",
+    "region": "County Donegal",
+    "locality": "Pettigo",
+    "postcode": "F94 PC60",
+    "website_url": "https://www.loughderg.org/",
+    "summary": "Island sanctuary in County Donegal known for St Patrick's Purgatory and its traditional pilgrimages and retreats.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Lough Derg",
+      "St Patrick's Purgatory",
+      "Pettigo"
+    ],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "Lough Derg, Sanctuary of Saint Patrick",
+        "url": "https://www.loughderg.org/"
+      }
+    ],
+    "entity_type": "place",
+    "detail_url": "places.html#place-lough-derg"
+  },
+  {
+    "id": "place-carfin-grotto",
+    "name": "Carfin Grotto",
+    "slug": "carfin-grotto",
+    "place_type": "shrine",
+    "country": "Scotland",
+    "region": "North Lanarkshire",
+    "locality": "Carfin",
+    "postcode": "ML1 5AJ",
+    "website_url": "https://www.carfingrotto.org/",
+    "summary": "Scotland's National Shrine to Our Lady of Lourdes, with daily prayer, Mass, and a long pilgrim tradition.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Carfin",
+      "Our Lady of Lourdes",
+      "Motherwell"
+    ],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "Carfin Grotto",
+        "url": "https://www.carfingrotto.org/"
+      }
+    ],
+    "entity_type": "place",
+    "detail_url": "places.html#place-carfin-grotto"
+  },
+  {
+    "id": "place-iona-abbey",
+    "name": "Iona Abbey and Nunnery",
+    "slug": "iona-abbey-and-nunnery",
+    "place_type": "other",
+    "country": "Scotland",
+    "region": "Inner Hebrides",
+    "locality": "Iona",
+    "website_url": "https://www.historicenvironment.scot/visit-a-place/places/iona-abbey-and-nunnery/",
+    "summary": "Ancient monastic island site linked with St Columba, medieval pilgrimage, and centuries of prayer.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Iona",
+      "St Columba",
+      "Iona Abbey"
+    ],
+    "sources": [
+      {
+        "authority": "heritage",
+        "title": "Iona Abbey and Nunnery | Historic Environment Scotland",
+        "url": "https://www.historicenvironment.scot/visit-a-place/places/iona-abbey-and-nunnery/"
+      }
+    ],
+    "entity_type": "place",
+    "detail_url": "places.html#place-iona-abbey"
+  },
+  {
     "id": "place-national-shrine-st-andrew",
     "name": "National Shrine of St Andrew",
     "slug": "national-shrine-of-st-andrew",
@@ -51,5 +238,32 @@
     ],
     "entity_type": "place",
     "detail_url": "places.html#place-national-shrine-st-andrew"
+  },
+  {
+    "id": "place-st-winefride-shrine",
+    "name": "National Shrine of St Winefride",
+    "slug": "national-shrine-of-st-winefride",
+    "place_type": "shrine",
+    "country": "Wales",
+    "region": "Flintshire",
+    "locality": "Holywell",
+    "postcode": "CH8 7PL",
+    "website_url": "https://www.stwinefridesshrine.org/",
+    "summary": "Ancient holy well and Catholic shrine in Holywell, with an unbroken pilgrimage tradition linked to St Winefride.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "St Winefride's Well",
+      "Holywell",
+      "Lourdes of Wales"
+    ],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "St Winefride's Shrine",
+        "url": "https://www.stwinefridesshrine.org/"
+      }
+    ],
+    "entity_type": "place",
+    "detail_url": "places.html#place-st-winefride-shrine"
   }
 ]

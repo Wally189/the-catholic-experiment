@@ -11,27 +11,10 @@
 <header class="site-header">
 <div class="wrap header-row">
 <a class="brand" href="index.html"><strong>The Catholic Experiment</strong><span>A life ordered by faith, work, and stewardship.</span></a>
-<nav aria-label="Primary" class="nav"><div class="nav-pillars"><a class="pillar-link" href="faith-formation.html">Faith &amp; Formation</a><a class="pillar-link" href="vocation-work.html">Vocation &amp; Work</a><a class="pillar-link" href="household-budgeting.html">Home &amp; Household</a><a class="pillar-link" href="community-relationships.html">Community &amp; Relationships</a><a class="pillar-link" href="health-preparedness.html">Health &amp; Preparedness</a><a class="pillar-link" href="rest-renewal.html">Rest &amp; Renewal</a></div></nav>
+<nav aria-label="Primary" class="nav"><div class="dropdown nav-group"><button class="dropdown-toggle" type="button">By Place</button><div class="dropdown-menu"><a href="catholic-britain-ireland.html">Catholic Britain &amp; Ireland</a><a href="find-parish.html">Find a Parish</a><a href="find-diocese.html">Find a Diocese</a><a href="businesses.html">Directory</a><a href="pilgrimage-map.html">Pilgrimage Map</a><a href="retreat-centres.html">Retreat Centres</a></div></div><div class="dropdown nav-group"><button class="dropdown-toggle" type="button">By Need</button><div class="dropdown-menu"><a href="faith-formation.html">Faith &amp; Formation</a><a href="vocation-work.html">Vocation &amp; Work</a><a href="household-budgeting.html">Home &amp; Household</a><a href="community-relationships.html">Community &amp; Relationships</a><a href="health-preparedness.html">Health &amp; Preparedness</a><a href="rest-renewal.html">Rest &amp; Renewal</a></div></div><div class="dropdown nav-group"><button class="dropdown-toggle" type="button">Official / Vatican</button><div class="dropdown-menu"><a href="tools.html">Catholic Tools</a><a href="catholic-media.html">Catholic Media</a><a href="catholic-charities.html">Catholic Charities</a><a href="catholic-events.html">Catholic Events</a></div></div></nav>
 <div class="header-tools">
 <div class="lang-explore-stack">
 <button aria-label="Toggle language" class="lang-toggle" data-lang-toggle="" type="button">English</button>
-<div class="dropdown explore-standalone">
-<button class="dropdown-toggle explore-toggle" type="button">Explore</button>
-<div class="dropdown-menu">
-<a href="find-parish.html">Find a Parish</a>
-<a href="find-diocese.html">Find a Diocese</a>
-<a href="directory.html">Directory</a>
-<a href="catholic-britain-ireland.html">Catholic Britain &amp; Ireland</a>
-<a href="businesses.html">Catholic Businesses</a>
-<a href="catholic-charities.html">Catholic Charities</a>
-<a href="catholic-events.html">Catholic Events</a>
-<a href="catholic-media.html">Catholic Media</a>
-<a href="pilgrimage-map.html">Pilgrimage Map</a>
-<a href="retreat-centres.html">Retreat Centres</a>
-<a href="resources.html">Resources</a>
-<a href="tools.html">Catholic Tools</a>
-</div>
-</div>
 </div>
 <button aria-label="Open search" class="icon-btn" data-open-search="">⌕</button>
 <button aria-label="Toggle dark mode" class="icon-btn" data-theme-toggle="">◐</button>
@@ -39,7 +22,7 @@
 </div>
 </header>
 <section class="subhero with-image" style="background-image:url('assets/img/20240406_143639.jpg')"><div class="subhero-inner"><div class="eyebrow">Contact</div><h1>Contact</h1><p>A modest contact form for enquiries, reflections, or correspondence.</p></div></section>
-<main class="page-shell" id="main-content"><div class="page-grid"><article class="card article"><div class="breadcrumbs"><a href="index.html">Home</a> / Contact</div><p class="dropcap">This demo form does not submit to a live service yet. It shows the intended shape: a restrained route for thoughtful contact, not an aggressive funnel.</p><form><div class="form-row"><div><label for="name">Name</label><input id="name" required=""/></div><div><label for="email2">Email</label><input id="email2" required="" type="email"/></div></div><label for="subject">Subject</label><input id="subject"/><label for="message">Message</label><textarea id="message"></textarea><div class="form-note">Future enhancement: connect to a mail service or static form backend, then align the privacy notice accordingly.</div><div class="hero-actions"><button class="btn" type="button">Send (demo)</button></div></form></article><aside class="aside card"><h3>Direct contact</h3><p class="muted">Placeholder address: <a href="mailto:hello@example.com">hello@example.com</a></p><p class="micro">Consider using an alias rather than a personal address on the live site.</p></aside></div></main>
+<main class="page-shell" id="main-content"><div class="page-grid"><article class="card article"><div class="breadcrumbs"><a href="index.html">Home</a> / Contact</div><p class="dropcap">Use this form for genuine enquiries, correction requests, and practical correspondence. Submissions are sent to the site inbox and reviewed before response.</p><form data-form-kind="contact" data-live-form=""><input name="_subject" type="hidden" value="Contact form submission"/><input name="_template" type="hidden" value="table"/><input name="_honey" style="display:none" tabindex="-1" type="text"/><div class="form-row"><div><label for="name">Name</label><input id="name" name="name" required=""/></div><div><label for="email2">Email</label><input id="email2" name="email" required="" type="email"/></div></div><label for="subject">Subject</label><input id="subject" name="subject" required=""/><label for="message">Message</label><textarea id="message" name="message" required=""></textarea><label><input data-consent="" required="" style="width:auto;margin-right:.5rem" type="checkbox"/> I consent to this message and contact data being processed so I can receive a reply, in line with the <a href="privacy.html">Privacy Policy</a>.</label><div class="form-note">This form uses a static-site form relay to send submissions to the configured site inbox. Do not include sensitive personal data.</div><div class="hero-actions"><button class="btn" type="submit">Send message</button></div><p class="micro" data-form-status="" role="status"></p></form></article><aside class="aside card"><h3>Direct contact</h3><p class="muted" data-contact-email-block="" hidden="">Inbox: <a data-contact-email-link="" data-contact-email-text="" href="contact.html" hidden="">Contact email</a></p><p class="micro" data-contact-email-pending="" hidden="">The direct inbox is not published yet. Configure a real contact email before relying on the form or publishing this page live.</p><p class="micro">If the form fails, use the direct email route above when available.</p></aside></div></main>
 <footer class="site-footer"><div class="footer-inner">
 <div><h3>The Catholic Experiment</h3><p class="muted">A life ordered by faith, work, and stewardship.</p><p class="footer-credit"><a href="https://www.waylight-atlantic.co.uk/">Website built by Waylight Atlantic</a></p></div>
 <div><h3>Explore</h3><ul><li><a href="tools.html">Catholic Tools</a></li><li><a href="find-diocese.html">Find a Diocese</a></li><li><a href="find-parish.html">Find a Parish</a></li><li><a href="businesses.html">Catholic Businesses</a></li><li><a href="catholic-media.html">Catholic Media</a></li><li><a href="catholic-britain-ireland.html">Catholic Britain &amp; Ireland</a></li><li><a href="donate.html">Donate</a></li></ul></div>

@@ -1,0 +1,6 @@
+# Host-agnostic redirect mapping for deprecated or canonicalized URLs
+# Implement these redirects in the hosting platform once selected.
+
+/directory.html -> /businesses.html
+/news.html -> /catholic-media.html
+/beauty-and-leisure.html -> /beauty-leisure.html

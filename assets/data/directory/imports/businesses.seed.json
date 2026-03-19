@@ -10,12 +10,255 @@
     "website_url": "https://www.ctsbooks.org/",
     "summary": "Catholic publisher and bookshop offering prayer books, catechetical resources, and spiritual reading.",
     "verification_status": "trusted",
-    "search_terms": ["CTS Books", "Catholic Truth Society"],
+    "search_terms": [
+      "CTS Books",
+      "Catholic Truth Society"
+    ],
     "sources": [
       {
         "authority": "organisation",
         "title": "Catholic Truth Society",
         "url": "https://www.ctsbooks.org/"
+      }
+    ]
+  },
+  {
+    "id": "business-pauline-books-media",
+    "name": "Pauline Books & Media UK",
+    "slug": "pauline-books-media-uk",
+    "business_type": "publisher",
+    "country": "England",
+    "region": "Liverpool",
+    "locality": "Liverpool",
+    "website_url": "https://www.paulineuk.org/",
+    "summary": "Catholic books, media, prayer resources, and gifts offered through the Daughters of St Paul in Liverpool.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Pauline Books and Media",
+      "Pauline Book Centre",
+      "Daughters of St Paul"
+    ],
+    "sources": [
+      {
+        "authority": "organisation",
+        "title": "Pauline Books & Media UK",
+        "url": "https://www.paulineuk.org/"
+      }
+    ]
+  },
+  {
+    "id": "business-gracewing",
+    "name": "Gracewing",
+    "slug": "gracewing",
+    "business_type": "publisher",
+    "country": "England",
+    "region": "Herefordshire",
+    "locality": "Leominster",
+    "website_url": "https://www.gracewing.co.uk/",
+    "summary": "Catholic publisher and UK distributor carrying theology, spirituality, saints, liturgy, and church titles.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Gracewing",
+      "Catholic publisher",
+      "Leominster"
+    ],
+    "sources": [
+      {
+        "authority": "publisher",
+        "title": "Gracewing",
+        "url": "https://www.gracewing.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "business-redemptorist-publications",
+    "name": "Redemptorist Publications",
+    "slug": "redemptorist-publications",
+    "business_type": "publisher",
+    "country": "England",
+    "region": "Hampshire",
+    "locality": "Chawton",
+    "website_url": "https://www.rpbooks.co.uk/",
+    "summary": "Catholic publisher producing liturgical, catechetical, pastoral, and parish resources in everyday language.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "RP Books",
+      "Redemptorist Publications",
+      "Catholic publisher"
+    ],
+    "sources": [
+      {
+        "authority": "publisher",
+        "title": "Redemptorist Publications",
+        "url": "https://www.rpbooks.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "business-mccrimmons",
+    "name": "McCrimmon Publishing",
+    "slug": "mccrimmon-publishing",
+    "business_type": "publisher",
+    "country": "England",
+    "region": "Essex",
+    "locality": "Great Wakering",
+    "website_url": "https://www.mccrimmons.com/",
+    "summary": "Publisher and church supplier known for hymnals, parish mass books, banners, and school resources.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "McCrimmons",
+      "Catholic Parish Mass Book",
+      "church banners"
+    ],
+    "sources": [
+      {
+        "authority": "publisher",
+        "title": "McCrimmon Publishing",
+        "url": "https://www.mccrimmons.com/"
+      }
+    ]
+  },
+  {
+    "id": "business-catholic-gift-shop",
+    "name": "Catholic Gift Shop",
+    "slug": "catholic-gift-shop",
+    "business_type": "retail",
+    "country": "England",
+    "region": "London",
+    "locality": "London",
+    "website_url": "https://www.catholicgiftshop.co.uk/",
+    "summary": "Online Catholic retailer specialising in rosaries, Lourdes gifts, medals, sacramental gifts, and devotional items.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Catholic Gift Shop",
+      "Lourdes gifts",
+      "rosaries"
+    ],
+    "sources": [
+      {
+        "authority": "retailer",
+        "title": "Catholic Gift Shop",
+        "url": "https://www.catholicgiftshop.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "business-catholic-seasons",
+    "name": "Catholic Seasons",
+    "slug": "catholic-seasons",
+    "business_type": "maker",
+    "country": "England",
+    "region": "United Kingdom",
+    "locality": "Online",
+    "website_url": "https://www.catholicseasons.com/",
+    "summary": "UK Catholic home and gift shop focused on liturgical living, sacramental gifts, beeswax candles, and domestic church goods.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Catholic Seasons",
+      "domestic church",
+      "Catholic home and gift shop"
+    ],
+    "sources": [
+      {
+        "authority": "retailer",
+        "title": "Catholic Seasons",
+        "url": "https://www.catholicseasons.com/"
+      }
+    ]
+  },
+  {
+    "id": "business-messenger-publications",
+    "name": "Messenger Publications",
+    "slug": "messenger-publications",
+    "business_type": "publisher",
+    "country": "Ireland",
+    "region": "Dublin",
+    "locality": "Dublin",
+    "website_url": "https://www.messenger.ie/",
+    "summary": "Jesuit publishing house in Ireland offering Catholic books, pastoral resources, and the Sacred Heart Messenger.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Messenger Publications",
+      "Sacred Heart Messenger",
+      "Jesuits in Ireland"
+    ],
+    "sources": [
+      {
+        "authority": "publisher",
+        "title": "Messenger Publications",
+        "url": "https://www.messenger.ie/"
+      }
+    ]
+  },
+  {
+    "id": "business-marian-pilgrimages",
+    "name": "Marian Pilgrimages",
+    "slug": "marian-pilgrimages",
+    "business_type": "travel",
+    "country": "Ireland",
+    "region": "Dublin",
+    "locality": "Dublin",
+    "website_url": "https://marian.ie/",
+    "summary": "Irish pilgrimage specialist organising travel to Lourdes, Fatima, Medjugorje, the Holy Land, and other shrines.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Marian Pilgrimages",
+      "pilgrimage specialists",
+      "Dublin"
+    ],
+    "sources": [
+      {
+        "authority": "travel",
+        "title": "Marian Pilgrimages",
+        "url": "https://marian.ie/"
+      }
+    ]
+  },
+  {
+    "id": "business-joe-walsh-tours",
+    "name": "Joe Walsh Tours",
+    "slug": "joe-walsh-tours",
+    "business_type": "travel",
+    "country": "Ireland",
+    "region": "Dublin",
+    "locality": "Dublin",
+    "website_url": "https://joewalshtours.ie/",
+    "summary": "Pilgrimage tour company organising diocesan pilgrimages and pilgrim journeys from Ireland and the UK to major holy sites.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Joe Walsh Tours",
+      "diocesan pilgrimages",
+      "pilgrimage tours"
+    ],
+    "sources": [
+      {
+        "authority": "travel",
+        "title": "Joe Walsh Tours",
+        "url": "https://joewalshtours.ie/"
+      }
+    ]
+  },
+  {
+    "id": "business-tangney-tours",
+    "name": "Tangney Tours",
+    "slug": "tangney-tours",
+    "business_type": "travel",
+    "country": "England",
+    "region": "Kent",
+    "locality": "Kent",
+    "website_url": "https://www.tangney-tours.com/",
+    "summary": "Pilgrimage specialist based in Kent, offering parish, diocesan, and group pilgrimages to Lourdes, the Holy Land, Medjugorje, and beyond.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Tangney Tours",
+      "pilgrimage specialist",
+      "Kent"
+    ],
+    "sources": [
+      {
+        "authority": "travel",
+        "title": "Tangney Tours",
+        "url": "https://www.tangney-tours.com/"
       }
     ]
   }

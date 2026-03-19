@@ -354,21 +354,20 @@
           <td>${badge(record.country)} ${(record.islands || []).map((item) => badge(item)).join(' ')}<div class="micro">${escapeHtml(record.region || '')}</div></td>
           <td>${escapeHtml(record.coverage_note || record.summary || '')}</td>
           <td>${badge(record.type || 'diocese')}<div class="micro">${escapeHtml(jurisdiction ? jurisdiction.name : '')}</div></td>
-          <td>${statusBadge(record.verification_status)}</td>
           <td>${record.website_url ? `<a href="${escapeHtml(record.website_url)}" rel="noopener" target="_blank">Official site</a>` : (firstSource(record) ? `<a href="${escapeHtml(firstSource(record).url)}" rel="noopener" target="_blank">${escapeHtml(firstSource(record).title)}</a>` : '')}</td>
         </tr>`;
     }
 
     if (name === 'parishes') {
       const diocese = lookups.dioceses.get(record.diocese_id);
+      const parishUrl = record.website_url || firstSource(record)?.url || '';
       return `
         <tr id="${escapeHtml(record.id)}">
           <td><strong><a href="${escapeHtml(record.detail_url)}">${escapeHtml(record.name)}</a></strong><span class="micro">${escapeHtml(record.parish_type || 'parish')}</span></td>
           <td>${escapeHtml(record.locality || '')}<div class="micro">${escapeHtml(record.postcode || '')}</div></td>
           <td>${escapeHtml(diocese ? (diocese.short_name || diocese.name) : '')}</td>
           <td>${badge(record.country)}<div class="micro">${escapeHtml(record.region || '')}</div></td>
-          <td>${statusBadge(record.verification_status)}</td>
-          <td>${firstSource(record) ? `<a href="${escapeHtml(firstSource(record).url)}" rel="noopener" target="_blank">${escapeHtml(firstSource(record).title)}</a>` : ''}</td>
+          <td>${parishUrl ? `<a href="${escapeHtml(parishUrl)}" rel="noopener" target="_blank">Official site</a>` : ''}</td>
         </tr>`;
     }
 
@@ -379,8 +378,7 @@
           <td>${escapeHtml(record.locality || '')}<div class="micro">${escapeHtml(record.region || '')}</div></td>
           <td>${badge(record.country)}</td>
           <td>${badge(record.business_type || 'business')}</td>
-          <td>${statusBadge(record.verification_status)}</td>
-          <td><a href="${escapeHtml(record.website_url || record.detail_url)}" rel="noopener" target="_blank">Visit</a></td>
+          <td><a href="${escapeHtml(record.website_url || record.detail_url)}" rel="noopener" target="_blank">Visit site</a></td>
         </tr>`;
     }
 
@@ -458,8 +456,14 @@
         countNode.textContent = `${filtered.length} of ${records.length} records visible`;
       }
       if (!tbody) return;
+      const columnCount = {
+        dioceses: 5,
+        parishes: 5,
+        businesses: 5,
+        organisations: 5,
+      }[name] || 6;
       if (!filtered.length) {
-        tbody.innerHTML = '<tr><td colspan="6"><span class="micro">No matching records yet.</span></td></tr>';
+        tbody.innerHTML = `<tr><td colspan="${columnCount}"><span class="micro">No matching records yet.</span></td></tr>`;
         return;
       }
       tbody.innerHTML = filtered.map((record) => rowForCollection(name, record, lookups)).join('');
