@@ -407,11 +407,9 @@ const TCE = (() => {
     document.querySelectorAll('[data-current-hour]').forEach((link) => {
       link.href = isMobile ? appUrl : hourUrl;
       link.dataset.desktopHref = hourUrl;
+      link.setAttribute('aria-label', isMobile ? `Open ${hourInfo.label} in the Universalis app` : `Open ${hourInfo.label} on Universalis`);
       const span = link.querySelector('span');
-      if (isMobile) {
-        if (span) span.textContent = 'Universalis app';
-        else link.textContent = 'Universalis app';
-      } else if (span) {
+      if (span) {
         span.textContent = hourInfo.label;
       } else {
         link.textContent = `${hourInfo.label} — Universalis`;
@@ -422,13 +420,6 @@ const TCE = (() => {
       link.href = isMobile ? appUrl : massUrl;
       link.dataset.desktopHref = massUrl;
       link.textContent = isMobile ? 'Open Universalis app' : "Today's readings";
-    });
-
-    document.querySelectorAll('[data-home-universalis]').forEach((link) => {
-      link.href = isMobile ? appUrl : todayUrl;
-      link.dataset.desktopHref = todayUrl;
-      link.textContent = 'Universalis';
-      link.setAttribute('aria-label', isMobile ? 'Open Universalis app' : 'Open Universalis');
     });
 
     const dayLabel = document.getElementById('today-date-label');
