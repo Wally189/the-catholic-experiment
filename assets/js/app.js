@@ -424,6 +424,13 @@ const TCE = (() => {
       link.textContent = isMobile ? 'Open Universalis app' : "Today's readings";
     });
 
+    document.querySelectorAll('[data-home-universalis]').forEach((link) => {
+      link.href = isMobile ? appUrl : todayUrl;
+      link.dataset.desktopHref = todayUrl;
+      link.textContent = 'Universalis';
+      link.setAttribute('aria-label', isMobile ? 'Open Universalis app' : 'Open Universalis');
+    });
+
     const dayLabel = document.getElementById('today-date-label');
     if (dayLabel) dayLabel.textContent = weekdayName(now);
 
