@@ -556,6 +556,22 @@ const languages = [
     }
     button.setAttribute('aria-controls', nav.id);
 
+    let utilityGroup = nav.querySelector('.mobile-utility-links');
+    if (!utilityGroup) {
+      const utilityLinks = Array.from(document.querySelectorAll('.topbar-left a[href]'));
+      if (utilityLinks.length) {
+        utilityGroup = document.createElement('div');
+        utilityGroup.className = 'mobile-utility-links';
+        utilityLinks.forEach((source) => {
+          const link = document.createElement('a');
+          link.href = source.href;
+          link.textContent = source.textContent?.trim() || 'Open';
+          utilityGroup.append(link);
+        });
+        nav.append(utilityGroup);
+      }
+    }
+
     const setNavState = (open) => {
       nav.classList.toggle('open', open);
       button.setAttribute('aria-expanded', open ? 'true' : 'false');
