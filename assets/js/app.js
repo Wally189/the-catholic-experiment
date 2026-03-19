@@ -394,6 +394,47 @@ const TCE = (() => {
     return { label: 'Compline', slug: 'compline' };
   }
 
+  function ensureFloatingLinks() {
+    let floating = document.querySelector('.floating-links');
+    if (!floating) {
+      floating = document.createElement('div');
+      floating.className = 'floating-links';
+      const anchor = document.querySelector('.site-search') || document.querySelector('.cookie-banner');
+      if (anchor?.parentNode) {
+        anchor.parentNode.insertBefore(floating, anchor);
+      } else {
+        document.body.append(floating);
+      }
+    }
+
+    let todayLink = floating.querySelector('[data-today-readings]');
+    if (!todayLink) {
+      todayLink = document.createElement('a');
+      todayLink.setAttribute('data-today-readings', '');
+      todayLink.setAttribute('href', 'https://universalis.com/mass.htm');
+      todayLink.setAttribute('rel', 'noopener');
+      todayLink.setAttribute('target', '_blank');
+      todayLink.textContent = "Today's readings";
+    }
+
+    let currentHourLink = floating.querySelector('[data-current-hour]');
+    if (!currentHourLink) {
+      currentHourLink = document.createElement('a');
+      currentHourLink.className = 'secondary';
+      currentHourLink.setAttribute('data-current-hour', '');
+      currentHourLink.setAttribute('href', 'https://universalis.com/lauds.htm');
+      currentHourLink.setAttribute('rel', 'noopener');
+      currentHourLink.setAttribute('target', '_blank');
+      const label = document.createElement('span');
+      label.textContent = 'Lauds';
+      currentHourLink.append(label, ' - Universalis');
+    }
+
+    todayLink.classList.remove('secondary');
+    currentHourLink.classList.add('secondary');
+    floating.replaceChildren(todayLink, currentHourLink);
+  }
+
   function updateCurrentHourLink() {
     const now = new Date();
     const locale = currentLocale();
@@ -419,7 +460,8 @@ const TCE = (() => {
     document.querySelectorAll('[data-today-readings]').forEach((link) => {
       link.href = isMobile ? appUrl : massUrl;
       link.dataset.desktopHref = massUrl;
-      link.textContent = isMobile ? 'Open Universalis app' : "Today's readings";
+      link.textContent = "Today's readings";
+      link.setAttribute('aria-label', isMobile ? "Open today's readings in the Universalis app" : "Open today's readings on Universalis");
     });
 
     const dayLabel = document.getElementById('today-date-label');
@@ -499,6 +541,48 @@ const languages = [
     });
   }
 
+  function refinePrimaryNav() {
+    const nav = document.querySelector('.nav');
+    if (!nav) return;
+
+    nav.querySelectorAll('.nav-group > .dropdown-toggle').forEach((button) => {
+      if (/Official\s*\/\s*Vatican/i.test(button.textContent || '')) {
+        button.textContent = 'Vatican Resources';
+      }
+    });
+
+    if (nav.querySelector('[data-nav-group="other-resources"]')) return;
+
+    const group = document.createElement('div');
+    group.className = 'dropdown nav-group';
+    group.setAttribute('data-nav-group', 'other-resources');
+
+    const button = document.createElement('button');
+    button.className = 'dropdown-toggle';
+    button.type = 'button';
+    button.textContent = 'Other resources';
+
+    const menu = document.createElement('div');
+    menu.className = 'dropdown-menu';
+
+    [
+      { href: 'resources.html', label: 'Overview' },
+      { href: 'resources.html#rome', label: 'Rome & universal Church' },
+      { href: 'resources.html#north-america', label: 'North America' },
+      { href: 'resources.html#latin-america', label: 'Latin America' },
+      { href: 'resources.html#europe', label: 'Europe' },
+      { href: 'resources.html#africa-asia-pacific', label: 'Africa & Asia-Pacific' },
+    ].forEach((item) => {
+      const link = document.createElement('a');
+      link.href = item.href;
+      link.textContent = item.label;
+      menu.append(link);
+    });
+
+    group.append(button, menu);
+    nav.append(group);
+  }
+
   function initNav() {
     document.querySelectorAll('.dropdown-toggle').forEach((button) => {
       button.setAttribute('type', 'button');
@@ -565,7 +649,7 @@ const languages = [
         utilityLinks.forEach((source) => {
           const link = document.createElement('a');
           link.href = source.href;
-          link.textContent = source.textContent?.trim() || 'Open';
+          link.textContent = source.matches('.donate-mini') ? 'Support' : (source.textContent?.trim() || 'Open');
           utilityGroup.append(link);
         });
         nav.append(utilityGroup);
@@ -1031,6 +1115,9 @@ const languages = [
     await loadSiteConfig();
     applyLiturgicalTheme();
     diversifyHeroImages();
+    initSupportLinks();
+    refinePrimaryNav();
+    ensureFloatingLinks();
     updateCurrentHourLink();
     initStickyHeader();
     initLanguageSwitch();
@@ -1047,7 +1134,6 @@ const languages = [
     initCookieBanner();
     initParishFilter();
     initLiveForms();
-    initSupportLinks();
     initAdmin();
   }
 
