@@ -546,26 +546,32 @@ const languages = [
       button.type = 'button';
       button.className = 'nav-toggle';
       button.setAttribute('data-nav-toggle', '');
-      button.setAttribute('aria-expanded', 'false');
-      button.setAttribute('aria-label', 'Toggle menu');
-      button.textContent = 'Menu';
       headerTools.prepend(button);
     }
 
-    const closeNav = () => {
-      nav.classList.remove('open');
-      button.setAttribute('aria-expanded', 'false');
-      document.body.classList.remove('mobile-nav-open');
+    if (!nav.id) {
+      nav.id = 'site-primary-nav';
+    }
+    button.setAttribute('aria-controls', nav.id);
+
+    const setNavState = (open) => {
+      nav.classList.toggle('open', open);
+      button.setAttribute('aria-expanded', open ? 'true' : 'false');
+      button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      button.textContent = open ? 'Close' : 'Menu';
+      document.body.classList.toggle('mobile-nav-open', open);
       queueChromeSync();
+    };
+
+    const closeNav = () => {
+      setNavState(false);
     };
 
     const syncMode = () => {
       if (window.matchMedia('(max-width: 980px)').matches) {
         closeNav();
       } else {
-        nav.classList.remove('open');
-        button.setAttribute('aria-expanded', 'false');
-        document.body.classList.remove('mobile-nav-open');
+        setNavState(false);
       }
       queueChromeSync();
     };
@@ -573,10 +579,7 @@ const languages = [
     button.addEventListener('click', () => {
       if (!window.matchMedia('(max-width: 980px)').matches) return;
       const open = !nav.classList.contains('open');
-      nav.classList.toggle('open', open);
-      button.setAttribute('aria-expanded', open ? 'true' : 'false');
-      document.body.classList.toggle('mobile-nav-open', open);
-      queueChromeSync();
+      setNavState(open);
     });
 
     window.addEventListener('scroll', () => {
