@@ -6,10 +6,18 @@ const TCE = (() => {
     support_partnerships_url: 'contact.html',
     support_featured_listing_url: 'businesses.html#future-supported-listings',
     liturgical_locale: '',
+    cms_pin: '',
+    contact_form_endpoint: '',
+    newsletter_form_endpoint: '',
+    join_form_endpoint: '',
+    translation_provider: 'google-gtx',
+    translation_endpoint: '',
+    translation_source_lang: 'en',
   }, window.__TCE_CONFIG__ || {});
 
   let regionalResourcesPromise = null;
   let siteConfigPromise = null;
+  let translationSnapshot = null;
 
   function safeLocalStorage(action, key, value = null) {
     try {
@@ -17,6 +25,15 @@ const TCE = (() => {
       if (action === 'set') window.localStorage.setItem(key, value);
     } catch (_) {}
     return null;
+  }
+
+  function escapeHtml(value) {
+    return String(value || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
   }
 
   function sameDate(a, b) {
@@ -496,37 +513,366 @@ const TCE = (() => {
     window.addEventListener('resize', onScroll);
   }
 
+  function currentPageName() {
+    const page = window.location.pathname.split('/').pop() || 'index.html';
+    return page.toLowerCase();
+  }
+
+  function ensureTranslationNote() {
+    let note = document.querySelector('[data-translation-note]');
+    if (note) return note;
+
+    note = document.createElement('div');
+    note.className = 'translation-note';
+    note.setAttribute('data-translation-note', '');
+    note.setAttribute('data-no-translate', '');
+    const header = document.querySelector('.site-header');
+    if (header?.parentNode) {
+      header.insertAdjacentElement('afterend', note);
+    } else {
+      document.body.append(note);
+    }
+    return note;
+  }
+
+  function setTranslationNote(message = '') {
+    const note = ensureTranslationNote();
+    if (note) note.textContent = message;
+  }
+
+  function translationLanguages() {
+    return [
+      { code: 'en-GB', label: 'English', target: 'en', available: true },
+      { code: 'cy', label: 'Cymraeg', target: 'cy', available: true },
+      { code: 'ga', label: 'Gaeilge', target: 'ga', available: true },
+      { code: 'gd', label: 'Gaidhlig', target: 'gd', available: true },
+      { code: 'gv', label: 'Manx', target: 'gv', available: true },
+    ];
+  }
+
+  function translationProtectedPages() {
+    return new Set([
+      'discovery-paths.html',
+      'faith-formation.html',
+      'prayer-library.html',
+      'liturgy-of-the-hours.html',
+      'vatican-resources.html',
+      'content-model.html',
+      'safeguarding.html',
+      'privacy.html',
+      'terms.html',
+      'data-protection.html',
+    ]);
+  }
+
+  function canMachineTranslatePage() {
+    return !translationProtectedPages().has(currentPageName());
+  }
+
+  function isTranslatableNode(node) {
+    const parent = node.parentElement;
+    if (!parent) return false;
+    if (!String(node.nodeValue || '').trim()) return false;
+    if (parent.closest('[data-no-translate], script, style, noscript, iframe, svg, canvas, code, pre, textarea')) return false;
+    return true;
+  }
+
+  function collectTranslationSnapshot() {
+    if (translationSnapshot) return translationSnapshot;
+
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        return isTranslatableNode(node) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+
+    const textNodes = [];
+    let current = walker.nextNode();
+    while (current) {
+      textNodes.push({ node: current, original: current.nodeValue });
+      current = walker.nextNode();
+    }
+
+    const attrNodes = Array.from(document.querySelectorAll('input[placeholder], textarea[placeholder], [aria-label], [title], input[type="submit"], button[value]'))
+      .filter((element) => !element.closest('[data-no-translate]'))
+      .map((element) => {
+        const attrs = [];
+        ['placeholder', 'aria-label', 'title', 'value'].forEach((name) => {
+          const value = element.getAttribute(name);
+          if (value && String(value).trim()) {
+            attrs.push({ name, original: value });
+          }
+        });
+        return attrs.length ? { element, attrs } : null;
+      })
+      .filter(Boolean);
+
+    translationSnapshot = { textNodes, attrNodes };
+    return translationSnapshot;
+  }
+
+  function translationSignature(snapshot) {
+    const joined = [
+      ...snapshot.textNodes.map((entry) => entry.original),
+      ...snapshot.attrNodes.flatMap((entry) => entry.attrs.map((attr) => attr.original)),
+    ].join('\u241E');
+    return stableHash(`${currentPageName()}::${joined}`).toString(36);
+  }
+
+  function translationCacheKey(lang) {
+    const snapshot = collectTranslationSnapshot();
+    return `tce-translation::${currentPageName()}::${lang}::${translationSignature(snapshot)}`;
+  }
+
+  function restoreOriginalLanguage() {
+    const snapshot = collectTranslationSnapshot();
+    snapshot.textNodes.forEach((entry) => {
+      entry.node.nodeValue = entry.original;
+    });
+    snapshot.attrNodes.forEach((entry) => {
+      entry.attrs.forEach((attr) => {
+        entry.element.setAttribute(attr.name, attr.original);
+      });
+    });
+    setTranslationNote('');
+  }
+
+  function applyCachedTranslation(payload) {
+    const snapshot = collectTranslationSnapshot();
+    if (!payload || !Array.isArray(payload.textNodes) || !Array.isArray(payload.attrNodes)) return false;
+    if (payload.textNodes.length !== snapshot.textNodes.length) return false;
+    if (payload.attrNodes.length !== snapshot.attrNodes.reduce((count, entry) => count + entry.attrs.length, 0)) return false;
+
+    snapshot.textNodes.forEach((entry, index) => {
+      entry.node.nodeValue = payload.textNodes[index];
+    });
+
+    let offset = 0;
+    snapshot.attrNodes.forEach((entry) => {
+      entry.attrs.forEach((attr) => {
+        entry.element.setAttribute(attr.name, payload.attrNodes[offset]);
+        offset += 1;
+      });
+    });
+    return true;
+  }
+
+  function storeTranslationCache(lang, textNodes, attrNodes) {
+    safeLocalStorage('set', translationCacheKey(lang), JSON.stringify({ textNodes, attrNodes }));
+  }
+
+  function loadTranslationCache(lang) {
+    const raw = safeLocalStorage('get', translationCacheKey(lang));
+    if (!raw) return null;
+    try {
+      return JSON.parse(raw);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function chunkArray(items, size) {
+    const chunks = [];
+    for (let index = 0; index < items.length; index += size) {
+      chunks.push(items.slice(index, index + size));
+    }
+    return chunks;
+  }
+
+  function parseGtxPayload(data, expectedLength) {
+    if (!Array.isArray(data)) return [];
+    const blocks = Array.isArray(data[0]) ? data[0] : [];
+    const rows = blocks.map((block) => Array.isArray(block) ? String(block[0] || '') : '');
+    return rows.slice(0, expectedLength);
+  }
+
+  async function translateChunkWithProvider(strings, targetLang) {
+    const endpoint = String(config.translation_endpoint || '').trim();
+    const sourceLang = String(config.translation_source_lang || 'en').trim() || 'en';
+
+    if (endpoint) {
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...(config.translation_api_key ? { 'X-API-Key': config.translation_api_key } : {}),
+        },
+        body: JSON.stringify({
+          q: strings,
+          source: sourceLang,
+          target: targetLang,
+          format: 'text',
+        }),
+      });
+      if (!response.ok) throw new Error('Translation request failed');
+      const data = await response.json();
+      if (Array.isArray(data)) return data.map((item) => String(item || ''));
+      if (Array.isArray(data.translations)) return data.translations.map((item) => String(item.translatedText || item.text || ''));
+      if (Array.isArray(data.data?.translations)) return data.data.translations.map((item) => String(item.translatedText || ''));
+      if (typeof data.translatedText === 'string') return [data.translatedText];
+      throw new Error('Unsupported translation response');
+    }
+
+    const params = new URLSearchParams({
+      client: 'gtx',
+      sl: sourceLang,
+      tl: targetLang,
+      dt: 't',
+    });
+    strings.forEach((value) => params.append('q', value));
+    const response = await fetch(`https://translate.googleapis.com/translate_a/single?${params.toString()}`);
+    if (!response.ok) throw new Error('Fallback translation request failed');
+    const data = await response.json();
+    return parseGtxPayload(data, strings.length);
+  }
+
+  async function translatePageContent(language) {
+    restoreOriginalLanguage();
+
+    if (language.target === 'en') {
+      return true;
+    }
+
+    if (!canMachineTranslatePage()) {
+      setTranslationNote('This page stays in English until a reviewed translation is prepared.');
+      return false;
+    }
+
+    const cached = loadTranslationCache(language.code);
+    if (cached && applyCachedTranslation(cached)) {
+      setTranslationNote('Machine-translated page loaded from cache. Key formation pages stay in English until reviewed.');
+      return true;
+    }
+
+    const snapshot = collectTranslationSnapshot();
+    const textSource = snapshot.textNodes.map((entry) => entry.original);
+    const attrSource = snapshot.attrNodes.flatMap((entry) => entry.attrs.map((attr) => attr.original));
+
+    const translateAll = async (items) => {
+      if (!items.length) return [];
+      const chunks = chunkArray(items, 24);
+      const translated = [];
+      for (const chunk of chunks) {
+        const response = await translateChunkWithProvider(chunk, language.target);
+        if (!Array.isArray(response) || response.length !== chunk.length) {
+          throw new Error('Unexpected translation batch size');
+        }
+        translated.push(...response);
+      }
+      return translated;
+    };
+
+    const translatedText = await translateAll(textSource);
+    const translatedAttrs = await translateAll(attrSource);
+
+    if (applyCachedTranslation({ textNodes: translatedText, attrNodes: translatedAttrs })) {
+      storeTranslationCache(language.code, translatedText, translatedAttrs);
+      setTranslationNote('Machine-translated page. Doctrine, OCIA, prayer, and governance pages stay in English until reviewed.');
+      return true;
+    }
+
+    return false;
+  }
+
   function initLanguageSwitch() {
     const button = document.querySelector('[data-lang-toggle]');
     if (!button) return;
-    
-const languages = [
-  { code: 'en-GB', label: 'English' },
-  { code: 'ga', label: 'Gaeilge' },
-  { code: 'gv', label: 'Manx (Gaelg)' },
-  { code: 'cy', label: 'Cymraeg' },
-  { code: 'gd', label: 'Gàidhlig' },
-  { code: 'sco', label: 'Scots' },
-  { code: 'uls', label: 'Ulstèr-Scotch' },
-  { code: 'kw', label: 'Kernewek' }
-];
-    const apply = (lang) => {
+
+    const languages = translationLanguages();
+    const wrapper = button.closest('.lang-explore-stack') || button.parentElement || button;
+    if (wrapper instanceof HTMLElement) {
+      wrapper.classList.add('lang-picker');
+      wrapper.setAttribute('data-no-translate', '');
+    }
+
+    button.setAttribute('aria-haspopup', 'true');
+    button.setAttribute('aria-expanded', 'false');
+    button.setAttribute('data-no-translate', '');
+
+    let menu = wrapper?.querySelector?.('[data-language-menu]');
+    if (!menu && wrapper instanceof HTMLElement) {
+      menu = document.createElement('div');
+      menu.className = 'language-menu';
+      menu.setAttribute('data-language-menu', '');
+      menu.setAttribute('data-no-translate', '');
+      menu.hidden = true;
+
+      languages.forEach((language) => {
+        const option = document.createElement('button');
+        option.type = 'button';
+        option.className = 'language-option';
+        option.setAttribute('data-lang-code', language.code);
+        if (language.available === false) {
+          option.disabled = true;
+          option.setAttribute('aria-disabled', 'true');
+        }
+        option.textContent = language.label;
+        menu.append(option);
+      });
+
+      wrapper.append(menu);
+    }
+
+    const setMenuState = (open) => {
+      if (!menu) return;
+      menu.hidden = !open;
+      button.setAttribute('aria-expanded', open ? 'true' : 'false');
+      wrapper?.classList.toggle('language-menu-open', open);
+    };
+
+    const syncOptions = (currentCode) => {
+      if (!menu) return;
+      menu.querySelectorAll('[data-lang-code]').forEach((option) => {
+        const active = option.getAttribute('data-lang-code') === currentCode;
+        option.setAttribute('aria-current', active ? 'true' : 'false');
+        option.classList.toggle('is-active', active);
+      });
+    };
+
+    const apply = async (lang, { persist = true } = {}) => {
       const index = Math.max(0, languages.findIndex((item) => item.code === lang));
       const current = languages[index];
+      if (!current || current.available === false) {
+        setTranslationNote(current?.note || 'This translation is not available yet, so the page remains in English.');
+        setMenuState(false);
+        return;
+      }
       document.documentElement.lang = current.code;
       button.textContent = current.label;
       button.setAttribute('data-lang-current', current.code);
-      button.setAttribute('aria-label', `Current language: ${current.label}. Activate to switch language.`);
-      safeLocalStorage('set', 'tce-language', current.code);
+      button.setAttribute('aria-label', `Current language: ${current.label}. Activate to choose a language.`);
+      if (persist) safeLocalStorage('set', 'tce-language', current.code);
+      syncOptions(current.code);
+      setMenuState(false);
+      setTranslationNote(current.target === 'en' ? '' : 'Preparing translation...');
+      try {
+        await translatePageContent(current);
+      } catch (_) {
+        restoreOriginalLanguage();
+        setTranslationNote('Translation could not be loaded right now. The page has been restored to English.');
+      }
     };
     button.addEventListener('click', (event) => {
       event.preventDefault();
-      const current = button.getAttribute('data-lang-current') || safeLocalStorage('get', 'tce-language') || 'en-GB';
-      const index = languages.findIndex((item) => item.code === current);
-      const next = languages[(index + 1) % languages.length];
-      apply(next.code);
+      setMenuState(menu?.hidden !== false);
     });
-    apply(safeLocalStorage('get', 'tce-language') || 'en-GB');
+
+    menu?.addEventListener('click', async (event) => {
+      const option = event.target.closest('[data-lang-code]');
+      if (!option) return;
+      event.preventDefault();
+      await apply(option.getAttribute('data-lang-code') || 'en-GB');
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!wrapper?.contains(event.target)) setMenuState(false);
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') setMenuState(false);
+    });
+
+    apply(safeLocalStorage('get', 'tce-language') || 'en-GB', { persist: false });
   }
 
   function initDarkMode() {
@@ -564,6 +910,7 @@ const languages = [
   function refinePrimaryNav() {
     const nav = document.querySelector('.nav');
     if (!nav) return;
+    const familyLabel = 'Home & Family';
 
     const buildNavLink = (item) => {
       const link = document.createElement('a');
@@ -602,12 +949,15 @@ const languages = [
       link.textContent = 'Business Directory';
     });
 
+    document.querySelectorAll('a[href="household-budgeting.html"]').forEach((link) => {
+      link.textContent = familyLabel;
+    });
+
     let group = nav.querySelector('[data-nav-group="other-resources"]');
     if (!group) {
       group = document.createElement('div');
       group.className = 'dropdown nav-group';
       group.setAttribute('data-nav-group', 'other-resources');
-      group.append(document.createElement('button'), document.createElement('div'));
       nav.append(group);
     }
 
@@ -630,6 +980,20 @@ const languages = [
 
     if (!button.parentNode) group.append(button);
     if (!menu.parentNode) group.append(menu);
+
+    const toolLabel = 'Tools';
+    let toolLink = nav.querySelector(':scope > a[href="tools.html"]');
+    if (!toolLink) {
+      toolLink = buildNavLink({ href: 'tools.html', label: toolLabel });
+      toolLink.classList.add('nav-direct-link');
+      nav.insertBefore(toolLink, vaticanGroup || group || null);
+    } else {
+      toolLink.textContent = toolLabel;
+    }
+
+    document.querySelectorAll('.site-footer a[href="tools.html"]').forEach((link) => {
+      link.textContent = toolLabel;
+    });
   }
 
   function initNav() {
@@ -707,6 +1071,17 @@ const languages = [
 
     const setNavState = (open) => {
       nav.classList.toggle('open', open);
+      if (isMobile()) {
+        nav.style.display = open ? 'grid' : 'none';
+        nav.style.visibility = open ? 'visible' : 'hidden';
+        nav.style.opacity = open ? '1' : '0';
+        nav.style.pointerEvents = open ? 'auto' : 'none';
+      } else {
+        nav.style.display = '';
+        nav.style.visibility = '';
+        nav.style.opacity = '';
+        nav.style.pointerEvents = '';
+      }
       button.setAttribute('aria-expanded', open ? 'true' : 'false');
       button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       button.textContent = open ? 'Close' : 'Menu';
@@ -772,9 +1147,17 @@ const languages = [
           if (data && typeof data === 'object') {
             Object.assign(config, data);
           }
+          if (String(config.cms_pin || '').trim() === '1975') {
+            config.cms_pin = '';
+          }
           return config;
         })
-        .catch(() => config);
+        .catch(() => {
+          if (String(config.cms_pin || '').trim() === '1975') {
+            config.cms_pin = '';
+          }
+          return config;
+        });
     }
     return siteConfigPromise;
   }
@@ -852,8 +1235,52 @@ const languages = [
     });
   }
 
+  function ensureSearchShell() {
+    let panel = document.querySelector('.site-search');
+    if (panel) return panel;
+
+    panel = document.createElement('div');
+    panel.className = 'site-search';
+    panel.setAttribute('aria-hidden', 'true');
+    panel.innerHTML = `
+      <div class="search-shell">
+        <div class="search-panel">
+          <div class="hero-actions" style="justify-content:space-between;align-items:center">
+            <strong>Search the site</strong>
+            <button aria-label="Close search" class="icon-btn" data-close-search type="button">✕</button>
+          </div>
+          <label class="sr-only" for="site-search-field">Search the site</label>
+          <input data-search-input id="site-search-field" placeholder="Search pages, guides, tools, directories, saints, parishes..." type="search" />
+          <div class="search-results" data-search-results></div>
+        </div>
+      </div>`;
+    document.body.append(panel);
+    return panel;
+  }
+
+  function ensureCookieBanner() {
+    let banner = document.querySelector('.cookie-banner');
+    if (banner) return banner;
+
+    banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    banner.innerHTML = `
+      <div class="cookie-card card">
+        <div>
+          <strong>Cookie choices</strong>
+          <div class="micro">This site uses local storage for theme preference, search helpers, and moderation tools. Optional analytics remain off unless accepted.</div>
+        </div>
+        <div class="cookie-actions">
+          <button class="btn ghost" data-cookie-choice="necessary" type="button">Necessary only</button>
+          <button class="btn" data-cookie-choice="accept" type="button">Accept optional</button>
+        </div>
+      </div>`;
+    document.body.append(banner);
+    return banner;
+  }
+
   async function initSearch() {
-    const panel = document.querySelector('.site-search');
+    const panel = ensureSearchShell();
     const input = document.querySelector('[data-search-input]');
     const results = document.querySelector('[data-search-results]');
     const openers = document.querySelectorAll('[data-open-search]');
@@ -912,7 +1339,7 @@ const languages = [
   }
 
   function initCookieBanner() {
-    const banner = document.querySelector('.cookie-banner');
+    const banner = ensureCookieBanner();
     if (!banner) return;
     const key = 'tce-cookie-choice';
     if (!safeLocalStorage('get', key)) banner.classList.add('show');
@@ -983,6 +1410,25 @@ const languages = [
     bindEmailChannel('newsletter', newsletterEmail);
   }
 
+  function configuredEndpoint(value) {
+    const endpoint = String(value || '').trim();
+    if (!endpoint) return '';
+    if (/^https?:\/\//i.test(endpoint) || endpoint.startsWith('/')) return endpoint;
+    return '';
+  }
+
+  function disableForm(form, message) {
+    form.classList.add('form-disabled');
+    form.querySelectorAll('input, textarea, select, button').forEach((control) => {
+      if (control.type === 'hidden') return;
+      control.disabled = true;
+    });
+    const status = form.querySelector('[data-form-status]');
+    if (status) {
+      status.textContent = message;
+    }
+  }
+
   function initLiveForms() {
     const forms = Array.from(document.querySelectorAll('form[data-live-form]'));
     if (!forms.length) return;
@@ -992,20 +1438,22 @@ const languages = [
       const submit = form.querySelector('button[type="submit"]');
       const consent = form.querySelector('[data-consent]');
       const kind = form.getAttribute('data-form-kind') || 'contact';
-      const recipient = kind === 'newsletter'
-        ? configuredEmail(config.newsletter_email) || configuredEmail(config.contact_email)
-        : configuredEmail(config.contact_email);
+      const endpointKey = kind === 'newsletter'
+        ? 'newsletter_form_endpoint'
+        : kind === 'join'
+          ? 'join_form_endpoint'
+          : 'contact_form_endpoint';
+      const fallbackMessage = kind === 'newsletter'
+        ? 'Direct newsletter signup is not open on this public build. Use the newsletter contact route on this page.'
+        : kind === 'join'
+          ? 'Public sign-up is paused until moderation and safeguarding are in place. Use the contact route instead.'
+          : 'Direct form submission is not enabled on this public build. Use the published email route on this page.';
+      const endpoint = configuredEndpoint(form.getAttribute('data-form-endpoint') || config[endpointKey]);
 
-      if (!recipient) {
-        if (status) {
-          status.textContent = kind === 'newsletter'
-            ? 'Newsletter signup is not configured yet. A working list contact will appear here once the site email is set.'
-            : 'Form service is not configured yet. A working contact email will appear on this page once the site inbox is set.';
-        }
+      if (!endpoint) {
+        disableForm(form, fallbackMessage);
         return;
       }
-
-      const endpoint = `https://formsubmit.co/ajax/${encodeURIComponent(recipient)}`;
       form.setAttribute('action', endpoint);
       form.setAttribute('method', 'post');
 
@@ -1094,6 +1542,65 @@ const languages = [
     }
   }
 
+  function appendUniqueFooterLink(list, href, label) {
+    if (!list || list.querySelector(`a[href="${href}"]`)) return;
+    const item = document.createElement('li');
+    const link = document.createElement('a');
+    link.href = href;
+    link.textContent = label;
+    item.append(link);
+    list.append(item);
+  }
+
+  function ensureGovernanceLinks() {
+    document.querySelectorAll('.site-footer').forEach((footer) => {
+      const legalSection = Array.from(footer.querySelectorAll('.footer-inner > div'))
+        .find((section) => section.querySelector('h3')?.textContent.trim() === 'Legal');
+      const list = legalSection?.querySelector('ul');
+      if (!list) return;
+      appendUniqueFooterLink(list, 'content-model.html', 'Directory rulebook');
+      appendUniqueFooterLink(list, 'safeguarding.html', 'Safeguarding');
+    });
+  }
+
+  function configuredPin(value) {
+    const pin = String(value || '').trim();
+    if (!pin || pin === '1975') return '';
+    return pin;
+  }
+
+  function renderPendingComments(container, comments) {
+    if (!container) return;
+    container.replaceChildren();
+    if (!comments.length) {
+      const empty = document.createElement('p');
+      empty.className = 'muted';
+      empty.textContent = 'No pending comments yet.';
+      container.append(empty);
+      return;
+    }
+
+    comments.forEach((comment) => {
+      const card = document.createElement('div');
+      card.className = 'comment';
+
+      const author = document.createElement('strong');
+      author.textContent = comment.author || 'Anonymous';
+      card.append(author);
+
+      const meta = document.createElement('div');
+      meta.className = 'post-meta';
+      meta.textContent = comment.date || '';
+      card.append(meta);
+
+      const text = document.createElement('p');
+      text.textContent = comment.text || '';
+      card.append(text);
+
+      container.append(card);
+    });
+  }
+
   function initAdmin() {
     const admin = document.querySelector('[data-admin]');
     if (!admin) return;
@@ -1103,13 +1610,23 @@ const languages = [
     const hint = document.querySelector('[data-pin-hint]');
     const exportButton = document.querySelector('[data-export-site]');
     const pendingComments = document.querySelector('[data-pending-comments]');
-    const pin = String(config.cms_pin || '1975');
+    const pin = configuredPin(config.cms_pin);
 
     if (pendingComments) {
       const comments = JSON.parse(safeLocalStorage('get', 'tce-pending-comments') || '[]');
-      pendingComments.innerHTML = comments.length
-        ? comments.map((comment) => `<div class="comment"><strong>${comment.author || 'Anonymous'}</strong><div class="post-meta">${comment.date || ''}</div><p>${comment.text || ''}</p></div>`).join('')
-        : '<p class="muted">No pending comments yet.</p>';
+      renderPendingComments(pendingComments, Array.isArray(comments) ? comments : []);
+    }
+
+    if (!pin) {
+      admin.setAttribute('data-admin-disabled', 'true');
+      if (login) {
+        login.innerHTML = `
+          <h2>Browser admin disabled</h2>
+          <p class="muted">The public build does not expose a steward PIN, browser moderation, or JSON export tools.</p>
+          <p class="micro">If local review tools are needed later, they should sit behind a real backend and proper access control.</p>`;
+      }
+      if (panel) panel.classList.add('hidden');
+      return;
     }
 
     if (form) {
@@ -1160,6 +1677,7 @@ const languages = [
     ensureTopbarLinks();
     initSupportLinks();
     refinePrimaryNav();
+    ensureGovernanceLinks();
     ensureFloatingLinks();
     updateCurrentHourLink();
     initStickyHeader();

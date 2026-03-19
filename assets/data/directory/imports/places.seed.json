@@ -245,5 +245,365 @@
         "url": "https://www.stwinefridesshrine.org/"
       }
     ]
+  },
+  {
+    "id": "place-buckfast-abbey",
+    "name": "Buckfast Abbey",
+    "slug": "buckfast-abbey",
+    "place_type": "religious-house",
+    "country": "England",
+    "region": "Devon",
+    "locality": "Buckfastleigh",
+    "website_url": "https://www.buckfast.org.uk/",
+    "summary": "Benedictine abbey in Devon with liturgy, monastic hospitality, pilgrim life, and a well-known Catholic visitor presence.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Buckfast Abbey",
+      "Benedictine abbey Devon",
+      "Buckfastleigh"
+    ],
+    "sources": [
+      {
+        "authority": "monastery",
+        "title": "Buckfast Abbey",
+        "url": "https://www.buckfast.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "place-pluscarden-abbey",
+    "name": "Pluscarden Abbey",
+    "slug": "pluscarden-abbey",
+    "place_type": "religious-house",
+    "country": "Scotland",
+    "region": "Moray",
+    "locality": "Elgin",
+    "website_url": "https://www.pluscardenabbey.org/",
+    "summary": "Benedictine abbey in Moray with sung liturgy, guest hospitality, and a long monastic tradition in the north of Scotland.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Pluscarden Abbey",
+      "Benedictine Scotland",
+      "Elgin monastery"
+    ],
+    "sources": [
+      {
+        "authority": "monastery",
+        "title": "Pluscarden Abbey",
+        "url": "https://www.pluscardenabbey.org/"
+      }
+    ]
+  },
+  {
+    "id": "place-belmont-abbey",
+    "name": "Belmont Abbey",
+    "slug": "belmont-abbey",
+    "place_type": "religious-house",
+    "country": "England",
+    "region": "Herefordshire",
+    "locality": "Hereford",
+    "website_url": "https://www.belmontabbey.org.uk/",
+    "summary": "Benedictine abbey near Hereford with a Catholic school, guest life, and regular liturgy open to visitors.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Belmont Abbey",
+      "Hereford abbey",
+      "Benedictine Herefordshire"
+    ],
+    "sources": [
+      {
+        "authority": "monastery",
+        "title": "Belmont Abbey",
+        "url": "https://www.belmontabbey.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "place-worth-abbey",
+    "name": "Worth Abbey",
+    "slug": "worth-abbey",
+    "place_type": "religious-house",
+    "country": "England",
+    "region": "West Sussex",
+    "locality": "Crawley",
+    "website_url": "https://worthabbey.net/",
+    "summary": "Benedictine abbey in Sussex known for monastic prayer, hospitality, and retreat life.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Worth Abbey",
+      "Benedictine Sussex",
+      "Crawley monastery"
+    ],
+    "sources": [
+      {
+        "authority": "monastery",
+        "title": "Worth Abbey",
+        "url": "https://worthabbey.net/"
+      }
+    ]
+  },
+  {
+    "id": "place-quarr-abbey",
+    "name": "Quarr Abbey",
+    "slug": "quarr-abbey",
+    "place_type": "religious-house",
+    "country": "England",
+    "region": "Isle of Wight",
+    "locality": "Ryde",
+    "website_url": "https://quarrabbey.org/",
+    "summary": "Benedictine abbey on the Isle of Wight with liturgy, hospitality, and a distinctive island monastic setting.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Quarr Abbey",
+      "Isle of Wight abbey",
+      "Benedictine island monastery"
+    ],
+    "sources": [
+      {
+        "authority": "monastery",
+        "title": "Quarr Abbey",
+        "url": "https://quarrabbey.org/"
+      }
+    ]
+  },
+  {
+    "id": "place-mount-saint-bernard-abbey",
+    "name": "Mount Saint Bernard Abbey",
+    "slug": "mount-saint-bernard-abbey",
+    "place_type": "religious-house",
+    "country": "England",
+    "region": "Leicestershire",
+    "locality": "Coalville",
+    "website_url": "https://www.mountsaintbernard.org/",
+    "summary": "Trappist abbey in Leicestershire with a strong contemplative identity and a longstanding Catholic pilgrim interest.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Mount Saint Bernard Abbey",
+      "Trappist abbey",
+      "Coalville monastery"
+    ],
+    "sources": [
+      {
+        "authority": "monastery",
+        "title": "Mount Saint Bernard Abbey",
+        "url": "https://www.mountsaintbernard.org/"
+      }
+    ]
+  },
+  {
+    "id": "place-prinknash-abbey",
+    "name": "Prinknash Abbey",
+    "slug": "prinknash-abbey",
+    "place_type": "religious-house",
+    "country": "England",
+    "region": "Gloucestershire",
+    "locality": "Cranham",
+    "website_url": "https://www.prinknashabbey.org/",
+    "summary": "Benedictine abbey in Gloucestershire with liturgy, monastic life, and Catholic visitor facilities.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Prinknash Abbey",
+      "Benedictine Gloucestershire",
+      "Cranham abbey"
+    ],
+    "sources": [
+      {
+        "authority": "monastery",
+        "title": "Prinknash Abbey",
+        "url": "https://www.prinknashabbey.org/"
+      }
+    ]
+  },
+  {
+    "id": "place-glenstal-abbey",
+    "name": "Glenstal Abbey",
+    "slug": "glenstal-abbey",
+    "place_type": "religious-house",
+    "country": "Ireland",
+    "region": "County Limerick",
+    "locality": "Murroe",
+    "website_url": "https://glenstal.com/",
+    "summary": "Benedictine abbey in County Limerick known for liturgy, hospitality, education, and retreat life.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Glenstal Abbey",
+      "Benedictine Limerick",
+      "Irish abbey"
+    ],
+    "sources": [
+      {
+        "authority": "monastery",
+        "title": "Glenstal Abbey",
+        "url": "https://glenstal.com/"
+      }
+    ]
+  },
+  {
+    "id": "place-holy-cross-abbey",
+    "name": "Holy Cross Abbey",
+    "slug": "holy-cross-abbey",
+    "place_type": "religious-house",
+    "country": "Ireland",
+    "region": "County Tipperary",
+    "locality": "Thurles",
+    "website_url": "https://holycrossabbey.ie/",
+    "summary": "Cistercian abbey in Tipperary with an ancient pilgrimage tradition and the relic of the True Cross.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Holy Cross Abbey",
+      "Tipperary abbey",
+      "True Cross relic"
+    ],
+    "sources": [
+      {
+        "authority": "monastery",
+        "title": "Holy Cross Abbey",
+        "url": "https://holycrossabbey.ie/"
+      }
+    ]
+  },
+  {
+    "id": "place-douai-abbey",
+    "name": "Douai Abbey",
+    "slug": "douai-abbey",
+    "place_type": "religious-house",
+    "country": "England",
+    "region": "Berkshire",
+    "locality": "Reading",
+    "website_url": "https://www.douaiabbey.org.uk/",
+    "summary": "Benedictine abbey in Berkshire with hospitality, retreats, and a strong English monastic history.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Douai Abbey",
+      "Benedictine Berkshire",
+      "Reading abbey"
+    ],
+    "sources": [
+      {
+        "authority": "monastery",
+        "title": "Douai Abbey",
+        "url": "https://www.douaiabbey.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "place-tyburn-convent",
+    "name": "Tyburn Convent",
+    "slug": "tyburn-convent",
+    "place_type": "religious-house",
+    "country": "England",
+    "region": "London",
+    "locality": "London",
+    "website_url": "https://www.tyburnconvent.org.uk/",
+    "summary": "Benedictine convent near Tyburn with Eucharistic adoration, pilgrimage interest, and devotion to the English martyrs.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Tyburn Convent",
+      "English Martyrs shrine",
+      "London convent"
+    ],
+    "sources": [
+      {
+        "authority": "religious institute",
+        "title": "Tyburn Convent",
+        "url": "https://www.tyburnconvent.org.uk/"
+      }
+    ]
+  },
+  {
+    "id": "place-roscrea-monastery",
+    "name": "Monastery of St Joseph, Roscrea",
+    "slug": "monastery-of-st-joseph-roscrea",
+    "place_type": "religious-house",
+    "country": "Ireland",
+    "region": "County Tipperary",
+    "locality": "Roscrea",
+    "website_url": "https://msjroscrea.ie/",
+    "summary": "Cistercian monastery in Roscrea with liturgy, contemplative life, and visitor interest in Irish monastic tradition.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Roscrea monastery",
+      "Monastery of St Joseph",
+      "Cistercian Roscrea"
+    ],
+    "sources": [
+      {
+        "authority": "monastery",
+        "title": "Monastery of St Joseph, Roscrea",
+        "url": "https://msjroscrea.ie/"
+      }
+    ]
+  },
+  {
+    "id": "place-minsteracres",
+    "name": "Minsteracres Retreat Centre",
+    "slug": "minsteracres-retreat-centre",
+    "place_type": "retreat-centre",
+    "country": "England",
+    "region": "Northumberland",
+    "locality": "Consett",
+    "website_url": "https://minsteracres.org/",
+    "summary": "Catholic retreat house in the north-east offering guided retreats, quiet days, and residential stays.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Minsteracres",
+      "Catholic retreat Northumberland",
+      "retreat centre Consett"
+    ],
+    "sources": [
+      {
+        "authority": "retreat centre",
+        "title": "Minsteracres Retreat Centre",
+        "url": "https://minsteracres.org/"
+      }
+    ]
+  },
+  {
+    "id": "place-tobar-mhuire",
+    "name": "Tobar Mhuire Retreat Centre",
+    "slug": "tobar-mhuire-retreat-centre",
+    "place_type": "retreat-centre",
+    "country": "Scotland",
+    "region": "Argyll and Bute",
+    "locality": "Isle of Mull",
+    "website_url": "https://www.tobarmhuire.com/",
+    "summary": "Catholic retreat house on the Isle of Mull offering residential retreats, private retreat time, and island quiet.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Tobar Mhuire",
+      "Mull retreat centre",
+      "Catholic retreat Scotland"
+    ],
+    "sources": [
+      {
+        "authority": "retreat centre",
+        "title": "Tobar Mhuire Retreat Centre",
+        "url": "https://www.tobarmhuire.com/"
+      }
+    ]
+  },
+  {
+    "id": "place-dominican-retreat-centre-tallaght",
+    "name": "Dominican Retreat Centre Tallaght",
+    "slug": "dominican-retreat-centre-tallaght",
+    "place_type": "retreat-centre",
+    "country": "Ireland",
+    "region": "Dublin",
+    "locality": "Tallaght",
+    "website_url": "https://domrc.ie/",
+    "summary": "Dominican retreat centre in Dublin offering retreats, talks, and spiritual days in a clearly Catholic setting.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Dominican Retreat Centre Tallaght",
+      "Tallaght retreats",
+      "Catholic retreat Dublin"
+    ],
+    "sources": [
+      {
+        "authority": "retreat centre",
+        "title": "Dominican Retreat Centre Tallaght",
+        "url": "https://domrc.ie/"
+      }
+    ]
   }
 ]

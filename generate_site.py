@@ -14,7 +14,7 @@ site = {
     'footer_url': 'https://www.waylight-atlantic.co.uk/',
     'contact_email': 'hello@example.com',
     'newsletter_email': 'newsletter@example.com',
-    'cms_pin': '1975',
+    'cms_pin': '',
 }
 
 pages = [
@@ -447,8 +447,15 @@ const TCE = (() => {
     const login = document.querySelector('[data-admin-login]');
     const panel = document.querySelector('[data-admin-panel]');
     const pinHint = document.querySelector('[data-pin-hint]');
-    const expected = config.cms_pin || '1975';
-    pinHint.textContent = `Demo PIN: ${expected}`;
+    const expected = config.cms_pin || '';
+    if (!expected) {
+      pinHint.textContent = 'Browser admin disabled in the public build.';
+      if (pinForm) {
+        pinForm.querySelectorAll('input,button').forEach((control) => control.disabled = true);
+      }
+      return;
+    }
+    pinHint.textContent = `Configured PIN: ${expected}`;
     pinForm.addEventListener('submit', async (e) => {
       e.preventDefault();
       const pin = new FormData(pinForm).get('pin');
@@ -714,25 +721,16 @@ for file,title,key,kind in pages:
 admin_body = '''<section class="subhero"><div class="subhero-inner"><div class="eyebrow">Lightweight CMS</div><h1>Site Steward</h1><p>A browser-based steward panel for this prototype: review comments, tweak core text fields, and export JSON for future enhancement.</p></div></section>
 <main id="main-content" class="admin-shell" data-admin><div class="breadcrumbs"><a href="index.html">Home</a> / Site Steward</div><div data-admin-login class="card admin-block"><h2>Enter steward PIN</h2><p class="muted">This is a prototype admin area intended for local review only.</p><form data-pin-form><label for="pin">PIN</label><input id="pin" name="pin" type="password" required><div class="hero-actions"><button class="btn" type="submit">Enter</button><span class="pill" data-pin-hint></span></div></form></div><div data-admin-panel class="hidden"><div class="admin-grid"><section class="card admin-block"><h2>Core settings</h2><div class="form-row"><div><label>Site title</label><input name="siteTitle"></div><div><label>Tagline</label><input name="tagline"></div></div><div class="form-row"><div><label>Contact email</label><input name="contactEmail"></div><div><label>Footer credit</label><input name="footerCredit"></div></div><label>Footer URL</label><input name="footerUrl"><div class="hero-actions"><button class="btn" type="button" data-export-site>Export JSON snapshot</button></div><p class="micro">This prototype exports JSON for later use. Pure browser HTML cannot directly overwrite local files without a fuller backend.</p></section><section class="card admin-block"><h2>Pending comments</h2><div data-pending-comments><p class="muted">No pending comments yet.</p></div></section></div></div></main>'''
 (base/'admin.html').write_text(page_template('Site Steward','Lightweight CMS / steward panel demo.',admin_body,'admin'), encoding='utf-8')
-search_index.append({'url':'admin.html','title':'Site Steward','section':'Admin','description':'Prototype steward panel for comment approval and JSON export.','keywords':'admin cms comments moderation'})
+search_index.append({'url':'admin.html','title':'Site Steward','section':'Governance','description':'Public note explaining that browser admin is disabled in the public build.','keywords':'admin disabled governance'})
 
-readme = '''# The Catholic Experiment — Prototype build
+readme = '''# The Catholic Experiment
 
-This is a static HTML/CSS/JS prototype packaged as a downloadable site.
+This legacy generator script predates the current public build and should be treated as historical scaffolding rather than a faithful description of the live site.
 
-## What is included
-- 30 HTML pages
-- Liturgical colour switching by season, with special handling for Gaudete and Laetare
-- Basic locale awareness (`.ie` uses Ireland overrides for sample national feasts)
-- Search overlay powered by `assets/data/search-index.json`
-- Journal entries powered by `assets/data/journal.json`
-- Comment submission with browser-local moderation queue
-- Prototype steward panel (`admin.html`) with JSON export and local comment approval
-- Dark mode, skip links, reduced motion support, and an accessibility statement
-- Starter legal/compliance pages that must be reviewed before any live launch
-
-## Demo steward PIN
-1975
+## Legacy note
+- The repo now has a directory-first governance model, published rulebook, and public safeguarding page.
+- Browser admin tooling and public moderation features are not part of the public build.
+- Use the top-level README in the repo root for the current project description.
 
 ## How to preview
 Open `index.html` in a browser. Some browsers restrict `fetch()` when opened directly from disk.
@@ -744,15 +742,8 @@ python3 -m http.server 8000
 
 Then visit `http://localhost:8000/`.
 
-## Notes on the lightweight CMS
-Because this prototype is static HTML/JS, the steward panel can export JSON and manage comments in local storage, but it cannot write back to files on disk without a fuller backend.
-Recommended future paths:
-1. Decap CMS or TinaCMS for git-backed editing
-2. A small Node/Express or serverless form/comment endpoint
-3. A static site generator for templating and collections
-
-## Legal pages
-The privacy, cookie, data-protection, terms, and accessibility pages are broad starter texts only. They should be checked against the final hosting, analytics, newsletter, and contact-form stack before publication.
+## Implementation note
+If this generator is kept, it should be brought into line with the current public site before it is used to regenerate pages or data.
 '''
 (base/'README.md').write_text(readme, encoding='utf-8')
 

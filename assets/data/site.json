@@ -6,6 +6,12 @@
   "footer_url": "https://www.waylight-atlantic.co.uk/",
   "contact_email": "thecatholicexperiment@gmail.com",
   "newsletter_email": "thecatholicexperiment@gmail.com",
-  "cms_pin": "1975",
+  "cms_pin": "",
+  "contact_form_endpoint": "",
+  "newsletter_form_endpoint": "",
+  "join_form_endpoint": "",
+  "translation_provider": "google-gtx",
+  "translation_endpoint": "",
+  "translation_source_lang": "en",
   "preview_season": ""
 }

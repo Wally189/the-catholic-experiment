@@ -576,12 +576,174 @@
     "source": "directory"
   },
   {
+    "id": "directory:businesses:business-catholic-gift-shop",
+    "url": "businesses.html#business-catholic-gift-shop",
+    "title": "Catholic Gift Shop",
+    "section": "Directory: Businesses",
+    "description": "Online Catholic retailer specialising in rosaries, Lourdes gifts, medals, sacramental gifts, and devotional items.",
+    "keywords": "Catholic Gift Shop retail London England Lourdes gifts rosaries",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-catholic-seasons",
+    "url": "businesses.html#business-catholic-seasons",
+    "title": "Catholic Seasons",
+    "section": "Directory: Businesses",
+    "description": "UK Catholic home and gift shop focused on liturgical living, sacramental gifts, beeswax candles, and domestic church goods.",
+    "keywords": "Catholic Seasons maker Online England domestic church Catholic home and gift shop",
+    "source": "directory"
+  },
+  {
     "id": "directory:businesses:business-cts-books",
     "url": "businesses.html#business-cts-books",
     "title": "Catholic Truth Society",
     "section": "Directory: Businesses",
     "description": "Catholic publisher and bookshop offering prayer books, catechetical resources, and spiritual reading.",
     "keywords": "Catholic Truth Society publisher London England CTS Books",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-gracewing",
+    "url": "businesses.html#business-gracewing",
+    "title": "Gracewing",
+    "section": "Directory: Businesses",
+    "description": "Catholic publisher and UK distributor carrying theology, spirituality, saints, liturgy, and church titles.",
+    "keywords": "Gracewing publisher Leominster England Catholic publisher",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-holyshop",
+    "url": "businesses.html#business-holyshop",
+    "title": "Holyshop",
+    "section": "Directory: Businesses",
+    "description": "Catholic devotional and sacramental shop offering rosaries, medals, statues, icons, and gifts.",
+    "keywords": "Holyshop retail Online England Catholic devotional shop rosaries and medals",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-mccrimmons",
+    "url": "businesses.html#business-mccrimmons",
+    "title": "McCrimmon Publishing",
+    "section": "Directory: Businesses",
+    "description": "Publisher and church supplier known for hymnals, parish mass books, banners, and school resources.",
+    "keywords": "McCrimmon Publishing publisher Great Wakering England McCrimmons Catholic Parish Mass Book church banners",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-pauline-books-media",
+    "url": "businesses.html#business-pauline-books-media",
+    "title": "Pauline Books & Media UK",
+    "section": "Directory: Businesses",
+    "description": "Catholic books, media, prayer resources, and gifts offered through the Daughters of St Paul in Liverpool.",
+    "keywords": "Pauline Books & Media UK publisher Liverpool England Pauline Books and Media Pauline Book Centre Daughters of St Paul",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-redemptorist-publications",
+    "url": "businesses.html#business-redemptorist-publications",
+    "title": "Redemptorist Publications",
+    "section": "Directory: Businesses",
+    "description": "Catholic publisher producing liturgical, catechetical, pastoral, and parish resources in everyday language.",
+    "keywords": "Redemptorist Publications publisher Chawton England RP Books Catholic publisher",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-tangney-tours",
+    "url": "businesses.html#business-tangney-tours",
+    "title": "Tangney Tours",
+    "section": "Directory: Businesses",
+    "description": "Pilgrimage specialist based in Kent, offering parish, diocesan, and group pilgrimages to Lourdes, the Holy Land, Medjugorje, and beyond.",
+    "keywords": "Tangney Tours travel Kent England pilgrimage specialist",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-ten-ten-resources",
+    "url": "businesses.html#business-ten-ten-resources",
+    "title": "Ten Ten Resources",
+    "section": "Directory: Businesses",
+    "description": "Catholic family and sacramental retailer offering rosaries, memorial cards, gifts, and practical parish resources.",
+    "keywords": "Ten Ten Resources retail Online England Catholic gifts sacramental cards",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-catholic-herald",
+    "url": "businesses.html#business-catholic-herald",
+    "title": "The Catholic Herald",
+    "section": "Directory: Businesses",
+    "description": "Catholic newspaper and magazine offering reporting, commentary, and Catholic cultural coverage.",
+    "keywords": "The Catholic Herald publisher London England Catholic Herald Catholic newspaper Catholic magazine",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-the-tablet",
+    "url": "businesses.html#business-the-tablet",
+    "title": "The Tablet",
+    "section": "Directory: Businesses",
+    "description": "Longstanding Catholic newspaper and publisher serving readers in Britain, Ireland, and beyond.",
+    "keywords": "The Tablet publisher London England Catholic newspaper Catholic magazine",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-catholic-ireland",
+    "url": "businesses.html#business-catholic-ireland",
+    "title": "CatholicIreland.net",
+    "section": "Directory: Businesses",
+    "description": "Irish Catholic resource platform offering articles, directories, and practical Catholic reading and reference material.",
+    "keywords": "CatholicIreland.net other Online Ireland Irish Catholic resources Catholic Ireland",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-joe-walsh-tours",
+    "url": "businesses.html#business-joe-walsh-tours",
+    "title": "Joe Walsh Tours",
+    "section": "Directory: Businesses",
+    "description": "Pilgrimage tour company organising diocesan pilgrimages and pilgrim journeys from Ireland and the UK to major holy sites.",
+    "keywords": "Joe Walsh Tours travel Dublin Ireland diocesan pilgrimages pilgrimage tours",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-marian-pilgrimages",
+    "url": "businesses.html#business-marian-pilgrimages",
+    "title": "Marian Pilgrimages",
+    "section": "Directory: Businesses",
+    "description": "Irish pilgrimage specialist organising travel to Lourdes, Fatima, Medjugorje, the Holy Land, and other shrines.",
+    "keywords": "Marian Pilgrimages travel Dublin Ireland pilgrimage specialists",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-messenger-publications",
+    "url": "businesses.html#business-messenger-publications",
+    "title": "Messenger Publications",
+    "section": "Directory: Businesses",
+    "description": "Jesuit publishing house in Ireland offering Catholic books, pastoral resources, and the Sacred Heart Messenger.",
+    "keywords": "Messenger Publications publisher Dublin Ireland Sacred Heart Messenger Jesuits in Ireland",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-pauline-books-media-ireland",
+    "url": "businesses.html#business-pauline-books-media-ireland",
+    "title": "Pauline Books & Media Ireland",
+    "section": "Directory: Businesses",
+    "description": "Irish Pauline book and media apostolate offering Catholic books, prayer material, and devotional gifts.",
+    "keywords": "Pauline Books & Media Ireland publisher Dublin Ireland Pauline Ireland Daughters of St Paul Ireland Catholic bookshop Dublin",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-irish-catholic",
+    "url": "businesses.html#business-irish-catholic",
+    "title": "The Irish Catholic",
+    "section": "Directory: Businesses",
+    "description": "Irish Catholic newspaper covering Church life, current affairs, and Catholic commentary.",
+    "keywords": "The Irish Catholic publisher Dublin Ireland Irish Catholic Catholic newspaper Ireland Catholic news",
+    "source": "directory"
+  },
+  {
+    "id": "directory:businesses:business-veritas",
+    "url": "businesses.html#business-veritas",
+    "title": "Veritas",
+    "section": "Directory: Businesses",
+    "description": "Irish Catholic bookseller and publisher offering catechetical, liturgical, devotional, and sacramental resources.",
+    "keywords": "Veritas publisher Dublin Ireland Catholic books Ireland Catholic publisher",
     "source": "directory"
   },
   {
@@ -675,6 +837,150 @@
     "source": "directory"
   },
   {
+    "id": "directory:places:place-belmont-abbey",
+    "url": "places.html#place-belmont-abbey",
+    "title": "Belmont Abbey",
+    "section": "Directory: Places",
+    "description": "Benedictine abbey near Hereford with a Catholic school, guest life, and regular liturgy open to visitors.",
+    "keywords": "Belmont Abbey religious-house Hereford England Hereford abbey Benedictine Herefordshire",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-buckfast-abbey",
+    "url": "places.html#place-buckfast-abbey",
+    "title": "Buckfast Abbey",
+    "section": "Directory: Places",
+    "description": "Benedictine abbey in Devon with liturgy, monastic hospitality, pilgrim life, and a well-known Catholic visitor presence.",
+    "keywords": "Buckfast Abbey religious-house Buckfastleigh England Benedictine abbey Devon",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-walsingham-shrine",
+    "url": "places.html#place-walsingham-shrine",
+    "title": "Catholic National Shrine of Our Lady, Walsingham",
+    "section": "Directory: Places",
+    "description": "National Catholic shrine and basilica at Walsingham, long associated with English pilgrimage and devotion to Our Lady.",
+    "keywords": "Catholic National Shrine of Our Lady, Walsingham shrine Walsingham England Our Lady of Walsingham Slipper Chapel",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-douai-abbey",
+    "url": "places.html#place-douai-abbey",
+    "title": "Douai Abbey",
+    "section": "Directory: Places",
+    "description": "Benedictine abbey in Berkshire with hospitality, retreats, and a strong English monastic history.",
+    "keywords": "Douai Abbey religious-house Reading England Benedictine Berkshire Reading abbey",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-lindisfarne-priory",
+    "url": "places.html#place-lindisfarne-priory",
+    "title": "Lindisfarne Priory",
+    "section": "Directory: Places",
+    "description": "Ancient monastic site associated with St Aidan, St Cuthbert, and the early Christian life of Northumbria.",
+    "keywords": "Lindisfarne Priory other Holy Island England Lindisfarne St Cuthbert St Aidan",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-minsteracres",
+    "url": "places.html#place-minsteracres",
+    "title": "Minsteracres Retreat Centre",
+    "section": "Directory: Places",
+    "description": "Catholic retreat house in the north-east offering guided retreats, quiet days, and residential stays.",
+    "keywords": "Minsteracres Retreat Centre retreat-centre Consett England Minsteracres Catholic retreat Northumberland retreat centre Consett",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-mount-saint-bernard-abbey",
+    "url": "places.html#place-mount-saint-bernard-abbey",
+    "title": "Mount Saint Bernard Abbey",
+    "section": "Directory: Places",
+    "description": "Trappist abbey in Leicestershire with a strong contemplative identity and a longstanding Catholic pilgrim interest.",
+    "keywords": "Mount Saint Bernard Abbey religious-house Coalville England Trappist abbey Coalville monastery",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-prinknash-abbey",
+    "url": "places.html#place-prinknash-abbey",
+    "title": "Prinknash Abbey",
+    "section": "Directory: Places",
+    "description": "Benedictine abbey in Gloucestershire with liturgy, monastic life, and Catholic visitor facilities.",
+    "keywords": "Prinknash Abbey religious-house Cranham England Benedictine Gloucestershire Cranham abbey",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-quarr-abbey",
+    "url": "places.html#place-quarr-abbey",
+    "title": "Quarr Abbey",
+    "section": "Directory: Places",
+    "description": "Benedictine abbey on the Isle of Wight with liturgy, hospitality, and a distinctive island monastic setting.",
+    "keywords": "Quarr Abbey religious-house Ryde England Isle of Wight abbey Benedictine island monastery",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-our-lady-glastonbury",
+    "url": "places.html#place-our-lady-glastonbury",
+    "title": "Shrine of Our Lady of Glastonbury",
+    "section": "Directory: Places",
+    "description": "Diocesan shrine on Magdalene Street, across from Glastonbury Abbey, with annual Catholic pilgrimage and Marian devotion.",
+    "keywords": "Shrine of Our Lady of Glastonbury shrine Glastonbury England Glastonbury shrine Our Lady of Glastonbury Magdalene Street",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-aylesford-priory",
+    "url": "places.html#place-aylesford-priory",
+    "title": "The Friars, Aylesford Priory",
+    "section": "Directory: Places",
+    "description": "Carmelite priory in Kent offering pilgrimage, retreat, prayer, and the National Shrine of St Jude.",
+    "keywords": "The Friars, Aylesford Priory religious-house Aylesford England Aylesford Priory The Friars St Jude shrine",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-tyburn-convent",
+    "url": "places.html#place-tyburn-convent",
+    "title": "Tyburn Convent",
+    "section": "Directory: Places",
+    "description": "Benedictine convent near Tyburn with Eucharistic adoration, pilgrimage interest, and devotion to the English martyrs.",
+    "keywords": "Tyburn Convent religious-house London England English Martyrs shrine London convent",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-worth-abbey",
+    "url": "places.html#place-worth-abbey",
+    "title": "Worth Abbey",
+    "section": "Directory: Places",
+    "description": "Benedictine abbey in Sussex known for monastic prayer, hospitality, and retreat life.",
+    "keywords": "Worth Abbey religious-house Crawley England Benedictine Sussex Crawley monastery",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-dominican-retreat-centre-tallaght",
+    "url": "places.html#place-dominican-retreat-centre-tallaght",
+    "title": "Dominican Retreat Centre Tallaght",
+    "section": "Directory: Places",
+    "description": "Dominican retreat centre in Dublin offering retreats, talks, and spiritual days in a clearly Catholic setting.",
+    "keywords": "Dominican Retreat Centre Tallaght retreat-centre Tallaght Ireland Tallaght retreats Catholic retreat Dublin",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-glenstal-abbey",
+    "url": "places.html#place-glenstal-abbey",
+    "title": "Glenstal Abbey",
+    "section": "Directory: Places",
+    "description": "Benedictine abbey in County Limerick known for liturgy, hospitality, education, and retreat life.",
+    "keywords": "Glenstal Abbey religious-house Murroe Ireland Benedictine Limerick Irish abbey",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-holy-cross-abbey",
+    "url": "places.html#place-holy-cross-abbey",
+    "title": "Holy Cross Abbey",
+    "section": "Directory: Places",
+    "description": "Cistercian abbey in Tipperary with an ancient pilgrimage tradition and the relic of the True Cross.",
+    "keywords": "Holy Cross Abbey religious-house Thurles Ireland Tipperary abbey True Cross relic",
+    "source": "directory"
+  },
+  {
     "id": "directory:places:place-knock-shrine",
     "url": "places.html#place-knock-shrine",
     "title": "Knock Shrine",
@@ -684,12 +990,75 @@
     "source": "directory"
   },
   {
+    "id": "directory:places:place-lough-derg",
+    "url": "places.html#place-lough-derg",
+    "title": "Lough Derg, Sanctuary of Saint Patrick",
+    "section": "Directory: Places",
+    "description": "Island sanctuary in County Donegal known for St Patrick's Purgatory and its traditional pilgrimages and retreats.",
+    "keywords": "Lough Derg, Sanctuary of Saint Patrick retreat-centre Pettigo Ireland Lough Derg St Patrick's Purgatory",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-roscrea-monastery",
+    "url": "places.html#place-roscrea-monastery",
+    "title": "Monastery of St Joseph, Roscrea",
+    "section": "Directory: Places",
+    "description": "Cistercian monastery in Roscrea with liturgy, contemplative life, and visitor interest in Irish monastic tradition.",
+    "keywords": "Monastery of St Joseph, Roscrea religious-house Roscrea Ireland Roscrea monastery Monastery of St Joseph Cistercian Roscrea",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-carfin-grotto",
+    "url": "places.html#place-carfin-grotto",
+    "title": "Carfin Grotto",
+    "section": "Directory: Places",
+    "description": "Scotland's National Shrine to Our Lady of Lourdes, with daily prayer, Mass, and a long pilgrim tradition.",
+    "keywords": "Carfin Grotto shrine Carfin Scotland Our Lady of Lourdes Motherwell",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-iona-abbey",
+    "url": "places.html#place-iona-abbey",
+    "title": "Iona Abbey and Nunnery",
+    "section": "Directory: Places",
+    "description": "Ancient monastic island site linked with St Columba, medieval pilgrimage, and centuries of prayer.",
+    "keywords": "Iona Abbey and Nunnery other Iona Scotland St Columba Iona Abbey",
+    "source": "directory"
+  },
+  {
     "id": "directory:places:place-national-shrine-st-andrew",
     "url": "places.html#place-national-shrine-st-andrew",
     "title": "National Shrine of St Andrew",
     "section": "Directory: Places",
     "description": "Shrine located within St Mary's Catholic Cathedral, Edinburgh.",
     "keywords": "National Shrine of St Andrew shrine Edinburgh Scotland St Andrew shrine Edinburgh shrine",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-pluscarden-abbey",
+    "url": "places.html#place-pluscarden-abbey",
+    "title": "Pluscarden Abbey",
+    "section": "Directory: Places",
+    "description": "Benedictine abbey in Moray with sung liturgy, guest hospitality, and a long monastic tradition in the north of Scotland.",
+    "keywords": "Pluscarden Abbey religious-house Elgin Scotland Benedictine Scotland Elgin monastery",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-tobar-mhuire",
+    "url": "places.html#place-tobar-mhuire",
+    "title": "Tobar Mhuire Retreat Centre",
+    "section": "Directory: Places",
+    "description": "Catholic retreat house on the Isle of Mull offering residential retreats, private retreat time, and island quiet.",
+    "keywords": "Tobar Mhuire Retreat Centre retreat-centre Isle of Mull Scotland Tobar Mhuire Mull retreat centre Catholic retreat Scotland",
+    "source": "directory"
+  },
+  {
+    "id": "directory:places:place-st-winefride-shrine",
+    "url": "places.html#place-st-winefride-shrine",
+    "title": "National Shrine of St Winefride",
+    "section": "Directory: Places",
+    "description": "Ancient holy well and Catholic shrine in Holywell, with an unbroken pilgrimage tradition linked to St Winefride.",
+    "keywords": "National Shrine of St Winefride shrine Holywell Wales St Winefride's Well Lourdes of Wales",
     "source": "directory"
   }
 ]

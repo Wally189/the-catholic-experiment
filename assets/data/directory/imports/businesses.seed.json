@@ -261,5 +261,197 @@
         "url": "https://www.tangney-tours.com/"
       }
     ]
+  },
+  {
+    "id": "business-veritas",
+    "name": "Veritas",
+    "slug": "veritas",
+    "business_type": "publisher",
+    "country": "Ireland",
+    "region": "Dublin",
+    "locality": "Dublin",
+    "website_url": "https://www.veritasbooksonline.com/",
+    "summary": "Irish Catholic bookseller and publisher offering catechetical, liturgical, devotional, and sacramental resources.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Veritas",
+      "Catholic books Ireland",
+      "Catholic publisher"
+    ],
+    "sources": [
+      {
+        "authority": "publisher",
+        "title": "Veritas",
+        "url": "https://www.veritasbooksonline.com/"
+      }
+    ]
+  },
+  {
+    "id": "business-ten-ten-resources",
+    "name": "Ten Ten Resources",
+    "slug": "ten-ten-resources",
+    "business_type": "retail",
+    "country": "England",
+    "region": "United Kingdom",
+    "locality": "Online",
+    "website_url": "https://www.tentenresources.co.uk/",
+    "summary": "Catholic family and sacramental retailer offering rosaries, memorial cards, gifts, and practical parish resources.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Ten Ten Resources",
+      "Catholic gifts",
+      "sacramental cards"
+    ],
+    "sources": [
+      {
+        "authority": "retailer",
+        "title": "Ten Ten Resources",
+        "url": "https://www.tentenresources.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "business-the-tablet",
+    "name": "The Tablet",
+    "slug": "the-tablet",
+    "business_type": "publisher",
+    "country": "England",
+    "region": "London",
+    "locality": "London",
+    "website_url": "https://www.thetablet.co.uk/",
+    "summary": "Longstanding Catholic newspaper and publisher serving readers in Britain, Ireland, and beyond.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "The Tablet",
+      "Catholic newspaper",
+      "Catholic magazine"
+    ],
+    "sources": [
+      {
+        "authority": "publisher",
+        "title": "The Tablet",
+        "url": "https://www.thetablet.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "business-catholic-herald",
+    "name": "The Catholic Herald",
+    "slug": "the-catholic-herald",
+    "business_type": "publisher",
+    "country": "England",
+    "region": "London",
+    "locality": "London",
+    "website_url": "https://thecatholicherald.com/",
+    "summary": "Catholic newspaper and magazine offering reporting, commentary, and Catholic cultural coverage.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Catholic Herald",
+      "Catholic newspaper",
+      "Catholic magazine"
+    ],
+    "sources": [
+      {
+        "authority": "publisher",
+        "title": "The Catholic Herald",
+        "url": "https://thecatholicherald.com/"
+      }
+    ]
+  },
+  {
+    "id": "business-irish-catholic",
+    "name": "The Irish Catholic",
+    "slug": "the-irish-catholic",
+    "business_type": "publisher",
+    "country": "Ireland",
+    "region": "Dublin",
+    "locality": "Dublin",
+    "website_url": "https://www.irishcatholic.com/",
+    "summary": "Irish Catholic newspaper covering Church life, current affairs, and Catholic commentary.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Irish Catholic",
+      "Catholic newspaper Ireland",
+      "Catholic news"
+    ],
+    "sources": [
+      {
+        "authority": "publisher",
+        "title": "The Irish Catholic",
+        "url": "https://www.irishcatholic.com/"
+      }
+    ]
+  },
+  {
+    "id": "business-pauline-books-media-ireland",
+    "name": "Pauline Books & Media Ireland",
+    "slug": "pauline-books-media-ireland",
+    "business_type": "publisher",
+    "country": "Ireland",
+    "region": "Dublin",
+    "locality": "Dublin",
+    "website_url": "https://www.pauline.ie/",
+    "summary": "Irish Pauline book and media apostolate offering Catholic books, prayer material, and devotional gifts.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Pauline Ireland",
+      "Daughters of St Paul Ireland",
+      "Catholic bookshop Dublin"
+    ],
+    "sources": [
+      {
+        "authority": "publisher",
+        "title": "Pauline Books & Media Ireland",
+        "url": "https://www.pauline.ie/"
+      }
+    ]
+  },
+  {
+    "id": "business-holyshop",
+    "name": "Holyshop",
+    "slug": "holyshop",
+    "business_type": "retail",
+    "country": "England",
+    "region": "United Kingdom",
+    "locality": "Online",
+    "website_url": "https://holyshop.co.uk/",
+    "summary": "Catholic devotional and sacramental shop offering rosaries, medals, statues, icons, and gifts.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "Holyshop",
+      "Catholic devotional shop",
+      "rosaries and medals"
+    ],
+    "sources": [
+      {
+        "authority": "retailer",
+        "title": "Holyshop",
+        "url": "https://holyshop.co.uk/"
+      }
+    ]
+  },
+  {
+    "id": "business-catholic-ireland",
+    "name": "CatholicIreland.net",
+    "slug": "catholicireland-net",
+    "business_type": "other",
+    "country": "Ireland",
+    "region": "Ireland",
+    "locality": "Online",
+    "website_url": "https://www.catholicireland.net/",
+    "summary": "Irish Catholic resource platform offering articles, directories, and practical Catholic reading and reference material.",
+    "verification_status": "trusted",
+    "search_terms": [
+      "CatholicIreland.net",
+      "Irish Catholic resources",
+      "Catholic Ireland"
+    ],
+    "sources": [
+      {
+        "authority": "publisher",
+        "title": "CatholicIreland.net",
+        "url": "https://www.catholicireland.net/"
+      }
+    ]
   }
 ]

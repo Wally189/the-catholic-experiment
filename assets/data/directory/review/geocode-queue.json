@@ -355,8 +355,116 @@
   },
   {
     "collection": "businesses",
+    "record_id": "business-catholic-gift-shop",
+    "query": "Catholic Gift Shop, London, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-catholic-seasons",
+    "query": "Catholic Seasons, Online, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
     "record_id": "business-cts-books",
     "query": "Catholic Truth Society, London, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-gracewing",
+    "query": "Gracewing, Leominster, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-holyshop",
+    "query": "Holyshop, Online, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-mccrimmons",
+    "query": "McCrimmon Publishing, Great Wakering, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-pauline-books-media",
+    "query": "Pauline Books & Media UK, Liverpool, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-redemptorist-publications",
+    "query": "Redemptorist Publications, Chawton, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-tangney-tours",
+    "query": "Tangney Tours, Kent, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-ten-ten-resources",
+    "query": "Ten Ten Resources, Online, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-catholic-herald",
+    "query": "The Catholic Herald, London, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-the-tablet",
+    "query": "The Tablet, London, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-catholic-ireland",
+    "query": "CatholicIreland.net, Online, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-joe-walsh-tours",
+    "query": "Joe Walsh Tours, Dublin, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-marian-pilgrimages",
+    "query": "Marian Pilgrimages, Dublin, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-messenger-publications",
+    "query": "Messenger Publications, Dublin, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-pauline-books-media-ireland",
+    "query": "Pauline Books & Media Ireland, Dublin, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-irish-catholic",
+    "query": "The Irish Catholic, Dublin, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "businesses",
+    "record_id": "business-veritas",
+    "query": "Veritas, Dublin, Ireland",
     "status": "pending-manual-geocode"
   },
   {
@@ -421,14 +529,152 @@
   },
   {
     "collection": "places",
+    "record_id": "place-belmont-abbey",
+    "query": "Belmont Abbey, Hereford, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-buckfast-abbey",
+    "query": "Buckfast Abbey, Buckfastleigh, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-walsingham-shrine",
+    "query": "Catholic National Shrine of Our Lady, Walsingham, Walsingham, NR22 6AL, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-douai-abbey",
+    "query": "Douai Abbey, Reading, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-lindisfarne-priory",
+    "query": "Lindisfarne Priory, Holy Island, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-minsteracres",
+    "query": "Minsteracres Retreat Centre, Consett, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-mount-saint-bernard-abbey",
+    "query": "Mount Saint Bernard Abbey, Coalville, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-prinknash-abbey",
+    "query": "Prinknash Abbey, Cranham, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-quarr-abbey",
+    "query": "Quarr Abbey, Ryde, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-our-lady-glastonbury",
+    "query": "Shrine of Our Lady of Glastonbury, Glastonbury, BA6 9EJ, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-aylesford-priory",
+    "query": "The Friars, Aylesford Priory, Aylesford, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-tyburn-convent",
+    "query": "Tyburn Convent, London, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-worth-abbey",
+    "query": "Worth Abbey, Crawley, England",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-dominican-retreat-centre-tallaght",
+    "query": "Dominican Retreat Centre Tallaght, Tallaght, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-glenstal-abbey",
+    "query": "Glenstal Abbey, Murroe, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-holy-cross-abbey",
+    "query": "Holy Cross Abbey, Thurles, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
     "record_id": "place-knock-shrine",
     "query": "Knock Shrine, Knock, F12 Y226, Ireland",
     "status": "pending-manual-geocode"
   },
   {
     "collection": "places",
+    "record_id": "place-lough-derg",
+    "query": "Lough Derg, Sanctuary of Saint Patrick, Pettigo, F94 PC60, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-roscrea-monastery",
+    "query": "Monastery of St Joseph, Roscrea, Roscrea, Ireland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-carfin-grotto",
+    "query": "Carfin Grotto, Carfin, ML1 5AJ, Scotland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-iona-abbey",
+    "query": "Iona Abbey and Nunnery, Iona, Scotland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
     "record_id": "place-national-shrine-st-andrew",
     "query": "National Shrine of St Andrew, Edinburgh, Scotland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-pluscarden-abbey",
+    "query": "Pluscarden Abbey, Elgin, Scotland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-tobar-mhuire",
+    "query": "Tobar Mhuire Retreat Centre, Isle of Mull, Scotland",
+    "status": "pending-manual-geocode"
+  },
+  {
+    "collection": "places",
+    "record_id": "place-st-winefride-shrine",
+    "query": "National Shrine of St Winefride, Holywell, CH8 7PL, Wales",
     "status": "pending-manual-geocode"
   }
 ]
