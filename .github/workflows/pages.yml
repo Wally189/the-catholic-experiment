@@ -23,7 +23,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Apply common footer and certificate standards
+      - name: Apply common footer, certificate and accessibility standards
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -38,8 +38,10 @@ jobs:
           text = path.read_text(encoding='utf-8')
           text = text.replace('View the indicative milestones and the developing A1 pathway on the Latin site.','View learner-recorded course milestones on the Latin site. These are not assessed qualifications or language-level awards.')
           text = text.replace('See the proposed completion framework for this course.','Certificate framework not yet released.')
-          text = text.replace('footer a{margin-right:18px}','footer a{margin-right:18px}.footer-brand{float:right;margin-right:0;font-weight:700;text-decoration:none}@media(max-width:760px){.footer-brand{float:none;display:block;margin-top:14px}}')
+          text = text.replace('footer a{margin-right:18px}','footer a{margin-right:18px}.footer-brand{float:right;margin-right:0;font-weight:700;text-decoration:none}.footer-brand:focus-visible{outline:3px solid rgba(214,164,58,.55);outline-offset:3px}@media(max-width:760px){.footer-brand{float:none;display:block;margin-top:14px}}')
           text = text.replace('<p class="version">Central site version 0.4 · reviewed 22 July 2026</p>','<p class="version">Central site version 0.4 · reviewed 22 July 2026 <a class="footer-brand" href="https://www.waylight-atlantic.co.uk/" target="_blank" rel="noopener">Waylight Atlantic →</a></p>')
+          text = text.replace('</style>', '@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto!important}*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}</style>', 1)
+          text = text.replace("links.forEach(link=>link.classList.toggle('on',link.dataset.view===id));", "links.forEach(link=>{const active=link.dataset.view===id;link.classList.toggle('on',active);if(active)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current')});")
           path.write_text(text, encoding='utf-8')
           PY
       - name: Configure Pages
