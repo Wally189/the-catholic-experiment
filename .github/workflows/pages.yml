@@ -23,6 +23,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Add standard footer link
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+          text = text.replace(
+              'footer a{margin-right:18px}',
+              'footer a{margin-right:18px}.footer-brand{float:right;margin-right:0;font-weight:700;text-decoration:none}@media(max-width:760px){.footer-brand{float:none;display:block;margin-top:14px}}'
+          )
+          text = text.replace(
+              '<p class="version">Central site version 0.4 · reviewed 22 July 2026</p>',
+              '<p class="version">Central site version 0.4 · reviewed 22 July 2026 <a class="footer-brand" href="https://www.waylight-atlantic.co.uk/" target="_blank" rel="noopener">Waylight Atlantic →</a></p>'
+          )
+          path.write_text(text, encoding='utf-8')
+          PY
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
