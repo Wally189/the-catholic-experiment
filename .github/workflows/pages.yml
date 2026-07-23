@@ -23,46 +23,73 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Apply common footer, certificate and accessibility standards
+
+      - name: Apply and validate the common platform
         run: |
           python - <<'PY'
           from pathlib import Path
-          old = 'This website has been built with the assistance of AI tools. Where appropriate this has been cross validated with Magnifica Humanae'
-          new = 'This website has been built with the assistance of AI tools. Where appropriate, content has been checked against Magnifica Humanae and relevant authoritative Catholic sources.'
-          footer_fix = '''<style id="programme-footer-layout-fix">
-          .programme-footer{display:grid!important;grid-template-columns:minmax(0,1fr) max-content!important;grid-template-rows:repeat(3,auto)!important;column-gap:32px!important;row-gap:10px!important;align-items:end!important}
-          .programme-footer>span{grid-column:1!important;min-width:0}
-          .programme-footer .footer-waylight{position:static!important;grid-column:2!important;grid-row:1/4!important;align-self:end!important;justify-self:end!important;margin:0!important;white-space:nowrap}
-          @media(max-width:900px){.programme-footer{grid-template-columns:1fr!important;grid-template-rows:auto!important;text-align:center!important}.programme-footer .footer-waylight{grid-column:1!important;grid-row:auto!important;justify-self:center!important;margin-top:14px!important}}
-          </style>'''
+
+          old_disclosure = 'This website has been built with the assistance of AI tools. Where appropriate this has been cross validated with Magnifica Humanae'
+          approved_disclosure = 'This website has been built with the assistance of AI tools. Where appropriate, content has been checked against Magnifica Humanae and relevant authoritative Catholic sources.'
+          shared_css = '<link rel="stylesheet" href="common-platform.css?v=20260723-4">'
+          shared_js = '<script src="common-platform.js?v=20260723-4"></script>'
+          html_files = []
+
           for path in Path('.').rglob('*'):
-              if path.is_file() and path.suffix.lower() in {'.html', '.js', '.css'}:
-                  text = path.read_text(encoding='utf-8')
-                  if old in text:
-                      text = text.replace(old, new)
-                  if path.suffix.lower() == '.html' and 'programme-footer-layout-fix' not in text:
-                      text = text.replace('</head>', footer_fix + '\n</head>', 1)
-                  path.write_text(text, encoding='utf-8')
-          path = Path('index.html')
-          text = path.read_text(encoding='utf-8')
-          text = text.replace('View the indicative milestones and the developing A1 pathway on the Latin site.','View learner-recorded course milestones on the Latin site. These are not assessed qualifications or language-level awards.')
-          text = text.replace('See the proposed completion framework for this course.','Certificate framework not yet released.')
-          text = text.replace('footer a{margin-right:18px}','footer a{margin-right:18px}.footer-brand{float:right;margin-right:0;font-weight:700;text-decoration:none}.footer-brand:focus-visible{outline:3px solid rgba(214,164,58,.55);outline-offset:3px}@media(max-width:760px){.footer-brand{float:none;display:block;margin-top:14px}}')
-          text = text.replace('<p class="version">Central site version 0.4 · reviewed 22 July 2026</p>','<p class="version">Central site version 0.4 · reviewed 22 July 2026 <a class="footer-brand" href="https://www.waylight-atlantic.co.uk/" target="_blank" rel="noopener">Waylight Atlantic →</a></p>')
-          text = text.replace('</style>', '@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto!important}*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}</style>', 1)
-          text = text.replace("links.forEach(link=>link.classList.toggle('on',link.dataset.view===id));", "links.forEach(link=>{const active=link.dataset.view===id;link.classList.toggle('on',active);if(active)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current')});")
-          path.write_text(text, encoding='utf-8')
+              if not path.is_file() or path.suffix.lower() not in {'.html', '.js', '.css'}:
+                  continue
+              text = path.read_text(encoding='utf-8').replace(old_disclosure, approved_disclosure)
+              text = text.replace('View the indicative milestones and the developing A1 pathway on the Latin site.','View learner-recorded course milestones on the Latin site. These are not assessed qualifications or language-level awards.')
+              text = text.replace('See the proposed completion framework for this course.','Certificate framework not yet released.')
+              if path.suffix.lower() == '.html' and 'http-equiv="refresh"' not in text.lower():
+                  html_files.append(path)
+                  if 'common-platform.css' not in text:
+                      if '</head>' not in text:
+                          raise RuntimeError(f'{path} has no closing head')
+                      text = text.replace('</head>', shared_css + '\n</head>', 1)
+                  if 'common-platform.js' not in text:
+                      if '</body>' in text:
+                          text = text.replace('</body>', shared_js + '\n</body>', 1)
+                      elif '</html>' in text:
+                          text = text.replace('</html>', shared_js + '\n</html>', 1)
+                      else:
+                          text += '\n' + shared_js
+              path.write_text(text, encoding='utf-8')
+
+          failures = []
+          for path in html_files:
+              text = path.read_text(encoding='utf-8')
+              if 'common-platform.css' not in text: failures.append(f'{path}: shared CSS missing')
+              if 'common-platform.js' not in text: failures.append(f'{path}: shared JavaScript missing')
+
+          for asset in ['common-platform.css','common-platform.js']:
+              if not Path(asset).exists(): failures.append(f'missing shared asset: {asset}')
+
+          controller = Path('common-platform.js').read_text(encoding='utf-8')
+          for required in ['Part of The Catholic Experiment','School: ${config.school}','Sacred Languages','Faith','Head Room','https://formspree.io/f/mgvgrgvb','Waylight Atlantic']:
+              if required not in controller: failures.append(f'common-platform.js missing: {required}')
+          if 'Corrections and contact' in controller: failures.append('obsolete footer corrections link remains')
+          for category in ['Correction','Question','Broken link','Accessibility','Suggested source','Other']:
+              if f'<option>{category}</option>' not in controller: failures.append(f'contact category missing: {category}')
+
+          shared_style = Path('common-platform.css').read_text(encoding='utf-8')
+          for required in ['width:105px','width:55px','grid-template-columns:minmax(0,1.35fr)','@media(max-width:900px)','platform-contact-layout']:
+              if required not in shared_style: failures.append(f'common-platform.css missing: {required}')
+
+          if failures:
+              raise SystemExit('\n'.join(failures))
           PY
-      - name: Build expanded Materials page
-        run: python build/prepare_materials.py
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
           enablement: true
+
       - name: Upload static site
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
