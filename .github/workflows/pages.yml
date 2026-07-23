@@ -29,11 +29,20 @@ jobs:
           from pathlib import Path
           old = 'This website has been built with the assistance of AI tools. Where appropriate this has been cross validated with Magnifica Humanae'
           new = 'This website has been built with the assistance of AI tools. Where appropriate, content has been checked against Magnifica Humanae and relevant authoritative Catholic sources.'
+          footer_fix = '''<style id="programme-footer-layout-fix">
+          .programme-footer{display:grid!important;grid-template-columns:minmax(0,1fr) max-content!important;grid-template-rows:repeat(3,auto)!important;column-gap:32px!important;row-gap:10px!important;align-items:end!important}
+          .programme-footer>span{grid-column:1!important;min-width:0}
+          .programme-footer .footer-waylight{position:static!important;grid-column:2!important;grid-row:1/4!important;align-self:end!important;justify-self:end!important;margin:0!important;white-space:nowrap}
+          @media(max-width:900px){.programme-footer{grid-template-columns:1fr!important;grid-template-rows:auto!important;text-align:center!important}.programme-footer .footer-waylight{grid-column:1!important;grid-row:auto!important;justify-self:center!important;margin-top:14px!important}}
+          </style>'''
           for path in Path('.').rglob('*'):
               if path.is_file() and path.suffix.lower() in {'.html', '.js', '.css'}:
                   text = path.read_text(encoding='utf-8')
                   if old in text:
-                      path.write_text(text.replace(old, new), encoding='utf-8')
+                      text = text.replace(old, new)
+                  if path.suffix.lower() == '.html' and 'programme-footer-layout-fix' not in text:
+                      text = text.replace('</head>', footer_fix + '\n</head>', 1)
+                  path.write_text(text, encoding='utf-8')
           path = Path('index.html')
           text = path.read_text(encoding='utf-8')
           text = text.replace('View the indicative milestones and the developing A1 pathway on the Latin site.','View learner-recorded course milestones on the Latin site. These are not assessed qualifications or language-level awards.')
