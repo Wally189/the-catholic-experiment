@@ -1,0 +1,167 @@
+from pathlib import Path
+import re
+
+
+CSS = r'''
+.materials-intro{max-width:980px}.materials-intro strong{color:var(--ink)}.materials-accordion{--panel:var(--burgundy);--panel-soft:#fbf6f1;margin-top:16px;border:1px solid color-mix(in srgb,var(--panel) 26%,var(--line));border-left:7px solid var(--panel);border-radius:16px;background:#fff;overflow:hidden}.materials-accordion summary{position:relative;display:block;padding:21px 66px 21px 22px;cursor:pointer;list-style:none;background:var(--panel-soft)}.materials-accordion summary::-webkit-details-marker{display:none}.materials-accordion summary::after{content:"＋";position:absolute;right:22px;top:50%;transform:translateY(-50%);font-size:29px;font-weight:700;color:var(--panel)}.materials-accordion[open] summary::after{content:"−"}.materials-accordion summary:hover,.materials-accordion summary:focus-visible{outline:3px solid color-mix(in srgb,var(--panel) 28%,transparent);outline-offset:-3px}.materials-accordion summary h2{margin:6px 0 4px;font-size:29px;line-height:1.18}.materials-accordion summary p{max-width:790px;margin:0;color:var(--muted);font-size:16px}.materials-body{padding:22px 24px 27px}.materials-body>p:first-child{margin-top:0}.materials-body p{max-width:920px}.materials-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:18px}.materials-card{border:1px solid var(--line);border-top:6px solid var(--accent,var(--panel));border-radius:15px;padding:20px;background:#fff}.materials-card h3{margin:0 0 8px;font-size:24px}.materials-card p{margin:0 0 14px;color:var(--muted)}.materials-card .button{margin:4px 7px 4px 0;background:var(--panel);color:#fff}.materials-card .button.light{background:#f2e7cf;color:var(--ink)}.folder-explainer{margin:18px 0;padding:18px;border-left:6px solid var(--gold);border-radius:0 14px 14px 0;background:#fff7df}.folder-tree{margin:16px 0 0;padding:18px;border:1px solid var(--line);border-radius:13px;background:#f8f4ef;overflow-x:auto;white-space:pre;font:14px/1.75 ui-monospace,SFMono-Regular,Consolas,monospace;color:var(--ink)}.plain-steps{padding-left:22px}.plain-steps li{margin:9px 0}.materials-closing{margin-top:22px;padding:20px;border-left:7px solid var(--green);border-radius:0 16px 16px 0;background:#eef5f0;font-size:17px}.materials-closing strong{font-family:Georgia,serif;font-size:21px}.materials-accordion .status{background:color-mix(in srgb,var(--panel) 14%,white);color:var(--panel)}
+'''
+
+
+SECTION = r'''<section class="view" id="materials" data-section hidden>
+<h1>Materials and study tools</h1>
+<p class="lede materials-intro">The Experiment websites provide the route through each course, but the aim is not to spend more time looking at a screen. Books, notebooks, handwriting and careful attention remain central. Technology is used where it genuinely improves access, organisation or portability.</p>
+<div class="notice"><strong>Begin simply:</strong> a notebook, a pen or pencil, access to the chosen Experiment website and the materials named on that course’s own Materials page will usually be enough.</div>
+
+<details class="materials-accordion" style="--panel:var(--blue);--panel-soft:#edf4f8" open>
+<summary><span class="status">Start here</span><h2>Find the materials for your Experiment</h2><p>Each individual Experiment lists its own books, editions, readings and practical requirements.</p></summary>
+<div class="materials-body">
+<p>This central page explains the general method. For the actual course text and anything else required for a particular subject, open that Experiment’s own <strong>Materials</strong> page. It will normally show lawful online access, a physical purchase route where available, and a library-search option.</p>
+<div class="materials-grid">
+<article class="materials-card" style="--accent:var(--burgundy)"><h3>The Latin Experiment</h3><p>Father Most’s first-year text, companion pages, writing materials and library or purchase routes.</p><a class="button" href="https://wally189.github.io/the-latin-experiment/#materials" target="_blank" rel="noopener">Open Latin Materials →</a></article>
+<article class="materials-card" style="--accent:var(--blue)"><h3>The Faith Experiment</h3><p>The catechetical spine, controlling Church sources and the materials used for the twelve-lesson course.</p><a class="button" href="https://wally189.github.io/The-Faith-Experiment/#materials" target="_blank" rel="noopener">Open Faith Materials →</a></article>
+<article class="materials-card" style="--accent:var(--green)"><h3>Other Experiments</h3><p>As new Experiments open, their own Materials pages will be added to the relevant course website.</p><a class="button light" href="#courses">See all courses →</a></article>
+</div>
+<p class="muted">There is no expectation that every listed book must be bought. The individual page will distinguish what is essential from what is recommended or useful for further study.</p>
+</div>
+</details>
+
+<details class="materials-accordion" style="--panel:var(--burgundy);--panel-soft:#faeef1">
+<summary><span class="status">Common to every School</span><h2>The Catholic Library</h2><p>A small group of authoritative resources will be useful across many different Experiments.</p></summary>
+<div class="materials-body">
+<p>You are not expected to build a large theological library before beginning. These are dependable reference points to which different courses may return. Printed copies are optional; online and library routes are provided wherever practical.</p>
+<div class="materials-grid">
+<article class="materials-card" style="--accent:var(--burgundy)"><h3>The Holy Bible</h3><p>Use a complete Catholic edition. The Bishops’ Conference offers guidance on Scripture, while the Catholic Truth Society provides a UK purchase route.</p><a class="button" href="https://www.cbcew.org.uk/scripture/" target="_blank" rel="noopener">Church guidance →</a><a class="button light" href="https://www.ctsbooks.org/product/new-catholic-bible-standard/" target="_blank" rel="noopener">Printed Bible →</a><a class="button light" href="https://search.worldcat.org/search?q=Catholic+Bible" target="_blank" rel="noopener">Search libraries →</a></article>
+<article class="materials-card" style="--accent:var(--blue)"><h3>Catechism of the Catholic Church</h3><p>The principal modern reference for a systematic presentation of Catholic doctrine.</p><a class="button" href="https://www.vatican.va/archive/ENG0015/_INDEX.HTM" target="_blank" rel="noopener">Read online →</a><a class="button light" href="https://www.ctsbooks.org/product/catechism-of-the-catholic-church/" target="_blank" rel="noopener">Buy from CTS →</a><a class="button light" href="https://search.worldcat.org/search?q=Catechism+of+the+Catholic+Church" target="_blank" rel="noopener">Search libraries →</a></article>
+<article class="materials-card" style="--accent:var(--green)"><h3>Compendium of the Catechism</h3><p>A shorter question-and-answer summary that is useful for review and quick reference.</p><a class="button" href="https://www.vatican.va/archive/compendium_ccc/documents/archive_2005_compendium-ccc_en.html" target="_blank" rel="noopener">Read online →</a><a class="button light" href="https://www.ctsbooks.org/product/compendium-of-the-catechism-of-the-catholic-church/" target="_blank" rel="noopener">Buy from CTS →</a><a class="button light" href="https://search.worldcat.org/search?q=Compendium+of+the+Catechism+of+the+Catholic+Church" target="_blank" rel="noopener">Search libraries →</a></article>
+<article class="materials-card" style="--accent:var(--purple)"><h3>Canon law and Church documents</h3><p>The Code of Canon Law, council documents, papal teaching and other official texts should be read from authoritative Church sources.</p><a class="button" href="https://www.vatican.va/archive/cod-iuris-canonici/cic_index_en.html" target="_blank" rel="noopener">Code of Canon Law →</a><a class="button light" href="https://www.vatican.va/content/vatican/en.html" target="_blank" rel="noopener">Vatican documents →</a></article>
+</div>
+</div>
+</details>
+
+<details class="materials-accordion" style="--panel:var(--gold);--panel-soft:#fff9e8">
+<summary><span class="status">The learning method</span><h2>Use the screen as a guide, not the whole activity</h2><p>The websites organise the work; much of the reading, writing, recall and reflection can happen away from the device.</p></summary>
+<div class="materials-body">
+<p>The Catholic Experiment is not anti-technology. Digital tools make rare books, official Church documents and course guidance widely available. The point is to use them deliberately rather than turn every lesson into more passive screen time.</p>
+<ol class="plain-steps"><li>Open the lesson and read the instructions.</li><li>Read the relevant passage online or in a physical book.</li><li>Put the device aside where practical.</li><li>Write, translate, recall, pray or reflect in a notebook.</li><li>Return to the website when the next instruction or source is needed.</li></ol>
+<div class="materials-grid"><article class="materials-card" style="--accent:var(--gold)"><h3>Useful physical materials</h3><p>A notebook or ring binder, pens and pencils, loose paper, a ruler, page markers and index cards. These are suggestions, not compulsory purchases.</p></article><article class="materials-card" style="--accent:var(--green)"><h3>Useful digital tasks</h3><p>Opening lessons, finding sources, searching a document, keeping backup copies and reading while travelling.</p></article><article class="materials-card" style="--accent:var(--burgundy)"><h3>A simple principle</h3><p><strong>Use technology for access and organisation. Use the method best suited to learning for the work itself.</strong></p></article></div>
+</div>
+</details>
+
+<details class="materials-accordion" style="--panel:var(--green);--panel-soft:#eef5f0">
+<summary><span class="status">Optional</span><h2>Create a digital study space</h2><p>A simple online filing cabinet can keep readings, notes and written work together and make them available on more than one device.</p></summary>
+<div class="materials-body">
+<p>A digital study space is merely an organised place on the internet where you can keep files. A <strong>folder</strong> is a named container, rather like a labelled section in a filing cabinet. A <strong>subfolder</strong> is a smaller folder kept inside it.</p>
+<p>You do not need both Google and Microsoft. Choose the service you already know, or the one that feels easiest.</p>
+<div class="materials-grid">
+<article class="materials-card" style="--accent:var(--green)"><h3>Google Drive and Docs</h3><p>Google Drive stores folders and files online. Google Docs can be used for typed notes without purchasing word-processing software.</p><a class="button" href="https://accounts.google.com/signup" target="_blank" rel="noopener">Create a Google account →</a><a class="button light" href="https://drive.google.com/" target="_blank" rel="noopener">Open Google Drive →</a><a class="button light" href="https://support.google.com/drive/answer/2424384?hl=en-gb" target="_blank" rel="noopener">Beginner’s guide →</a></article>
+<article class="materials-card" style="--accent:var(--blue)"><h3>Microsoft 365 and OneDrive</h3><p>Microsoft offers free web versions of Word, Excel and PowerPoint. OneDrive stores the files online.</p><a class="button" href="https://www.microsoft.com/en-gb/microsoft-365/free-office-online-for-the-web" target="_blank" rel="noopener">Open Microsoft 365 →</a><a class="button light" href="https://onedrive.live.com/" target="_blank" rel="noopener">Open OneDrive →</a><a class="button light" href="https://support.microsoft.com/en-gb/onedrive" target="_blank" rel="noopener">OneDrive help →</a></article>
+<article class="materials-card" style="--accent:var(--gold)"><h3>Paper remains perfectly valid</h3><p>A notebook and a physical folder are a complete study system. The digital option is offered for convenience, portability and backup—not as another requirement.</p></article>
+</div>
+</div>
+</details>
+
+<details class="materials-accordion" style="--panel:var(--purple);--panel-soft:#f4edf5">
+<summary><span class="status">Step by step</span><h2>Create the folder structure</h2><p>Keep the same route throughout: The Catholic Experiment → The Schools → the School → the individual Experiment → your working folders.</p></summary>
+<div class="materials-body">
+<div class="folder-explainer"><strong>Think of the structure as a set of boxes inside boxes.</strong> First create the main Catholic Experiment folder. Inside it create The Schools. Inside that, create the School you are following. Inside the School, create the particular Experiment. Only then add the folders for readings, notes and completed work.</div>
+<ol class="plain-steps"><li>Create a folder called <strong>The Catholic Experiment</strong>.</li><li>Open it and create a folder called <strong>The Schools</strong>.</li><li>Open The Schools and create the relevant School—for example, <strong>Sacred Languages</strong>.</li><li>Open that School and create the Experiment—for example, <strong>The Latin Experiment</strong>.</li><li>Inside the Experiment, create only the working folders you will actually use.</li></ol>
+<pre class="folder-tree" aria-label="Suggested digital folder structure">The Catholic Experiment
+└── The Schools
+    ├── Faith and Formation
+    │   └── The Faith Experiment
+    │       ├── 00 Course Guide
+    │       ├── 01 Readings and Source Texts
+    │       ├── 02 Lesson Notes
+    │       ├── 03 Written Work
+    │       ├── 04 Prayer and Reflection
+    │       ├── 05 Questions and Further Study
+    │       └── 06 Completed Work
+    └── Sacred Languages
+        └── The Latin Experiment
+            ├── 00 Course Guide
+            ├── 01 Readings and Source Texts
+            ├── 02 Lesson Notes
+            ├── 03 Written Work
+            ├── 04 Vocabulary and Revision
+            ├── 05 Questions and Further Study
+            └── 06 Completed Work</pre>
+<p class="muted">The numbers keep the working folders in a sensible order. You need only create folders for Schools and Experiments you are actually following.</p>
+</div>
+</details>
+
+<details class="materials-accordion" style="--panel:var(--rose);--panel-soft:#faeef2">
+<summary><span class="status">Browser organisation</span><h2>Save useful pages as Favourites or Bookmarks</h2><p>A Favourite or Bookmark is a saved shortcut that lets you return to a webpage without searching for it again.</p></summary>
+<div class="materials-body">
+<p>Microsoft Edge usually calls these saved shortcuts <strong>Favourites</strong>. Chrome, Firefox and some other browsers call them <strong>Bookmarks</strong>. They do the same job. Saving one is rather like placing a page marker in a book: the browser remembers the web address for you.</p>
+<p>Use the same arrangement as your Drive, OneDrive or paper filing system. That way, the route always feels familiar.</p>
+<pre class="folder-tree" aria-label="Suggested favourites or bookmarks structure">The Catholic Experiment
+└── The Schools
+    └── Sacred Languages
+        └── The Latin Experiment
+            ├── Course Pages
+            ├── Readings and Source Texts
+            ├── Dictionaries and Reference
+            ├── Church Resources
+            └── Further Study</pre>
+<ol class="plain-steps"><li>Create one main Favourites or Bookmarks folder called <strong>The Catholic Experiment</strong>.</li><li>Add The Schools, then the School and Experiment folders beneath it.</li><li>Save a page only where you expect to use it again.</li><li>Rename unclear favourites in ordinary language—for example, “Latin dictionary” rather than a long webpage title.</li></ol>
+<p>This can be especially useful on a bus or train: save the lesson and reading pages in advance, read a short passage while travelling, then complete the handwritten work later in a quieter place.</p>
+</div>
+</details>
+
+<div class="materials-closing"><strong>The minimum workable setup</strong><br>The Experiment website, the Materials page for your chosen course, a notebook, a pen and a willingness to proceed carefully. Everything else exists to support that work.</div>
+</section>'''
+
+
+def apply_materials_page(path: Path) -> None:
+    text = path.read_text(encoding='utf-8')
+
+    if '.materials-intro{' not in text:
+        marker = '.programme-footer{'
+        if marker not in text:
+            raise RuntimeError('CSS insertion marker not found')
+        text = text.replace(marker, CSS + marker, 1)
+
+    pattern = re.compile(
+        r'<section class="view" id="materials" data-section hidden>.*?</section>\n'
+        r'<section class="view" id="certificates"',
+        re.S,
+    )
+    replacement = SECTION + '\n<section class="view" id="certificates"'
+    text, count = pattern.subn(replacement, text, count=1)
+    if count != 1:
+        raise RuntimeError(f'Expected one Materials section, replaced {count}')
+
+    if '.materials-grid{grid-template-columns:1fr 1fr}' not in text:
+        text = text.replace(
+            '@media(max-width:900px){',
+            '@media(max-width:1100px){.materials-grid{grid-template-columns:1fr 1fr}}\n'
+            '@media(max-width:900px){',
+            1,
+        )
+
+    if '.materials-grid{grid-template-columns:1fr}.materials-accordion' not in text:
+        text = text.replace(
+            '@media(max-width:800px){',
+            '@media(max-width:800px){.materials-grid{grid-template-columns:1fr}.materials-accordion{border-left-width:6px}.materials-accordion summary{padding:18px 54px 18px 17px}.materials-accordion summary h2{font-size:25px}.materials-accordion summary p{font-size:15px}.materials-accordion summary::after{right:17px}.materials-body{padding:18px}.folder-tree{font-size:12px}}\n'
+            '@media(max-width:800px){',
+            1,
+        )
+
+    required = (
+        'Find the materials for your Experiment',
+        'The Catholic Library',
+        'Create a digital study space',
+        'Create the folder structure',
+        'Save useful pages as Favourites or Bookmarks',
+        'https://drive.google.com/',
+        'https://www.microsoft.com/en-gb/microsoft-365/free-office-online-for-the-web',
+    )
+    missing = [item for item in required if item not in text]
+    if missing:
+        raise RuntimeError(f'Missing expected content: {missing}')
+
+    path.write_text(text, encoding='utf-8')
+
+
+if __name__ == '__main__':
+    apply_materials_page(Path('index.html'))
