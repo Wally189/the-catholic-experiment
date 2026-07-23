@@ -62,7 +62,7 @@
     const contact = document.querySelector('[data-v="contact"], #contact[data-section], section#contact');
     if (!contact || contact.dataset.platformContact === 'true') return;
     const existingForm = contact.querySelector('form');
-    const existingContainer = existingForm?.closest('.plan,.card,.platform-contact-layout');
+    const existingContainer = existingForm?.closest('.plan') || existingForm?.closest('.card') || existingForm?.closest('.platform-contact-layout');
     const mailLink = contact.querySelector('a[href^="mailto:"]');
     if (existingContainer) existingContainer.outerHTML = contactMarkup();
     else if (existingForm) existingForm.outerHTML = contactMarkup();
@@ -96,16 +96,6 @@
     style.dataset.platformCourseFix = 'true';
     style.textContent = '@media(min-width:901px){.frame{grid-template-rows:auto auto minmax(0,1fr) auto!important}.frame>.mobile-catalogue{grid-row:1!important}.frame>.mobile-list{grid-row:2!important}.frame>.app{grid-row:3!important}.frame>.programme-footer{grid-row:4!important}}';
     document.head.append(style);
-    document.addEventListener('click', event => {
-      const lesson = event.target.closest('.lesson-link.published');
-      if (!lesson) return;
-      const number = Number(lesson.dataset.number);
-      if (!Number.isInteger(number) || number < 1) return;
-      setTimeout(() => {
-        const displayed = Number(document.getElementById('lessonPage')?.dataset.currentLesson);
-        if (displayed !== number) location.assign(`course.html?lesson=${number}`);
-      }, 0);
-    }, true);
   }
 
   document.querySelectorAll('body > .app > .nav, body > .app > .side-nav, .frame > .global-nav, .frame > .nav').forEach(canonicaliseNav);
