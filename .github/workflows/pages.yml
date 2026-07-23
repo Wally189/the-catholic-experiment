@@ -53,6 +53,8 @@ jobs:
           text = text.replace("links.forEach(link=>link.classList.toggle('on',link.dataset.view===id));", "links.forEach(link=>{const active=link.dataset.view===id;link.classList.toggle('on',active);if(active)link.setAttribute('aria-current','page');else link.removeAttribute('aria-current')});")
           path.write_text(text, encoding='utf-8')
           PY
+      - name: Build expanded Materials page
+        run: python build/prepare_materials.py
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
