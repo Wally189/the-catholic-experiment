@@ -83,6 +83,9 @@ jobs:
       - name: Build expanded Materials page
         run: python build/prepare_materials.py
 
+      - name: Build central Journal and Videos pages
+        run: python build/prepare_central_journal_videos.py
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
         with:
