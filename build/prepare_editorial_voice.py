@@ -56,39 +56,26 @@ journal = '''<section class="view" id="journal" data-section hidden>
 
 videos = '''<section class="view" id="videos" data-section hidden>
 <h1>Videos</h1>
-<p class="lede">The videos are occasional milestones rather than a second version of every lesson. They introduce the project, show the real work and reflect honestly on what changed over a meaningful stretch of study.</p>
-<div class="notice"><strong>Planned format:</strong> one welcome video for The Catholic Experiment, followed by reflective course videos at sensible intervals. The welcome slide deck and spoken introduction will be developed separately.</div>
-<article class="media-card" style="--accent:var(--gold);margin-top:24px"><span class="status planned">Welcome</span><h2>Welcome to The Catholic Experiment</h2><p>A short introduction to the question behind the project, the Schools, the learning method and how the journal, videos and individual Experiments fit together.</p></article>
+<p class="lede"><strong>What happens when an ordinary Catholic tries to study the faith seriously—using old books, handwriting, modern tools and no guarantee that the method will work?</strong></p>
+<p class="lede">These videos record the experiment as it happens: what I learned, what surprised me, what I misunderstood and whether any of it made a difference.</p>
+<div class="notice"><strong>New here? Begin with the welcome video.</strong> It explains the question behind The Catholic Experiment, how the Schools fit together and why the mistakes matter as much as the successes.</div>
+<article class="media-card" style="--accent:var(--gold);margin-top:24px"><span class="status planned">Welcome · Start here</span><h2>Can an ordinary Catholic build a serious education in the faith?</h2><p>I began with books, notebooks and a slightly unreasonable plan. This video explains what I am attempting, why I am documenting it publicly and what would count as success—or failure.</p><a class="button" href="#videos" aria-disabled="true">Coming soon</a></article>
 
 <details class="course-accordion" style="--school:var(--blue);--school-soft:#edf4f8" open>
-<summary><span class="status active">School 01</span><h2>Faith and Formation</h2><p>Doctrine, formation, prayer, worship and the lived Catholic faith.</p></summary>
+<summary><span class="status active">School 01</span><h2>Faith and Formation</h2><p>What changes when Catholic belief is treated not as a list of facts, but as something to be understood, tested and lived?</p></summary>
 <div class="accordion-content"><h3>The Faith Experiment</h3><div class="media-list">
-<article class="media-card" style="--accent:var(--blue)"><span class="status planned">Lessons 1–4</span><h2>What changed after the first four Faith lessons?</h2><p>The first of three planned Faith Experiment videos, reflecting on what I studied, what surprised me, what needed correction and how the course affected my understanding and practice.</p></article>
-<article class="media-card" style="--accent:var(--blue)"><span class="status planned">Lessons 5–8</span><h2>Faith Experiment · second reflection</h2><p>A later milestone video will continue the same candid review of learning, questions, correction and practice.</p></article>
-<article class="media-card" style="--accent:var(--blue)"><span class="status planned">Lessons 9–12</span><h2>Faith Experiment · final reflection</h2><p>The final course video will consider the whole twelve-lesson journey and what should happen next.</p></article>
+<article class="media-card" style="--accent:var(--blue)"><span class="status planned">Lessons 1–4</span><h2>Did the first four lessons change what I thought faith was?</h2><p>I began expecting information. Instead, the course raised questions about belief, worship, authority and what Catholic teaching might demand in ordinary life.</p></article>
+<article class="media-card" style="--accent:var(--blue)"><span class="status planned">Lessons 5–8</span><h2>What became harder once the pieces started fitting together?</h2><p>The second reflection will look at the questions that emerged when separate doctrines began to connect—and when understanding them started to feel more demanding.</p></article>
+<article class="media-card" style="--accent:var(--blue)"><span class="status planned">Lessons 9–12</span><h2>What did the whole course actually change?</h2><p>The final reflection will consider what remained, what needed correction and whether the course altered how I understood or practised the faith.</p></article>
 </div></div></details>
 
 <details class="course-accordion" style="--school:var(--burgundy);--school-soft:#faeef1" open>
-<summary><span class="status active">School 02</span><h2>Sacred Languages</h2><p>Languages of Scripture, worship and Catholic tradition.</p></summary>
+<summary><span class="status active">School 02</span><h2>Sacred Languages</h2><p>What becomes visible when Latin stops looking like a code and begins to sound like a language?</p></summary>
 <div class="accordion-content"><h3>The Latin Experiment</h3><div class="media-list">
-<article class="media-card" style="--accent:var(--burgundy)"><span class="status planned">Lessons 1–5</span><h2>What happened when I began learning Latin?</h2><p>A reflective summary of the first five lessons: reading aloud, handwriting, vocabulary, the first signs of grammar, what helped, what did not and what I misunderstood.</p></article>
+<article class="media-card" style="--accent:var(--burgundy)"><span class="status planned">Lessons 1–5</span><h2>What happened when I actually tried to learn Latin?</h2><p>Five lessons in, I had copied vocabulary, read aloud, encountered the first signs of grammar and discovered that neat handwriting is not the same thing as understanding. Here is what worked, what did not and what I had misunderstood.</p></article>
 </div></div></details>
 
-<details class="course-accordion" style="--school:var(--green);--school-soft:#eef5f0">
-<summary><span class="status planned">School 03</span><h2>Scripture and the Sacred World</h2><p>Future videos will be grouped here by Experiment as courses open.</p></summary>
-<div class="accordion-content"><p class="muted">No videos are currently planned for publication in this School.</p></div></details>
-
-<details class="course-accordion" style="--school:var(--purple);--school-soft:#f4edf5">
-<summary><span class="status planned">School 04</span><h2>Reason and Human Understanding</h2><p>Future videos will be grouped here by Experiment as courses open.</p></summary>
-<div class="accordion-content"><p class="muted">No videos are currently planned for publication in this School.</p></div></details>
-
-<details class="course-accordion" style="--school:var(--gold);--school-soft:#fff9e8">
-<summary><span class="status planned">School 05</span><h2>Church and Witness</h2><p>Future videos will be grouped here by Experiment as courses open.</p></summary>
-<div class="accordion-content"><p class="muted">No videos are currently planned for publication in this School.</p></div></details>
-
-<details class="course-accordion" style="--school:var(--rose);--school-soft:#faeef2">
-<summary><span class="status planned">School 06</span><h2>Church in the World</h2><p>Future videos will be grouped here by Experiment as courses open.</p></summary>
-<div class="accordion-content"><p class="muted">No videos are currently planned for publication in this School.</p></div></details>
+<p class="muted" style="margin-top:22px">Other Schools will appear here as their Experiments begin.</p>
 </section>'''
 
 text, journal_count = re.subn(r'<section class="view" id="journal" data-section hidden>.*?</section>\s*<section class="view" id="videos"', journal + '\n<section class="view" id="videos"', text, count=1, flags=re.S)
@@ -104,11 +91,10 @@ required = [
     'Most ambitious study plans fail',
     'Serious study does not require an expensive library',
     'What I got wrong',
-    'Welcome to The Catholic Experiment',
-    'School 01',
-    'School 06',
-    'Latin · final reflection' if False else 'What happened when I began learning Latin?',
-    'Faith Experiment · final reflection'
+    'Can an ordinary Catholic build a serious education in the faith?',
+    'Did the first four lessons change what I thought faith was?',
+    'What happened when I actually tried to learn Latin?',
+    'Other Schools will appear here as their Experiments begin.'
 ]
 missing = [item for item in required if item not in text]
 if missing:
