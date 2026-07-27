@@ -85,6 +85,62 @@ text, video_count = re.subn(r'<section class="view" id="videos" data-section hid
 if video_count != 1:
     raise RuntimeError(f'Expected one Videos section, replaced {video_count}')
 
+# Visual-only redesign. This deliberately changes no site copy, links, sections or behaviour.
+monastic_css = r'''
+/* Catholix monastic visual layer */
+:root{--ink:#07182d;--burgundy:#7c2438;--blue:#244e78;--gold:#b88a31;--green:#345e4c;--purple:#514566;--rose:#865064;--ivory:#f3ecdc;--stone:#6e675d;--paper:#fbf7ed;--ground:#06172b;--muted:#655f56;--line:#d6c9ad;--navy:#06172b;--navy-soft:#0d2947;--parchment:#f7f0e2;--rule:#b88a31}
+*{box-sizing:border-box}
+html{background:var(--navy)}
+body{margin:0;padding:18px;background:var(--navy);font:17px/1.72 Georgia,'Times New Roman',serif;color:var(--ink)}
+body::before{content:'JMJ';position:fixed;z-index:20;top:27px;right:35px;color:var(--gold);font:700 15px/1 Georgia,serif;letter-spacing:.18em;pointer-events:none}
+.app{min-height:calc(100vh - 36px);border:2px solid var(--gold);outline:1px solid rgba(184,138,49,.42);outline-offset:-8px;border-radius:0;background:var(--paper);display:grid;grid-template-columns:105px minmax(0,1fr);overflow:hidden;box-shadow:0 20px 70px rgba(0,0,0,.36)}
+.nav{position:relative;background:linear-gradient(180deg,#06172b,#0a223c 72%,#06172b);color:#fff;padding:27px 9px 24px;border-right:1px solid var(--gold);display:flex;flex-direction:column}
+.nav::before,.nav::after{content:'✦';display:block;color:var(--gold);text-align:center;font-size:13px;letter-spacing:.25em}
+.nav::before{margin-bottom:14px}.nav::after{margin-top:auto;padding-top:22px;border-top:1px solid rgba(184,138,49,.44)}
+.logo{width:61px;height:61px;border:1px solid var(--gold);border-radius:50%;background:transparent;color:var(--gold);margin:0 auto 24px;display:grid;place-items:center;font:35px Georgia,serif;box-shadow:inset 0 0 0 5px rgba(184,138,49,.06)}
+.nav a{position:relative;color:#d9d2c3;text-decoration:none;text-align:center;padding:15px 2px 14px;border:0;border-top:1px solid rgba(255,255,255,.08);border-radius:0;margin:0;font:700 11px/1.4 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.nav a:last-of-type{border-bottom:1px solid rgba(255,255,255,.08)}
+.nav a:hover,.nav a:focus-visible,.nav a.on{color:#fff;background:linear-gradient(90deg,rgba(184,138,49,.18),transparent);box-shadow:inset 3px 0 var(--gold);outline:none}
+main{min-width:0;background:var(--paper);background-image:radial-gradient(circle at 20% 10%,rgba(184,138,49,.05),transparent 28%),linear-gradient(rgba(255,255,255,.25),rgba(255,255,255,.25))}
+.view{padding:54px clamp(28px,5vw,78px) 70px;min-height:82vh}
+.view>h1{margin:0 0 24px;padding:0 0 18px;border-bottom:1px solid var(--gold);font:400 clamp(42px,6vw,72px)/1.05 Georgia,serif;letter-spacing:.015em;color:var(--navy)}
+.view>h1::after{content:'✠';float:right;color:var(--gold);font-size:.42em;margin-top:.55em}
+.hero{position:relative;overflow:hidden;min-height:70vh;border:0;border-radius:0;padding:clamp(44px,7vw,92px);color:var(--navy);background:linear-gradient(90deg,rgba(251,247,237,.98) 0 57%,rgba(251,247,237,.82) 57% 100%),repeating-linear-gradient(90deg,transparent 0 84px,rgba(184,138,49,.09) 85px 86px),linear-gradient(135deg,#efe3ca,#fbf7ed);display:flex;flex-direction:column;justify-content:center;border-bottom:1px solid var(--gold)}
+.hero::before{content:'✠';position:absolute;right:7%;top:10%;width:210px;height:300px;border:1px solid rgba(184,138,49,.55);border-bottom:0;border-radius:120px 120px 0 0;display:grid;place-items:center;color:rgba(184,138,49,.5);font-size:72px;background:linear-gradient(180deg,rgba(184,138,49,.06),transparent)}
+.hero::after{content:'';position:absolute;left:clamp(44px,7vw,92px);right:clamp(44px,7vw,92px);bottom:38px;height:1px;background:linear-gradient(90deg,var(--gold),transparent)}
+.hero>*{position:relative;max-width:min(760px,72%)}
+.hero small{font:700 12px/1.4 Arial,sans-serif;letter-spacing:.2em;color:var(--gold)}
+.hero h1{font:400 clamp(58px,7vw,98px)/.94 Georgia,serif;margin:18px 0 26px;max-width:850px;color:var(--navy);letter-spacing:-.025em}
+.hero .question{max-width:790px;font:italic 28px/1.42 Georgia,serif;margin:0 0 22px;color:#243247}
+.hero p{max-width:790px;font-size:18px;color:#3f3a34}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.button{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--gold);border-radius:0;padding:12px 17px;background:var(--navy);color:#fff;font:700 12px/1.2 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
+.button:hover,.button:focus-visible{background:var(--gold);color:var(--navy);outline:2px solid var(--navy);outline-offset:2px}
+.button.secondary{background:transparent;color:var(--navy);border-color:var(--navy)}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400}h1{font-size:52px;line-height:1.08}h2{font-size:34px;line-height:1.18}h3{font-size:24px;line-height:1.24}
+.lede{max-width:900px;color:#555047;font-size:19px}.story{max-width:980px;margin:56px auto 0}.story p{font-size:18px}.story>h2,.story section>h2{padding-bottom:12px;border-bottom:1px solid var(--line)}
+.pullquote{margin:38px 0;padding:28px 34px;border:0;border-left:3px solid var(--gold);background:transparent;border-radius:0;font:italic 27px/1.5 Georgia,serif;color:#233149}
+.method-list{columns:2;column-gap:54px;padding:22px 0 0;list-style:none;border-top:1px solid var(--line)}.method-list li{break-inside:avoid;margin:0;padding:10px 0 10px 26px;border-bottom:1px dotted #c9baa0;position:relative}.method-list li::before{content:'✦';position:absolute;left:2px;color:var(--gold);font-size:10px;top:15px}
+.cards,.grid{display:block;margin-top:26px}.card{display:block;border:0;border-top:1px solid var(--line);border-radius:0;padding:24px 10px 25px 36px;background:transparent;text-decoration:none;position:relative}.card:last-child{border-bottom:1px solid var(--line)}.card::before{content:'✠';position:absolute;left:3px;top:26px;color:var(--accent,var(--gold));font-size:17px}.card h3{margin:0 0 6px}.card p,.muted{color:var(--muted)}.school-grid .card{min-height:0;transition:padding .15s ease,background .15s ease}.school-grid .card:hover,.school-grid .card:focus-visible{transform:none;box-shadow:none;outline:none;padding-left:45px;background:rgba(184,138,49,.055)}
+.status{display:inline-block;padding:4px 9px;border:1px solid currentColor;border-radius:0;background:transparent;font:700 10px/1.3 Arial,sans-serif;text-transform:uppercase;letter-spacing:.1em;color:var(--gold)}.status.active{background:transparent;color:var(--green)}.status.planned{background:transparent;color:var(--stone)}
+.notice{margin:28px 0;padding:20px 24px;border:1px solid var(--line);border-left:4px solid var(--gold);background:rgba(184,138,49,.055);border-radius:0}
+.section-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin:48px 0 8px;padding-bottom:14px;border-bottom:1px solid var(--gold)}.section-heading h2{margin:7px 0 0}.section-heading p{max-width:650px;margin:0;color:var(--muted)}
+.course-accordion{--school:var(--burgundy);--school-soft:transparent;margin-top:0;border:0;border-bottom:1px solid var(--line);border-left:0;border-radius:0;background:transparent;overflow:hidden;scroll-margin-top:24px}.course-accordion:first-of-type{border-top:1px solid var(--line)}
+.course-accordion summary{position:relative;display:block;padding:28px 68px 26px 8px;cursor:pointer;list-style:none;background:transparent}.course-accordion summary::-webkit-details-marker{display:none}.course-accordion summary::before{content:'✠';position:absolute;left:8px;top:33px;color:var(--school);font-size:14px}.course-accordion summary::after{content:'＋';position:absolute;right:10px;top:50%;transform:translateY(-50%);font-size:25px;font-weight:400;color:var(--school)}.course-accordion[open] summary::after{content:'−'}.course-accordion summary:hover,.course-accordion summary:focus-visible{filter:none;outline:none;background:rgba(184,138,49,.045)}.course-accordion summary>*{margin-left:32px}.course-accordion summary h2{margin-top:7px;margin-bottom:5px;font-size:32px;line-height:1.15}.course-accordion summary p{color:var(--muted);font-size:16px;line-height:1.55;max-width:780px}.course-accordion summary .status{background:transparent;color:var(--school)}
+.accordion-content{padding:0 8px 32px 40px}.syllabus{display:block}.course-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 26px;align-items:center;padding:22px 0;border:0;border-top:1px dotted #c9baa0;border-radius:0;background:transparent;min-width:0}.course-row:first-child{border-top:1px solid var(--line)}.course-row>div:first-child,.course-row>div:nth-child(2){grid-column:1}.course-row h3{margin:5px 0 0;font-size:26px}.course-row p{margin:0;color:var(--muted);font-size:17px;line-height:1.58}.course-row .button{grid-column:2;grid-row:1/3;align-self:center;background:var(--navy);color:#fff}.course-row.planned{background:transparent}.route{font-size:19px;line-height:1.9}.standards{max-width:960px;margin-top:42px;padding:28px 0;border:0;border-top:1px solid var(--gold);border-bottom:1px solid var(--line);border-radius:0;background:transparent}
+.schedule-grid{display:block;margin:30px 0 42px}.schedule-card{border:0;border-top:1px solid var(--line);border-radius:0;padding:24px 8px 25px 36px;background:transparent;position:relative}.schedule-card:last-child{border-bottom:1px solid var(--line)}.schedule-card::before{content:'✠';position:absolute;left:4px;color:var(--accent,var(--gold))}.schedule-card h3{margin:0 0 8px}.schedule-card p{margin:0;color:var(--muted)}
+.schedule-table-wrap{overflow-x:auto;margin:22px 0 34px;border:1px solid var(--line);border-radius:0;background:rgba(255,255,255,.35)}.schedule-table th,.schedule-table td{padding:17px 18px;border-bottom:1px solid var(--line)}.schedule-table th{background:var(--navy);color:#fff;font:700 11px/1.4 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}.schedule-note{max-width:960px;padding:28px;border:1px solid var(--line);border-left:4px solid var(--green);border-radius:0;background:rgba(52,94,76,.045)}
+.central-course-links{display:flex;gap:8px}.central-course-links .button.secondary-link{background:transparent;color:var(--navy);border-color:var(--gold)}
+.media-list{display:block;margin-top:28px}.media-card{border:0;border-top:1px solid var(--line);border-radius:0;padding:26px 8px 28px 36px;background:transparent;position:relative}.media-card:last-child{border-bottom:1px solid var(--line)}.media-card::before{content:'✠';position:absolute;left:5px;top:30px;color:var(--accent,var(--gold))}.media-card h2{margin:5px 0 9px}.media-card p{color:var(--muted)}.media-card .button{margin:7px 7px 0 0}
+.programme-footer{position:relative;padding:28px 38px 34px;border-top:1px solid var(--gold);background:var(--navy);color:#d9d2c3;text-align:left}.footer-ai{opacity:.42}.footer-waylight{color:var(--gold)}
+@media(min-width:1250px){.syllabus{grid-template-columns:none}.course-row{grid-template-columns:minmax(0,1fr) auto}.course-row>div:first-child,.course-row>div:nth-child(2){grid-column:1}.course-row .button{grid-column:2;grid-row:1/3;justify-self:auto;margin-top:0}}
+@media(max-width:900px){.hero>*{max-width:100%}.hero::before{opacity:.28;right:-40px}.hero h1{font-size:62px}.cards,.grid{display:block}.course-row{grid-template-columns:1fr}.course-row>div:first-child,.course-row>div:nth-child(2),.course-row .button{grid-column:1;grid-row:auto}.course-row .button{justify-self:start}.central-course-links{justify-content:flex-start}}
+@media(max-width:800px){body{padding:0}body::before{top:15px;right:13px}.app{min-height:100vh;border-width:2px;outline:none;grid-template-columns:1fr}.nav{position:sticky;top:0;z-index:15;flex-direction:row;overflow-x:auto;padding:7px 56px 7px 7px;border-right:0;border-bottom:1px solid var(--gold)}.nav::before,.nav::after,.logo{display:none}.nav a{min-width:91px;border:0;border-right:1px solid rgba(255,255,255,.08);padding:11px 4px}.view{padding:34px 23px 54px}.view>h1{font-size:44px}.hero{min-height:75vh;padding:58px 25px 64px}.hero::before{width:170px;height:250px;top:8%;right:-65px}.hero::after{left:25px;right:25px;bottom:28px}.hero h1{font-size:48px}.hero .question{font-size:22px}.method-list{columns:1}.section-heading{align-items:flex-start;flex-direction:column}.course-accordion summary{padding:23px 48px 22px 0}.course-accordion summary::before{left:0}.course-accordion summary>*{margin-left:27px}.course-accordion summary::after{right:4px}.accordion-content{padding:0 0 26px 27px}.course-row{padding:20px 0}.programme-footer{padding:24px 22px;text-align:center}.footer-waylight{position:static;display:block;margin-top:16px}}
+'''
+
+if '/* Catholix monastic visual layer */' not in text:
+    text = text.replace('</style>', monastic_css + '\n</style>', 1)
+
 required = [
     'That uncertainty is part of the point',
     'deciding where on earth to begin',
@@ -94,7 +150,8 @@ required = [
     'Can an ordinary Catholic build a serious education in the faith?',
     'Did the first four lessons change what I thought faith was?',
     'What happened when I actually tried to learn Latin?',
-    'Other Schools will appear here as their Experiments begin.'
+    'Other Schools will appear here as their Experiments begin.',
+    '/* Catholix monastic visual layer */'
 ]
 missing = [item for item in required if item not in text]
 if missing:
