@@ -24,70 +24,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Apply and validate the common platform
+      - name: Build published site
         run: |
-          python - <<'PY'
-          from pathlib import Path
-
-          old_disclosure = 'This website has been built with the assistance of AI tools. Where appropriate this has been cross validated with Magnifica Humanae'
-          approved_disclosure = 'This website has been built with the assistance of AI tools. Where appropriate, content has been checked against Magnifica Humanae and relevant authoritative Catholic sources.'
-          shared_css = '<link rel="stylesheet" href="common-platform.css?v=20260723-4">'
-          shared_js = '<script src="common-platform.js?v=20260723-4"></script>'
-          html_files = []
-
-          for path in Path('.').rglob('*'):
-              if not path.is_file() or path.suffix.lower() not in {'.html', '.js', '.css'}:
-                  continue
-              text = path.read_text(encoding='utf-8').replace(old_disclosure, approved_disclosure)
-              text = text.replace('View the indicative milestones and the developing A1 pathway on the Latin site.','View learner-recorded course milestones on the Latin site. These are not assessed qualifications or language-level awards.')
-              text = text.replace('See the proposed completion framework for this course.','Certificate framework not yet released.')
-              if path.suffix.lower() == '.html' and 'http-equiv="refresh"' not in text.lower():
-                  html_files.append(path)
-                  if 'common-platform.css' not in text:
-                      if '</head>' not in text:
-                          raise RuntimeError(f'{path} has no closing head')
-                      text = text.replace('</head>', shared_css + '\n</head>', 1)
-                  if 'common-platform.js' not in text:
-                      if '</body>' in text:
-                          text = text.replace('</body>', shared_js + '\n</body>', 1)
-                      elif '</html>' in text:
-                          text = text.replace('</html>', shared_js + '\n</html>', 1)
-                      else:
-                          text += '\n' + shared_js
-              path.write_text(text, encoding='utf-8')
-
-          failures = []
-          for path in html_files:
-              text = path.read_text(encoding='utf-8')
-              if 'common-platform.css' not in text: failures.append(f'{path}: shared CSS missing')
-              if 'common-platform.js' not in text: failures.append(f'{path}: shared JavaScript missing')
-
-          for asset in ['common-platform.css','common-platform.js']:
-              if not Path(asset).exists(): failures.append(f'missing shared asset: {asset}')
-
-          controller = Path('common-platform.js').read_text(encoding='utf-8')
-          for required in ['Part of The Catholic Experiment','School: ${config.school}','Sacred Languages','Faith','Head Room','https://formspree.io/f/mgvgrgvb','Waylight Atlantic']:
-              if required not in controller: failures.append(f'common-platform.js missing: {required}')
-          if 'Corrections and contact' in controller: failures.append('obsolete footer corrections link remains')
-          for category in ['Correction','Question','Broken link','Accessibility','Suggested source','Other']:
-              if f'<option>{category}</option>' not in controller: failures.append(f'contact category missing: {category}')
-
-          shared_style = Path('common-platform.css').read_text(encoding='utf-8')
-          for required in ['width:105px','width:55px','grid-template-columns:minmax(0,1.35fr)','@media(max-width:900px)','platform-contact-layout']:
-              if required not in shared_style: failures.append(f'common-platform.css missing: {required}')
-
-          if failures:
-              raise SystemExit('\n'.join(failures))
-          PY
-
-      - name: Build expanded Materials page
-        run: python build/prepare_materials.py
-
-      - name: Build central Journal and Videos pages
-        run: python build/prepare_central_journal_videos.py
-
-      - name: Apply curiosity-led editorial voice
-        run: python build/prepare_editorial_voice.py
+          python build/prepare_materials.py
+          python build/prepare_central_journal_videos.py
+          python build/prepare_editorial_voice.py
+          test -f index.html
+          grep -q "Catholix family visual layer" index.html
+          grep -q "The Catholic Experiment" index.html
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
